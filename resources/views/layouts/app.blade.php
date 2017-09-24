@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/rs-plugin/css/navigation.css">
     <link rel="stylesheet" href="/tuner/css/colorpicker.css">
     <link rel="stylesheet" href="/tuner/css/styles.css">
+    <link rel="shortcut icon" href="{{url('icon.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{url('icon.png')}}" type="image/x-icon">
   </head>
   <body>
     @include('partials.header')    

@@ -7,8 +7,8 @@
             <div class="col-md-6 col-sm-7">
               <!-- lang select wrapper-->
               <div class="top-left-wrap font-3">
-                <div class="mail-top"><a href="mailto:support.suntour@example.com"> <i class="flaticon-suntour-email"></i>suntour@example.com</a></div><span>/</span>
-                <div class="tel-top"><a href="tel:(723)-700-1183"> <i class="flaticon-suntour-phone"></i>(723)-700-1183</a></div>
+                <div class="mail-top"><a href="mailto:support.suntour@example.com"> <i class="flaticon-suntour-email"></i>info@scubatribemaldives.com</a></div><span>/</span>
+                <div class="tel-top"><a href="tel:(723)-700-1183"> <i class="flaticon-suntour-phone"></i>(960)-7465333</a></div>
               </div>
               <!-- ! lang select wrapper-->
             </div>

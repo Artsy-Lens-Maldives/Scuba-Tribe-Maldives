@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/fonts/fi/flaticon.css">
     
     <link rel="stylesheet" href="/css/all.css">
-    <link rel="stylesheet" href="/css/main.css">    
+    <link rel="stylesheet" href="/css/main.css"> 
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">   
     
     <link rel="shortcut icon" href="{{url('icon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{url('icon.png')}}" type="image/x-icon">

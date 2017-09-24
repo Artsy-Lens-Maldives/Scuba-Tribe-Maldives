@@ -6242,6 +6242,15 @@ function flexslider_init(){
 	});
 }
 
+
+$('form').keypress(function(e){
+    var code = e.keyCode || e.which;
+
+    if( code === 13 ) {
+        e.preventDefault();
+        $( ".subscribe-submit" ).click();
+    };
+});
 jQuery(document).ready(function (){
 	vimeo_init();
 	cws_self_hosted_video ();

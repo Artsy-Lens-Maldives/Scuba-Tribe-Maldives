@@ -1528,3 +1528,13 @@ function flexslider_init(){
 		sync: "#flex-carousel"
 	});
 }
+
+
+$('form').keypress(function(e){
+    var code = e.keyCode || e.which;
+
+    if( code === 13 ) {
+        e.preventDefault();
+        $( ".subscribe-submit" ).click();
+    };
+});

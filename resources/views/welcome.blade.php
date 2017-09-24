@@ -33,11 +33,13 @@
                   <h2 class="title-section alt-2"><span>Get</span> Latest offers</h2>
                 </div>
                 <div class="col-md-7">
-                  <form action="/api/subscribe" method="post" class="form contact-form mt-10">
+                  <form action="api/subscribe" method="post" class="form contact-form mt-10">
+                    {!! csrf_field() !!}
                     <div class="input-container">
                       <input type="text" placeholder="Enter your email" value="" name="email" class="newsletter-field mb-0 form-row"><i class="flaticon-suntour-email icon-left"></i>
-                      <button type="submit" class="subscribe-submit"><i class="flaticon-suntour-arrow icon-right"></i></button>
+                      
                     </div>
+                    <button type="submit" class="subscribe-submit"><i class="flaticon-suntour-arrow icon-right"></i></button>
                   </form>
                 </div>
               @endif

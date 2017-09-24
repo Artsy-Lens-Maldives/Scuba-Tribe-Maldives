@@ -38,7 +38,7 @@
             <div class="col-sm-6">
               <p>© Copyright 2017 <span>Scuba Tribe Maldives</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved</p>
             </div>
-            <div class="col-sm-6 text-right"><a href="index.html" class="footer-nav">Home</a><a href="page-about-us.html" class="footer-nav">Pages</a><a href="hotels-search.html" class="footer-nav">Hotels</a><a href="blog-grid.html" class="footer-nav">Blog</a><a href="shop-grid.html" class="footer-nav">Shop</a><a href="page-contact.html" class="footer-nav">Contacts</a></div>
+            <div class="col-sm-6 text-right"><a href="index.html" class="footer-nav">Home</a><a href="page-about-us.html" class="footer-nav">Liveaboards</a><a href="hotels-search.html" class="footer-nav">Catameran</a><a href="blog-grid.html" class="footer-nav">Dive Spots</a><a href="page-contact.html" class="footer-nav">Contacts</a></div>
           </div>
         </div>
       </div>

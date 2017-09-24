@@ -2263,10 +2263,10 @@ nav .inner-nav.mobile_nav.opened ul {
 /* Site top panel */
 /*  */
 .site-top-panel {
-    background: $main-header;
+    background: $color-white;
     height: 62px;
     line-height: 60px;
-    border-top: 2px solid $main-color;
+    border-bottom: 3px solid $main-color;
 }
 
 .site-top-panel .top-left-wrap {
@@ -7331,7 +7331,7 @@ body .tparrows {
 
 .tabs .block-tabs-btn .tabs-btn {
     font-family: Montserrat;
-    color: #a9b5c1;
+    color: $main-color;
     font-weight: 600;
     float: left;
     height: 48px;
@@ -7350,7 +7350,7 @@ body .tparrows {
 }
 
 .tabs .block-tabs-btn .tabs-btn.active {
-    color: $main-color;
+    color: $color-white;
     background: #424d58;
     border-color: #424d58;
 }

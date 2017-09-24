@@ -22,7 +22,4 @@ mix.styles([
     'public/rs-plugin/css/settings.css',
     'public/rs-plugin/css/layers.css',
     'public/rs-plugin/css/navigation.css'
-], 'public/css/all.css')
-    .scripts([
-
-], 'public/js/all.js')
+], 'public/css/all.css');

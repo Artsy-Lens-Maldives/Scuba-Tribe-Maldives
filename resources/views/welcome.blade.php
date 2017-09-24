@@ -114,7 +114,7 @@
           <div class="row">
             <div class="col-md-8">
               <h6 class="title-section-top font-4"></h6>
-              <h2 class="title-section alt-2"><span>Our</span> Testimonials</h2>
+              <h2 class="title-section alt-2"><span>Reviews</span> About Us</h2>
               <div class="cws_divider mb-25 mt-5"></div>
             </div>
           </div>

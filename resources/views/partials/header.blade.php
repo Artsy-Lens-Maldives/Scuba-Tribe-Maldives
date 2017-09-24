@@ -161,14 +161,5 @@
         </div>
       </nav>
       <!-- End Navigation panel-->
-      <!-- breadcrumbs start-->
-      <section style="background-image:url('pic/breadcrumbs/1.png');" class="breadcrumbs">
-        <div class="container">
-          <div class="text-left breadcrumbs-item"><a href="#">home</a><i>/</i><a href="#">pages</a><i>/</i><a href="#" class="last">404 Page</a>
-            <h2>404 Page</h2>
-          </div>
-        </div>
-      </section>
-      <!-- ! breadcrumbs end-->
     </header>
     <!-- ! header page-->

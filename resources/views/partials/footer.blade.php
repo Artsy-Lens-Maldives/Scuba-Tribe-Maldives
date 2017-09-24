@@ -5,7 +5,7 @@
           <!-- widget footer-->
           <div class="col-md-6 col-sm-12 mb-sm-30">
             <div class="logo-soc clearfix">
-              <div class="footer-logo"><a href="index.html"><img src="/img/da.png" data-at2x="/img/da.png" alt width="198px" height="50px"></a></div>
+              <div class="footer-logo"><a href="{{ url('/') }}"><img src="/img/da.png" data-at2x="/img/da.png" alt width="198px" height="50px"></a></div>
             </div>
             <p class="color-g2 mt-10">Vestibulum tincidunt venenatis scelerisque. Proin quis enim lacinia, vehicula massa et, mollis urna. Proin nibh mauris, blandit vitae convallis at, tincidunt vel tellus. Praesent posuere nec lectus non.</p>
             <!-- social-->
@@ -38,7 +38,7 @@
             <div class="col-sm-6">
               <p>© Copyright 2017 <span>Scuba Tribe Maldives</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved</p>
             </div>
-            <div class="col-sm-6 text-right"><a href="index.html" class="footer-nav">Home</a><a href="page-about-us.html" class="footer-nav">Liveaboard</a><a href="hotels-search.html" class="footer-nav">Catameran</a><a href="blog-grid.html" class="footer-nav">Dive Spots</a><a href="page-contact.html" class="footer-nav">Contacts</a></div>
+            <div class="col-sm-6 text-right"><a href="{{ url('/') }}" class="footer-nav">Home</a><a href="{{ url('/liveaboards') }}" class="footer-nav">Liveaboard</a><a href="{{ url('/catameran') }}" class="footer-nav">Catameran</a><a href="{{ url('/dive-spots') }}" class="footer-nav">Dive Spots</a><a href="{{ url('/contact-us') }}" class="footer-nav">Contact Us</a></div>
           </div>
         </div>
       </div>

@@ -4,20 +4,12 @@
     <title>Scuba Tribe Maldives</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    
     <link rel="stylesheet" href="/fonts/fi/flaticon.css">
-    <link rel="stylesheet" href="/css/flexslider.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/indent.css">
-    <link rel="stylesheet" href="/rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="/rs-plugin/css/layers.css">
-    <link rel="stylesheet" href="/rs-plugin/css/navigation.css">
-    <link rel="stylesheet" href="/tuner/css/colorpicker.css">
-    <link rel="stylesheet" href="/tuner/css/styles.css">
+    
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/main.css">    
+    
     <link rel="shortcut icon" href="{{url('icon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{url('icon.png')}}" type="image/x-icon">
   </head>

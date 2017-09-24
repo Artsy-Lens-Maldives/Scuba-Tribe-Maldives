@@ -58,4 +58,5 @@ mix.styles([
     'public/rs-plugin/js/extensions/revolution.extension.actions.min.js',
     'public/rs-plugin/js/extensions/revolution.extension.kenburn.min.js',
     'public/rs-plugin/js/extensions/revolution.extension.migration.min.js',
-], 'public/js/plugin.js');
+], 'public/js/plugin.js')
+    .sass('resources/assets/sass/main.scss', 'public/css');

@@ -56,27 +56,32 @@
           <!-- Main Menu-->
           <div class="inner-nav desktop-nav">
             <ul class="clearlist">
-              <!-- Item With Sub-->
-              <li><a href="{{ url('/') }}">Home</a></li>
-              <!-- End Item With Sub-->
+              <!-- Home -->
+              <li><a href="{{ url('/') }}" class="active">Home</a>
+              </li>
               <li class="slash">/</li>
-              <!-- Item With Sub-->
-              <li class="active"><a href="{{ url('/liveaboards') }}">Liveaboards</a></li>
-              <!-- End Item With Sub-->
+              <!-- End Home -->
+              
+              <!-- Liveaboard -->
+              <li><a href="{{ url('/liveaboard') }}">Liveaboard</a>
+              </li>
               <li class="slash">/</li>
-              <!-- Item With Sub-->
-              <li><a href="{{ url('/catameran') }}">Catameran</a></li>
-              <!-- End Item With Sub-->
-              <!-- span /-->
-              <!-- Item With Sub-->
-              <!-- End Item With Sub-->
+              <!-- End Liveaboard -->
+
+              <!-- Catamaran -->
+              <li><a href="{{ url('/catamaran') }}">Catamaran</a>
+              </li>
               <li class="slash">/</li>
-              <!-- Item With Sub-->
-              <li><a href="{{ url('/dive-spots') }}">Dive Spots</a></li>
-              <!-- End Item With Sub-->
+              <!-- End Catamaran -->
+
+              <!-- Diving Spots -->
+              <li><a href="{{ url('/diving-spots') }}">Diving Spots</a>
+              </li>
               <li class="slash">/</li>
-              <!-- Item-->
-              <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
+              <!-- End Diving Spots -->
+
+              <!-- Caontact-Us -->
+              <li><a href="pag{{ url('/contact-us') }}">Contact Us</a></li>
               <!-- End Item-->
               <!-- Search-->
               <li class="search"><a href="#" class="mn-has-sub">Search</a>

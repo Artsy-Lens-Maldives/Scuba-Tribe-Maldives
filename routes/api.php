@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('subscribe', function (Request $request) {
+    Session::flash('msg', 'athik.13@gmail.com');
+    return Redirect::back();
+});

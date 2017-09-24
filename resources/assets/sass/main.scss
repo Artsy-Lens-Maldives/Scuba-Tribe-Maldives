@@ -987,7 +987,7 @@ hr {
     z-index: 1;
     display: block;
     width: 100%;
-    border-bottom: 2px solid $main-color;
+    border-bottom: 2px solid $color-white;
 }
 
 .cws_divider.short,
@@ -1512,11 +1512,11 @@ header .transparent .inner-nav > ul > li > a:hover {
     -ms-transform: skew(-15deg);
     -o-transform: skew(-15deg);
     transform: skew(-15deg);
-    background: $main-header;
+    background: $color-white;
 }
 
 .main-nav li.search .close-button span {
-    color: $main-color;
+    color: $color-white;
     z-index: 1;
     position: relative;
     vertical-align: middle;
@@ -2370,7 +2370,7 @@ nav .inner-nav.mobile_nav.opened ul {
 }
 
 .site-top-panel .top-right-wrap .dropdown ul li a:hover {
-    color: $main-color;
+    color: $color-white;
 }
 
 .site-top-panel .top-right-wrap .dropdown ul li li {
@@ -8399,7 +8399,7 @@ footer.footer {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 footer.footer h4 {
@@ -8453,8 +8453,8 @@ footer.footer .twitter-footer .twitt {
 }
 
 footer.footer .copyright {
-    color: $color-white;
-    background: #424d58;
+    color: $main-color;
+    background: $color-white;
     line-height: 60px;
 }
 

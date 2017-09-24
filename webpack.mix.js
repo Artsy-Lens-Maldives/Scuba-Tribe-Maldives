@@ -11,5 +11,18 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.styles([
+    'public/css/reset.css',
+    'public/css/bootstrap.css',
+    'public/css/font-awesome.css',
+    'public/css/owl.carousel.css',
+    'public/css/jquery.fancybox.css',
+    'public/css/flexslider.css',
+    'public/css/indent.css',
+    'public/rs-plugin/css/settings.css',
+    'public/rs-plugin/css/layers.css',
+    'public/rs-plugin/css/navigation.css'
+], 'public/css/all.css')
+    .scripts([
+
+], 'public/js/all.js')

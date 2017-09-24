@@ -75,14 +75,16 @@
                 <div class="tabs-keeper">
                   <!-- tabs container-->
                   <div data-tabs-id="cont-tabs1" class="container-tabs active">
-                    <h6 class="trans-uppercase">Hotel Bohemians</h6>
-                    <p>Duis egestas accumsan ipsum, at volutpat elit imperdiet in. Curabitur lacinia, massa quis elementum bibendum, tellus neque porttitor erat, a ornare enim arcu nec mauris. Morbi ac tristique felis. Praesent cursus placerat risus. Duis ut magna quis sem varius consequat.  </p>
+                    <h6 class="trans-uppercase">Scuba Tribe Maldives</h6>
+                    <p>Custom made SCUBA diving holidays in the Maldives.   </p>
                     <ul class="style-3">
-                      <li>Nam molestie dolor id auctor sodales;</li>
-                      <li>In sagittis dolor vel turpis aliquet pharetra;</li>
-                      <li>Quisque non turpis in dui congue dapibus;</li>
-                      <li>Vivamus varius nisl quis dictum maximus;</li>
-                      <li>Vestibulum scelerisque ligula quis est faucibus tincidunt.</li>
+                      <li>We have created Scuba Tribe Maldives to share our passion for scuba diving. To make sure you get what you need and even more. 
+                          Booking your scuba holiday with us you will get the best Maldives liveaboards, sailing catamarans and local islands diving experience. 
+                          Give us the dates and your expectations - the rest is on us. 
+                          We work only with reputable dive operations, those who we personally know. And they are many! 
+                          If you want to join a scheduled liveaboard diving cruise, or charter a boat for your family and friends, or have a private cruising on a sailing catamaran, or taste the local island life and diving the best surrounding dive sports - we will do all of this for you. With love!
+                          Welcome to the Tribe!</li>
+                   
                     </ul>
                   </div>
                   <!-- /tabs container-->

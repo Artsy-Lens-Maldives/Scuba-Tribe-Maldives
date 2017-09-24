@@ -18,3 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/liveaboard', function () {
+    return view('liveaboard');
+});
+
+Route::get('/catamaran', function () {
+    return view('catamaran');
+});
+
+Route::get('/diving-spots', function () {
+    return view('diving-spots');
+});

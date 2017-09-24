@@ -12,12 +12,14 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">   
     
-    <link rel="shortcut icon" href="{{url('icon.png')}}" type="image/x-icon">
-    <link rel="icon" href="{{url('icon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('icon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('icon.png') }}" type="image/x-icon">
   </head>
   <body>
+    @include('partials.header')    
     
     @yield('content')
+    
     
     <script src="//www.youtube.com/player_api"></script>
     <script type="text/javascript" src="/js/all.js"></script>

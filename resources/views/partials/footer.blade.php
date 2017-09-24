@@ -7,7 +7,7 @@
             <div class="logo-soc clearfix">
               <div class="footer-logo"><a href="{{ url('/') }}"><img src="/img/da.png" data-at2x="/img/da.png" alt width="198px" height="50px"></a></div>
             </div>
-            <p class="color-g2 mt-10">Vestibulum tincidunt venenatis scelerisque. Proin quis enim lacinia, vehicula massa et, mollis urna. Proin nibh mauris, blandit vitae convallis at, tincidunt vel tellus. Praesent posuere nec lectus non.</p>
+            <p class="color-g2 mt-10">Custom made diving holidays in the Maldives. Liveaboards, private Catamarans, local Dive Centers. Book with us for the best rates.</p>
             <!-- social-->
             <div class="social-link dark"><a href="#" class="cws-social fa fa-twitter"></a><a href="#" class="cws-social fa fa-facebook"></a><a href="#" class="cws-social fa fa-google-plus"></a><a href="#" class="cws-social fa fa-linkedin"></a></div>
             <!-- ! social-->

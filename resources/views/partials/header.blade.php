@@ -52,7 +52,7 @@
       <nav class="main-nav js-stick">
         <div class="full-wrapper relative clearfix container">
           <!-- Logo ( * your text or image into link tag *)-->
-          <div class="nav-logo-wrap local-scroll"><a href="index.html" class="logo"><img src="img/logo.png" data-at2x="img/logo@2x.png" alt></a></div>
+          <div class="nav-logo-wrap local-scroll"><a href="index.html" class="logo"><img src="/img/logo-scuba.png" data-at2x="/img/logo-scuba.png" alt width="198px" height="50px"></a></div>
           <!-- Main Menu-->
           <div class="inner-nav desktop-nav">
             <ul class="clearlist">

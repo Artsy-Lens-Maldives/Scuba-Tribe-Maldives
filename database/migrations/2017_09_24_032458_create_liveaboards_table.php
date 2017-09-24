@@ -16,6 +16,13 @@ class CreateLiveaboardsTable extends Migration
         Schema::create('liveaboards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->longtext('description');
+            $table->string('amenties');
+            $table->integer('star');
+            $table->string('owneraddress');
+            $table->string('email');
+            $table->string('website');
+            $table->string('vessel_layout_photo');
             $table->timestamps();
         });
     }

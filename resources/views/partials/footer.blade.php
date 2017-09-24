@@ -1,11 +1,11 @@
     <!-- footer-->
-    <footer style="background-image: url('pic/footer/footer-bg.jpg')" class="footer footer-fixed">
+    <footer style="background-image: url('pic/footer/footer.jpg')" class="footer footer-fixed">
       <div class="container">
         <div class="row pb-100 pb-md-40">
           <!-- widget footer-->
           <div class="col-md-6 col-sm-12 mb-sm-30">
             <div class="logo-soc clearfix">
-              <div class="footer-logo"><a href="index.html"><img src="img/logo-white.png" data-at2x="img/logo-white@2x.png" alt></a></div>
+              <div class="footer-logo"><a href="index.html"><img src="/img/logo01.png" data-at2x="/img/logo01.png" width="200" height="200" alt></a></div>
             </div>
             <p class="color-g2 mt-10">Vestibulum tincidunt venenatis scelerisque. Proin quis enim lacinia, vehicula massa et, mollis urna. Proin nibh mauris, blandit vitae convallis at, tincidunt vel tellus. Praesent posuere nec lectus non.</p>
             <!-- social-->
@@ -36,7 +36,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <p>© Copyright 2016 <span>Suntour</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved</p>
+              <p>© Copyright 2017 <span>Scuba Tribe Maldives</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved</p>
             </div>
             <div class="col-sm-6 text-right"><a href="index.html" class="footer-nav">Home</a><a href="page-about-us.html" class="footer-nav">Pages</a><a href="hotels-search.html" class="footer-nav">Hotels</a><a href="blog-grid.html" class="footer-nav">Blog</a><a href="shop-grid.html" class="footer-nav">Shop</a><a href="page-contact.html" class="footer-nav">Contacts</a></div>
           </div>

@@ -7,8 +7,8 @@
             <div class="col-md-6 col-sm-7">
               <!-- lang select wrapper-->
               <div class="top-left-wrap font-3">
-                <div class="mail-top"><a href="mailto:support.suntour@example.com"> <i class="flaticon-suntour-email"></i>info@scubatribemaldives.com</a></div><span>/</span>
-                <div class="tel-top"><a href="tel:(723)-700-1183"> <i class="flaticon-suntour-phone"></i>(960)-7465333</a></div>
+                <div class="mail-top"><a href="mailto:info@scubatribemaldives.com"> <i class="flaticon-suntour-email"></i>info@scubatribemaldives.com</a></div><span>/</span>
+                <div class="tel-top"><a href="tel:7465333"> <i class="flaticon-suntour-phone"></i>(960)-7465333</a></div>
               </div>
               <!-- ! lang select wrapper-->
             </div>
@@ -68,7 +68,7 @@
               <!-- End Item With Sub-->
               <li class="slash">/</li>
               <!-- Item With Sub-->
-              <li><a href="hotels-search.html" class="mn-has-sub">Hotels <i class="fa fa-angle-down button_open"></i></a>
+              <li><a href="hotels-search.html" class="mn-has-sub">Liveaboards <i class="fa fa-angle-down button_open"></i></a>
                 <!-- Sub-->
                 <ul class="mn-sub">
                   <li><a href="hotels-list.html">Hotels list</a></li>
@@ -80,7 +80,7 @@
               <!-- End Item With Sub-->
               <li class="slash">/</li>
               <!-- Item With Sub-->
-              <li class="megamenu"><a href="page-about-us.html" class="mn-has-sub active">Pages <i class="fa fa-angle-down button_open"></i></a>
+              <li class="megamenu"><a href="page-about-us.html" class="mn-has-sub active">Catameran <i class="fa fa-angle-down button_open"></i></a>
                 <!-- Sub-->
                 <ul class="mn-sub mn-has-multi">
                   <li class="mn-sub-multi"><a class="mn-group-title">Pages</a>
@@ -122,7 +122,7 @@
               <!-- End Item With Sub-->
               <li class="slash">/</li>
               <!-- Item With Sub-->
-              <li><a href="shop-grid.html" class="mn-has-sub">Shop <i class="fa fa-angle-down button_open"></i></a>
+              <li><a href="shop-grid.html" class="mn-has-sub">Dive Spots <i class="fa fa-angle-down button_open"></i></a>
                 <!-- Sub-->
                 <ul class="mn-sub">
                   <li><a href="shop-grid.html">Shop Grid</a></li>
@@ -162,7 +162,7 @@
       </nav>
       <!-- End Navigation panel-->
       <!-- breadcrumbs start-->
-      <section style="background-image:url('pic/breadcrumbs/bg-1.jpg');" class="breadcrumbs">
+      <section style="background-image:url('pic/breadcrumbs/1.png');" class="breadcrumbs">
         <div class="container">
           <div class="text-left breadcrumbs-item"><a href="#">home</a><i>/</i><a href="#">pages</a><i>/</i><a href="#" class="last">404 Page</a>
             <h2>404 Page</h2>

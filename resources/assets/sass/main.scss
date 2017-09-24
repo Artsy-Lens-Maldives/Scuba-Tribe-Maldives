@@ -411,7 +411,7 @@ ul.icon li i {
 }
 
 ul.color-2 li:before {
-    border-color: #f9b91e;
+    border-color: $secondry-color;
 }
 
 ul.icon-style li {
@@ -1218,7 +1218,7 @@ header .transparent .inner-nav > ul > li > a:hover {
     width: 16px;
     height: 16px;
     display: inline-block;
-    background: #f9b91e;
+    background: $secondry-color;
     color: $color-white;
 }
 
@@ -5655,11 +5655,11 @@ body .tparrows {
 }
 
 .tx-color-2 {
-    color: #f9b91e !important;
+    color: $secondry-color !important;
 }
 
 .tx-color-3 {
-    color: #F56363 !important;
+    color: $text-color !important;
 }
 
 .tx-color-4 {
@@ -5754,49 +5754,49 @@ body .tparrows {
 }
 
 .cws-icon.border-icon.color-2 {
-    color: #f9b91e;
+    color: $secondry-color;
     background: transparent;
     border-color: $body-bg;
 }
 
 .cws-icon.border-icon.color-2:hover {
     color: $color-white;
-    background: #f9b91e;
-    border-color: #f9b91e;
+    background: $secondry-color;
+    border-color: $secondry-color;
 }
 
 .cws-icon.border-icon.color-2.alt {
     color: $color-white;
-    background: #f9b91e;
-    border-color: #f9b91e;
+    background: $secondry-color;
+    border-color: $secondry-color;
 }
 
 .cws-icon.border-icon.color-2.alt:hover {
-    color: #f9b91e;
+    color: $secondry-color;
     background: transparent;
     border-color: $body-bg;
 }
 
 .cws-icon.border-icon.color-3 {
-    color: #F56363;
+    color: $text-color;
     background: transparent;
     border-color: $body-bg;
 }
 
 .cws-icon.border-icon.color-3:hover {
     color: $color-white;
-    background: #F56363;
-    border-color: #F56363;
+    background: $text-color;
+    border-color: $text-color;
 }
 
 .cws-icon.border-icon.color-3.alt {
     color: $color-white;
-    background: #F56363;
-    border-color: #F56363;
+    background: $text-color;
+    border-color: $text-color;
 }
 
 .cws-icon.border-icon.color-3.alt:hover {
-    color: #F56363;
+    color: $text-color;
     background: transparent;
     border-color: $body-bg;
 }
@@ -5887,24 +5887,24 @@ body .tparrows {
 
 .service-item:hover .cws-icon.border-icon.color-2 {
     color: $color-white;
-    background: #f9b91e;
-    border-color: #f9b91e;
+    background: $secondry-color;
+    border-color: $secondry-color;
 }
 
 .service-item:hover .cws-icon.border-icon.color-2.alt {
-    color: #f9b91e;
+    color: $secondry-color;
     background: transparent;
     border-color: $body-bg;
 }
 
 .service-item:hover .cws-icon.border-icon.color-3 {
     color: $color-white;
-    background: #F56363;
-    border-color: #F56363;
+    background: $text-color;
+    border-color: $text-color;
 }
 
 .service-item:hover .cws-icon.border-icon.color-3.alt {
-    color: #F56363;
+    color: $text-color;
     background: transparent;
     border-color: $body-bg;
 }
@@ -7551,11 +7551,11 @@ body .tparrows {
 }
 
 .divider.color-2 {
-    background: #f9b91e;
+    background: $secondry-color;
 }
 
 .divider.color-3 {
-    background: #F56363;
+    background: $text-color;
 }
 
 .divider.color-4 {
@@ -9247,7 +9247,7 @@ blockquote.without-img {
 }
 
 blockquote.without-img footer {
-    color: #f9b91e;
+    color: $secondry-color;
 }
 
 .quote.alt-2 {
@@ -11204,7 +11204,7 @@ form.form .subscribe-submit {
 }
 
 .stars-perc .stars-active {
-    color: #f9b91e;
+    color: $secondry-color;
     top: 0;
     left: 0;
     position: absolute;
@@ -11233,7 +11233,7 @@ form.form .subscribe-submit {
 }
 
 .stars-perc > span:before {
-    color: #f9b91e;
+    color: $secondry-color;
     top: 0;
     left: 0;
     position: absolute;
@@ -11673,7 +11673,7 @@ form.form .subscribe-submit {
 }
 
 .shop-item .shop-item-body .action.sale {
-    background: #F56363;
+    background: $text-color;
     right: -100%;
     top: 30px;
 }
@@ -12042,16 +12042,16 @@ sup {
 }
 
 .color-filter ul .cat-item.red.active, .color-filter ul .cat-item.red:hover {
-    color: #F56363;
+    color: $text-color;
 }
 
 .color-filter ul .cat-item.red.active a, .color-filter ul .cat-item.red:hover a {
-    color: #F56363;
+    color: $text-color;
 }
 
 .color-filter ul .cat-item.red.active:before, .color-filter ul .cat-item.red:hover:before {
-    background: #F56363;
-    border-color: #F56363;
+    background: $text-color;
+    border-color: $text-color;
 }
 
 .color-filter a {
@@ -12388,7 +12388,7 @@ sup {
 }
 
 .review-status .out-stock {
-    color: #F56363;
+    color: $text-color;
 }
 
 .select-wrap {
@@ -12626,7 +12626,7 @@ form .form-row.notes {
 .order-total .amount,
 .cart-subtotal .amount {
     font-weight: 600;
-    color: #F56363;
+    color: $text-color;
 }
 
 /*  */
@@ -12692,7 +12692,7 @@ form .form-row.notes {
 .inner-nav li.menu-shop-card .mn-sub li .shop-cart-menu .sub-total span,
   .inner-nav.mobile_nav .shop-cart-menu .sub-total span {
     float: right;
-    color: #F56363;
+    color: $text-color;
 }
 
 /*  */
@@ -13410,7 +13410,7 @@ abbr {
 
 .widget-contact-form input.error,
 .widget-contact-form textarea.error {
-    border-color: #F56363;
+    border-color: $text-color;
 }
 
 .widget-contact-form input.error:focus,

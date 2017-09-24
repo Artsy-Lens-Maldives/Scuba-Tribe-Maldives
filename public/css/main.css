@@ -411,7 +411,7 @@ ul.icon li i {
 }
 
 ul.color-2 li:before {
-  border-color: #f9b91e;
+  border-color: #2B2B2B;
 }
 
 ul.icon-style li {
@@ -1178,7 +1178,7 @@ header .transparent .inner-nav > ul > li > a:hover {
   width: 16px;
   height: 16px;
   display: inline-block;
-  background: #f9b91e;
+  background: #2B2B2B;
   color: #ffffff;
 }
 
@@ -5227,11 +5227,11 @@ body .tparrows {
 }
 
 .tx-color-2 {
-  color: #f9b91e !important;
+  color: #2B2B2B !important;
 }
 
 .tx-color-3 {
-  color: #F56363 !important;
+  color: #E9E9E9 !important;
 }
 
 .tx-color-4 {
@@ -5324,49 +5324,49 @@ body .tparrows {
 }
 
 .cws-icon.border-icon.color-2 {
-  color: #f9b91e;
+  color: #2B2B2B;
   background: transparent;
   border-color: #b5b5b5;
 }
 
 .cws-icon.border-icon.color-2:hover {
   color: #ffffff;
-  background: #f9b91e;
-  border-color: #f9b91e;
+  background: #2B2B2B;
+  border-color: #2B2B2B;
 }
 
 .cws-icon.border-icon.color-2.alt {
   color: #ffffff;
-  background: #f9b91e;
-  border-color: #f9b91e;
+  background: #2B2B2B;
+  border-color: #2B2B2B;
 }
 
 .cws-icon.border-icon.color-2.alt:hover {
-  color: #f9b91e;
+  color: #2B2B2B;
   background: transparent;
   border-color: #b5b5b5;
 }
 
 .cws-icon.border-icon.color-3 {
-  color: #F56363;
+  color: #E9E9E9;
   background: transparent;
   border-color: #b5b5b5;
 }
 
 .cws-icon.border-icon.color-3:hover {
   color: #ffffff;
-  background: #F56363;
-  border-color: #F56363;
+  background: #E9E9E9;
+  border-color: #E9E9E9;
 }
 
 .cws-icon.border-icon.color-3.alt {
   color: #ffffff;
-  background: #F56363;
-  border-color: #F56363;
+  background: #E9E9E9;
+  border-color: #E9E9E9;
 }
 
 .cws-icon.border-icon.color-3.alt:hover {
-  color: #F56363;
+  color: #E9E9E9;
   background: transparent;
   border-color: #b5b5b5;
 }
@@ -5457,24 +5457,24 @@ body .tparrows {
 
 .service-item:hover .cws-icon.border-icon.color-2 {
   color: #ffffff;
-  background: #f9b91e;
-  border-color: #f9b91e;
+  background: #2B2B2B;
+  border-color: #2B2B2B;
 }
 
 .service-item:hover .cws-icon.border-icon.color-2.alt {
-  color: #f9b91e;
+  color: #2B2B2B;
   background: transparent;
   border-color: #b5b5b5;
 }
 
 .service-item:hover .cws-icon.border-icon.color-3 {
   color: #ffffff;
-  background: #F56363;
-  border-color: #F56363;
+  background: #E9E9E9;
+  border-color: #E9E9E9;
 }
 
 .service-item:hover .cws-icon.border-icon.color-3.alt {
-  color: #F56363;
+  color: #E9E9E9;
   background: transparent;
   border-color: #b5b5b5;
 }
@@ -7048,11 +7048,11 @@ body .tparrows {
 }
 
 .divider.color-2 {
-  background: #f9b91e;
+  background: #2B2B2B;
 }
 
 .divider.color-3 {
-  background: #F56363;
+  background: #E9E9E9;
 }
 
 .divider.color-4 {
@@ -8633,7 +8633,7 @@ blockquote.without-img {
 }
 
 blockquote.without-img footer {
-  color: #f9b91e;
+  color: #2B2B2B;
 }
 
 .quote.alt-2 {
@@ -10522,7 +10522,7 @@ form.form .subscribe-submit {
 }
 
 .stars-perc .stars-active {
-  color: #f9b91e;
+  color: #2B2B2B;
   top: 0;
   left: 0;
   position: absolute;
@@ -10551,7 +10551,7 @@ form.form .subscribe-submit {
 }
 
 .stars-perc > span:before {
-  color: #f9b91e;
+  color: #2B2B2B;
   top: 0;
   left: 0;
   position: absolute;
@@ -10943,7 +10943,7 @@ form.form .subscribe-submit {
 }
 
 .shop-item .shop-item-body .action.sale {
-  background: #F56363;
+  background: #E9E9E9;
   right: -100%;
   top: 30px;
 }
@@ -11280,18 +11280,18 @@ sup {
 
 .color-filter ul .cat-item.red.active,
 .color-filter ul .cat-item.red:hover {
-  color: #F56363;
+  color: #E9E9E9;
 }
 
 .color-filter ul .cat-item.red.active a,
 .color-filter ul .cat-item.red:hover a {
-  color: #F56363;
+  color: #E9E9E9;
 }
 
 .color-filter ul .cat-item.red.active:before,
 .color-filter ul .cat-item.red:hover:before {
-  background: #F56363;
-  border-color: #F56363;
+  background: #E9E9E9;
+  border-color: #E9E9E9;
 }
 
 .color-filter a {
@@ -11620,7 +11620,7 @@ sup {
 }
 
 .review-status .out-stock {
-  color: #F56363;
+  color: #E9E9E9;
 }
 
 .select-wrap {
@@ -11857,7 +11857,7 @@ form .form-row.notes {
 .order-total .amount,
 .cart-subtotal .amount {
   font-weight: 600;
-  color: #F56363;
+  color: #E9E9E9;
 }
 
 /*  */
@@ -11926,7 +11926,7 @@ form .form-row.notes {
 .inner-nav li.menu-shop-card .mn-sub li .shop-cart-menu .sub-total span,
 .inner-nav.mobile_nav .shop-cart-menu .sub-total span {
   float: right;
-  color: #F56363;
+  color: #E9E9E9;
 }
 
 /*  */
@@ -12630,7 +12630,7 @@ abbr {
 
 .widget-contact-form input.error,
 .widget-contact-form textarea.error {
-  border-color: #F56363;
+  border-color: #E9E9E9;
 }
 
 .widget-contact-form input.error:focus,

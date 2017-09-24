@@ -10,7 +10,7 @@
               <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                 <div class="sl-title-top">Welcome to</div>
                 <div class="sl-title">Scuba Tribe Maldives</div>
-                <div class="sl-title-bot">Personalized <span>Prices</span></div>
+                <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
               </div>
             </li>
           </ul>

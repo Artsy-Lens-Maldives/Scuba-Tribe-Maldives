@@ -16,21 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/liveaboard', function () {
-    return view('liveaboard');
-});
-
-Route::get('/catamaran', function () {
-    return view('catamaran');
-});
-
-Route::get('/diving-spots', function () {
-    return view('diving-spots');
-});
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'AdminAuth\LoginController@login');
@@ -44,3 +31,14 @@ Route::group(['prefix' => 'admin'], function () {
   Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
   Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
 });
+
+
+// Liveaboard Routes
+Route::get('/liveaboard', 'LiveaboardController@index');
+Route::get('/liveaboard/{liveaboard}', 'LiveaboardController@show');
+
+// Catamaran Routes
+Route::get('/catamaran', 'CatamaranController@index');
+
+// Diving Spots Routes
+Route::get('/diving-spots', 'DivingSpotController@index');

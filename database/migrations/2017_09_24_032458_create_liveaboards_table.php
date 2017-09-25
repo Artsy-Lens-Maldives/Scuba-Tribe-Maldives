@@ -15,14 +15,23 @@ class CreateLiveaboardsTable extends Migration
     {
         Schema::create('liveaboards', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->longtext('description');
-            $table->string('amenties');
-            $table->integer('star');
-            $table->string('owneraddress');
-            $table->string('email');
-            $table->string('website');
-            $table->string('vessel_layout_photo');
+            $table->string('name')->nullable();
+            $table->integer('star')->nullable();
+            $table->longtext('description')->nullable();
+            $table->longtext('boat_features')->nullable();
+            $table->longtext('food_and_drinks')->nullable();
+            $table->longtext('diving')->nullable();
+            $table->longtext('gear_rental')->nullable();
+            $table->string('vessel_layout_photo')->nullable();
+            $table->longtext('boat_specifications')->nullable();
+            $table->longtext('other_features')->nullable();
+            
+            $table->string('owner_address')->nullable();
+            $table->string('email')->nullable();
+            $table->string('website')->nullable();
+            
+            $table->string('slug')->nullable();
+            
             $table->timestamps();
         });
     }

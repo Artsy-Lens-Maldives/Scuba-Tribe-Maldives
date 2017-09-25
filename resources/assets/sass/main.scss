@@ -110,10 +110,10 @@ a:active {
     outline: none;
 }
 
-img, embed, object, video {
-    max-width: 100%;
-    height: auto;
-}
+// img, embed, object, video {
+//     max-width: 100%;
+//     height: auto;
+// }
 
 .row + .row {
     margin-top: 20px;
@@ -4956,7 +4956,7 @@ nav .inner-nav.mobile_nav.opened ul {
 }
 
 .recom-item .recom-media .pic img {
-    max-width: none;
+    // max-width: none;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;

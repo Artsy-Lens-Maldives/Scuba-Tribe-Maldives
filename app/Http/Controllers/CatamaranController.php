@@ -14,7 +14,7 @@ class CatamaranController extends Controller
      */
     public function index()
     {
-        //
+        return view('catamaran.index');
     }
 
     /**

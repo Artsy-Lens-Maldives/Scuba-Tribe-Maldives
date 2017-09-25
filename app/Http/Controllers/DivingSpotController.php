@@ -14,7 +14,7 @@ class DivingSpotController extends Controller
      */
     public function index()
     {
-        //
+        return view('diving-spots.index');
     }
 
     /**

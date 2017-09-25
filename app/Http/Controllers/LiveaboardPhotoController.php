@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\liveaboard;
+use App\liveaboard_photo;
 use Illuminate\Http\Request;
 
-class LiveaboardController extends Controller
+class LiveaboardPhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class LiveaboardController extends Controller
      */
     public function index()
     {
-        $liveaboards = liveaboard::all();
-        return view('liveaboard.index', compact('liveaboards'));
+        //
     }
 
     /**
@@ -42,21 +41,21 @@ class LiveaboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\liveaboard  $liveaboard
+     * @param  \App\liveaboard_photo  $liveaboard_photo
      * @return \Illuminate\Http\Response
      */
-    public function show(liveaboard $liveaboard)
+    public function show(liveaboard_photo $liveaboard_photo)
     {
-        return view('liveaboard.detail', compact('liveaboard'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\liveaboard  $liveaboard
+     * @param  \App\liveaboard_photo  $liveaboard_photo
      * @return \Illuminate\Http\Response
      */
-    public function edit(liveaboard $liveaboard)
+    public function edit(liveaboard_photo $liveaboard_photo)
     {
         //
     }
@@ -65,10 +64,10 @@ class LiveaboardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\liveaboard  $liveaboard
+     * @param  \App\liveaboard_photo  $liveaboard_photo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, liveaboard $liveaboard)
+    public function update(Request $request, liveaboard_photo $liveaboard_photo)
     {
         //
     }
@@ -76,10 +75,10 @@ class LiveaboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\liveaboard  $liveaboard
+     * @param  \App\liveaboard_photo  $liveaboard_photo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(liveaboard $liveaboard)
+    public function destroy(liveaboard_photo $liveaboard_photo)
     {
         //
     }

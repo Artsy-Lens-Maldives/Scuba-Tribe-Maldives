@@ -1,5 +1,5 @@
     <!-- footer-->
-    <footer style="background-image: url('pic/footer/footer.jpg')" class="footer footer-fixed">
+    <footer style="background-image: url('{{ url('pic/footer/footer.jpg') }} ')" class="footer footer-fixed">
       <div class="container">
         <div class="row pb-100 pb-md-40">
           <!-- widget footer-->

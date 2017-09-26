@@ -5,7 +5,7 @@
           <!-- widget footer-->
           <div class="col-md-6 col-sm-12 mb-sm-30">
             <div class="logo-soc clearfix">
-              <div class="footer-logo"><a href="{{ url('/') }}"><img src="/img/da.png" data-at2x="/img/da.png" alt width="198px" height="50px"></a></div>
+              <div class="footer-logo"><a href="{{ url('/') }}"><img src="/img/da.png" data-at2x="/img/da.png" alt width="198px" height="70px"></a></div>
             </div>
             <p class="color-g2 mt-10">Custom made diving holidays in the Maldives. Liveaboards, private Catamarans, local Dive Centers. Book with us for the best rates.</p>
             <!-- social-->

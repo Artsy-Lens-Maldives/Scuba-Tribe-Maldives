@@ -83,3 +83,12 @@ $factory->define(App\liveaboard::class, function (Faker $faker) {
         
     ];
 });
+
+$factory->define(App\liveaboard_photo::class, function (Faker $faker) {
+    $photo = '/img/bg/' . rand(1,11) . '.jpg';
+
+    return [
+        'liveaboard_id' => factory(App\liveaboard::class)->create()->id,
+        'photo_url' => $photo,
+    ];
+});

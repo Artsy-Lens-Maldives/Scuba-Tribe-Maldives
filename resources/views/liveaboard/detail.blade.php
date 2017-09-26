@@ -33,10 +33,10 @@
         <div class="container mt-30">
           <h4 class="mb-20">Description</h4>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-7">
               {!! $liveaboard->description !!}
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
               <div class="bg-gray-3 p-30-40">
                 <h4>Boat Features</h4>
                 <ul class="style-1 mb-0">
@@ -64,19 +64,29 @@
               </thead>
               <tbody>
                 <tr>
-                  <td style="vertical-align: middle;">
-                    <h4>30 SEP</h4>
-                  </td>
-                  <td style="vertical-align: middle;"> 
-                    <ul class="">
-                      <li><b>Maldives Central - North Tour</b></li>
-                      <li>8 Days / 7 Nights ( return: 07 OCT 2017 )</li>
-                      <li>Free Parking</li>
-                    </ul>
-                  </td>
-                  <td style="vertical-align: middle;">
-                    <a href="#" class="cws-button alt gray">Book now</a>
-                  </td>
+                  @if(!$liveaboard->itinerary->isEmpty())
+
+                    @foreach($liveaboard->itinerary as $itinerary)
+                    <td style="vertical-align: middle;">
+                      <h4>{{ $itinerary->date }}</h4>
+                    </td>
+                    <td style="vertical-align: middle;"> 
+                      {{ $itinerary->detail }}
+                    </td>
+                    <td style="vertical-align: middle;">
+                      <a href="#" class="cws-button alt gray">Book now</a>
+                    </td>
+                    @endforeach
+
+                  @else
+
+                    <td></td>
+                    <td style="vertical-align: middle;">
+                      <h4>No Itineraries Found</h4>
+                    </td>
+                    <td></td>
+                  
+                  @endif
                 </tr>
               </tbody>
             </table>
@@ -86,28 +96,41 @@
         <div id="features" class="container mb-50">
           <div class="row">
             <div class="col-md-12">
-              <div class="bg-gray-3 mb-15 p-30-40">
+              <h4 class="trans-uppercase mb-10">{{ $liveaboard->name }} Features</h4>
+              <div class="cws_divider mb-30"></div>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-md-4">
+              <div class="mb-15 p-30-40">
                 <h4>Food and Drinks</h4>
                 <ul class="style-1 mb-0">
                   {!! $liveaboard->food_and_drinks !!}
                 </ul>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="bg-gray-3 mb-15 p-30-40">
+            <div class="col-md-4">
+              <div class="mb-15 p-30-40">
                 <h4>Diving</h4>
                 <ul class="style-1 mb-0">
                   {!! $liveaboard->diving !!}
                 </ul>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="bg-gray-3 mb-15 p-30-40">
+            <div class="col-md-4">
+              <div class="mb-15 p-30-40">
                 <h4>Gear Rental</h4>
                 {!! $liveaboard->gear_rental !!}
               </div>
             </div>
-
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mb-15 p-30-40">
+                <h4>Vessel Layout photo</h4>
+                <img src="{{ $liveaboard->vessel_layout_photo }}" class="img-responsive">
+              </div>
+            </div>
           </div>
         </div>
         <!-- section reviews-->
@@ -118,49 +141,67 @@
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          <div class="reviews-wrap">
-            <div class="reviews-top pattern relative">
-              <div class="reviews-total" style="background: #afafaf;">
+          @if(!$liveaboard->reviews->isEmpty())
 
-                <div class="reviews-sub-mark">4.2</div>
-                <div class="stars-perc"><span style="width:85%"></span></div><span>Based on 67 reviews</span>
-              </div>
-              <div class="reviews-marks">
-                <ul>
-                  <li>Cleanliness<span><span class="stars-perc"><span style="width:85%"></span></span>4.5</span></li>
-                  <li>Location<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>
-                  <li>Staff<span><span class="stars-perc"><span style="width:100%"></span></span>5.0</span></li>
-                  <li>Free Wi-Fi<span><span class="stars-perc"><span style="width:65%"> </span></span>3.5</span></li>
-                </ul>
-                <ul>
-                  <li>Comfort<span><span class="stars-perc"><span style="width:85%"> </span></span>4.5</span></li>
-                  <li>Facilities<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>
-                  <li>Value for money<span><span class="stars-perc"><span style="width:100%"> </span></span>5.0</span></li>
-                </ul>
-              </div>
-            </div>
-            <div class="comments">
-              <div class="comment-body">
-                <div class="avatar"><img src="pic/blog/90x90/1.jpg" data-at2x="pic/blog/90x90/1@2x.jpg" alt>12 Reviews</div>
-                <div class="comment-info">
-                  <div class="comment-meta">
-                    <div class="title">
-                      <h5>Lovely clean, comfortable hotel <span>Rachel George</span></h5>
-                    </div>
-                    <div class="comment-date">
-                      <div class="stars stars-5">5</div><span>Mon, 03-23-2016</span>
-                    </div>
-                  </div>
-                  <div class="comment-content">
-                    <p>Proin ut pretium sem. Maecenas id commodo massa. Sed vitae urna hendrerit, commodo dolor non, porttitor odio. Suspendisse ac arcu eu enim lobortis luctus sed quis velit. Nam ut vestibulum orci, at sodales libero. Fusce egestas urna a dolor fermentum, id tincidunt leo eleifend. Phasellus pulvinar hendrerit pulvinar.</p>
-                  </div>
+            <div class="reviews-wrap">
+              <div class="reviews-top pattern relative">
+                <div class="reviews-total" style="background: #afafaf;">
+
+                  <div class="reviews-sub-mark">4.2</div>
+                  <div class="stars-perc"><span style="width:85%"></span></div><span>Based on 67 reviews</span>
+                </div>
+                <div class="reviews-marks">
+                  <ul>
+                    <li>Cleanliness<span><span class="stars-perc"><span style="width:85%"></span></span>4.5</span></li>
+                    <li>Location<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>
+                    <li>Staff<span><span class="stars-perc"><span style="width:100%"></span></span>5.0</span></li>
+                    <li>Free Wi-Fi<span><span class="stars-perc"><span style="width:65%"> </span></span>3.5</span></li>
+                  </ul>
+                  <ul>
+                    <li>Comfort<span><span class="stars-perc"><span style="width:85%"> </span></span>4.5</span></li>
+                    <li>Facilities<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>
+                    <li>Value for money<span><span class="stars-perc"><span style="width:100%"> </span></span>5.0</span></li>
+                  </ul>
                 </div>
               </div>
+              @foreach($liveaboard->reviews as $review)
+                <div class="comments">
+                  <div class="comment-body">
+                    <div class="avatar"><img src="/pic/blog/90x90/1.jpg" data-at2x="/pic/blog/90x90/1@2x.jpg" alt></div>
+                    <div class="comment-info">
+                      <div class="comment-meta">
+                        <div class="title">
+                          <h5>{{ $review->title }} <span>{{ $review->first_name }} {{ $review->last_name }}</span></h5>
+                        </div>
+                        <div class="comment-date">
+                          <div class="stars stars-{{ $review->star }}">{{ $review->star }}</div><span>{{ $review->created_at->diffForHumans() }}</span>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="comment-content">
+                        <p>{{ $review->text }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+              @endforeach
+              <div class="reviews-bottom">
+                <h4>You've been to this? Leave a review</h4>
+              </div>
             </div>
-            <div class="reviews-bottom">
-              <h4>You've been in this? Leave a review</h4>
+
+          @else
+          
+            <div class="reviews-wrap">
+              <div class="comments">
+                <h3>No Reviews found</h3>
+              </div>
+              <div class="reviews-bottom">
+                <h4>You've been to this? Leave a review</h4>
+              </div>
             </div>
-          </div>
+
+          @endif
         </div>
         <!-- review -->
         <div class="container">
@@ -170,10 +211,13 @@
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
+          
           <div class="review-content pattern relative">
+            @if(!Auth::guest())
+
             <div class="row">
               <div class="col-md-5 mb-md-30 mb-xs-0">
-                <div class="review-total"><img src="pic/blog/120x120.jpg" data-at2x="pic/blog/120x120@2x.jpg" alt>
+                <div class="review-total"><img src="/pic/blog/120x120.jpg" data-at2x="/pic/blog/120x120@2x.jpg" alt>
                   <div class="review-total-content">
                     <h6>{{ $liveaboard->name }}</h6>
                     <div class="stars stars-{{ $liveaboard->star }}"></div>
@@ -233,6 +277,14 @@
                 </div>
               </div>
             </form>
+
+            @else
+
+            <h4>You need to login to write a review</h4>
+
+            @endif
+            
+            
           </div>
         </div>
         <!-- ! review -->

@@ -960,7 +960,7 @@ hr {
   z-index: 1;
   display: block;
   width: 100%;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #000000;
 }
 
 .cws_divider.short,
@@ -2216,7 +2216,7 @@ nav .inner-nav.mobile_nav.opened ul {
 }
 
 .site-top-panel .top-right-wrap .dropdown ul li a:hover {
-  color: #000000;
+  color: #ffffff;
 }
 
 .site-top-panel .top-right-wrap .dropdown ul li li {
@@ -7471,10 +7471,6 @@ aside .owl-single-item .pic img {
 .comments .comment-body .comment-info {
   margin-left: 130px;
   position: relative;
-}
-
-.comments .comment-body .comment-info .comment-meta {
-  border-bottom: 1px solid #e8ecf0;
 }
 
 .comments .comment-body .comment-info .comment-meta .title {

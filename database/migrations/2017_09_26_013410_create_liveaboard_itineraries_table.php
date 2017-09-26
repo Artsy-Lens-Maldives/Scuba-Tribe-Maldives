@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLiveaboardPhotosTable extends Migration
+class CreateLiveaboardItinerariesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateLiveaboardPhotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('liveaboard_photos', function (Blueprint $table) {
+        Schema::create('liveaboard_itineraries', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('liveaboard_id')->nullable();
-            $table->string('photo_url')->nullable();
+            $table->string('date')->nullable();
+            $table->longtext('detail')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateLiveaboardPhotosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('liveaboard_photos');
+        Schema::dropIfExists('liveaboard_itineraries');
     }
 }

@@ -32,4 +32,12 @@ class liveaboard extends Model
     public function getFirstImageAttribute() {
         return $this->images()->first();
     }
+
+    public function reviews() {
+        return $this->hasMany('App\liveaboard_review', 'liveaboard_id');
+    }
+
+    public function itinerary() {
+        return $this->hasMany('App\liveaboard_itinerary', 'liveaboard_id');
+    }
 }

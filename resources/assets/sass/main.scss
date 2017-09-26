@@ -987,7 +987,7 @@ hr {
     z-index: 1;
     display: block;
     width: 100%;
-    border-bottom: 2px solid $color-white;
+    border-bottom: 2px solid $main-color;
 }
 
 .cws_divider.short,
@@ -7997,7 +7997,7 @@ aside .owl-single-item .pic img {
 }
 
 .comments .comment-body .comment-info .comment-meta {
-    border-bottom: 1px solid #e8ecf0;
+    //
 }
 
 .comments .comment-body .comment-info .comment-meta .title {

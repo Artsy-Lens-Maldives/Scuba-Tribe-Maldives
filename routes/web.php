@@ -34,9 +34,11 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 // Liveaboard Routes
-Route::get('/liveaboard', 'LiveaboardController@index');
-Route::get('/liveaboard/{liveaboard}', 'LiveaboardController@show');
-
+Route::group(['prefix' => 'liveaboard'], function () {
+  Route::get('/', 'LiveaboardController@index');
+  Route::get('/{liveaboard}', 'LiveaboardController@show');
+  Route::get('/add/new', 'LiveaboardController@create');
+});
 // Catamaran Routes
 Route::get('/catamaran', 'CatamaranController@index');
 

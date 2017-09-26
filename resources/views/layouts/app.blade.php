@@ -14,6 +14,7 @@
     
     <link rel="shortcut icon" href="{{url('icon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{url('icon.png')}}" type="image/x-icon">
+    @yield('css')
   </head>
   <body>
     @include('partials.header')    
@@ -24,5 +25,6 @@
     <script src="//www.youtube.com/player_api"></script>
     <script type="text/javascript" src="/js/all.js"></script>
     <script type="text/javascript" src="/js/plugin.js"></script>
+    @yield('js')
   </body>
 </html>

@@ -6,42 +6,42 @@
         <div class="tp-banner-container">
           <div class="tp-banner-slider">
             <ul>
-              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/7.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/7.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
                   <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
                 </div>
               </li>
-              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/1.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/1.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="y:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
                   <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
                 </div>
               </li>
-              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/2.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/2.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:-150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
                   <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
                 </div>
               </li>
-              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/11.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/11.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
                   <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
                 </div>
               </li>
-              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/3.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/3.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="y:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
                   <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
                 </div>
               </li>
-              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/9.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/9.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:-150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
@@ -157,7 +157,7 @@
       </section>
       
       <!-- testimonials section-->
-      <section class="small-section cws_prlx_section bg-blue-40"><img src="/img/bg-2.jpg" alt class="cws_prlx_layer">
+      <section class="small-section cws_prlx_section bg-blue-40"><img src="/img/bg-2.JPG" alt class="cws_prlx_layer">
         <div class="container">
           <div class="row">
             <div class="col-md-8">

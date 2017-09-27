@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row pb-100 pb-md-40">
           <!-- widget footer-->
-          <div class="col-md-6 col-sm-12 mb-sm-30">
+          <div class="col-md-9 col-sm-12 mb-sm-30">
             <div class="logo-soc clearfix">
               <div class="footer-logo"><a href="{{ url('/') }}"><img src="/img/da.png" data-at2x="/img/da.png" alt width="198px" height="70px"></a></div>
             </div>
@@ -13,14 +13,6 @@
             <!-- ! social-->
           </div>
           <!-- ! widget footer-->
-          <!-- widget footer-->
-          <div class="col-md-3 col-sm-6 mb-sm-30">
-            <div class="widget-footer">
-              <h4>Latest Tweets</h4>
-              <div class="twitter-footer align-left"></div>
-            </div>
-          </div>
-          <!-- end widget footer-->
           <!-- widget footer-->
           <div class="col-md-3 col-sm-6">
             <div class="widget-footer">

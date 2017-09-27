@@ -11,7 +11,6 @@ $(document).ready(function() {
 	$(window).on('scroll', progress_bar_loader);
 	cws_page_focus();
 	progress_bar_loader();
-	init_twitter_carusel();
 	init_fancy();
 	search_open ()
 	if($(".cws_prlx_section").length) {

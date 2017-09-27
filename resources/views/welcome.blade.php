@@ -157,13 +157,13 @@
       </section>
       
       <!-- testimonials section-->
-      <section class="small-section cws_prlx_section bg-blue-40"><img src="/img/bg-2.JPG" alt class="cws_prlx_layer">
+      <section class="small-section cws_prlx_section bg-blue-40"><img src="/img/bg-2.jpg" alt class="cws_prlx_layer">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
               <h6 class="title-section-top font-4"></h6>
               <h2 class="title-section alt-2"><span>Reviews</span> About Us</h2>
-              <div class="cws_divider mb-25 mt-5"></div>
+              <div class="cws_divider mb-25 mt-5" style="border-bottom: 2px solid #fff;"></div>
             </div>
           </div>
           <div class="row">

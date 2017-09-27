@@ -1517,7 +1517,7 @@ function flexslider_init(){
 		slideshow: false,
 		itemWidth: 130,
 		itemMargin: 5,
-		asNavFor: '#flex-slider'
+		asNavFor: '#flex-slider',
 	});
 
 	$('#flex-slider').flexslider({
@@ -1525,7 +1525,8 @@ function flexslider_init(){
 		controlNav: false,
 		animationLoop: false,
 		slideshow: false,
-		sync: "#flex-carousel"
+		sync: "#flex-carousel",
+		smoothHeight: true,
 	});
 }
 

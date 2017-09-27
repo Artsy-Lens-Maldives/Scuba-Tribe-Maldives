@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\liveaboard;
+use App\liveaboard_photo;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 
 class LiveaboardController extends Controller
 {
@@ -36,7 +41,17 @@ class LiveaboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $liveaboard = liveaboard::create(Input::except('_token', 'image'));
+        foreach ($request->image as $photo) {
+            $fileName = $request->input('name') . '-' . time() . '-' . $photo->getClientOriginalName();
+            $location = 'public/' . $liveaboard->slug . '/images'; 
+            $file = $photo->storeAs($location, $fileName);
+            liveaboard_photo::create([
+                'liveaboard_id' => $liveaboard->id,
+                'photo_url' => '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $fileName
+            ]);
+        }
+        return 'Successfully created';
     }
 
     /**
@@ -82,5 +97,23 @@ class LiveaboardController extends Controller
     public function destroy(liveaboard $liveaboard)
     {
         //
+    }
+
+    public function image($slug, $filename)
+    {
+        $fileloc = 'app/public/' . $slug . '/' . 'images/' . $filename;
+        $path = storage_path($fileloc);
+    
+        if (!File::exists($path)) {
+          abort(404);
+        }
+    
+        $file = File::get($path);
+        $type = File::mimeType($path);
+    
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+    
+        return $response;
     }
 }

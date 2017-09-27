@@ -11,13 +11,19 @@
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          
-          <div class="review-content pattern relative">
-            <form class="form clearfix">
+          <form class="form clearfix" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <div class="review-content pattern relative mb-15" style="">
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class="trans-uppercase mb-10">Basic Details</h6>
+                  <div class="cws_divider mb-30"></div>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-md-10">
                   <label for="name">Name</label>
-                  <input id="name" itype="text" name="name" value="" size="191" placeholder="Name of liveaboard" aria-required="true" class="form-row">
+                  <input id="name" itype="text" name="name" size="191" placeholder="   Name of liveaboard" aria-required="true" class="form-row">
                 </div>
                 <div class="col-md-2">
                   <label for="rating">Select rating</label>
@@ -37,6 +43,17 @@
                   <label for="boat_features">Boat Features</label>
                   <textarea class="boat_features" id="boat_features" name="boat_features" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
                 </div>
+              </div>
+            </div>
+            
+            <div class="review-content pattern relative mb-15" style="">
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class="trans-uppercase mb-10">Features</h6>
+                  <div class="cws_divider mb-30"></div>
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-md-12">
                   <label for="food_and_drinks">Food and Drinks</label>
                   <textarea class="food_and_drinks" id="food_and_drinks" name="food_and_drinks" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
@@ -49,11 +66,28 @@
                   <label for="gear_rental">Gear rental</label>
                   <textarea class="gear_rental" id="gear_rental" name="gear_rental" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
                 </div>
-                  <input type="submit" value="Add a review" class="cws-button alt float-right">
               </div>
-            </form>
-            
-          </div>
+            </div>
+            <div class="review-content pattern relative mb-15" style="">
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class="trans-uppercase mb-10">Add Photos to gallery</h6>
+                  <div class="cws_divider mb-30"></div>
+                </div>
+              </div>
+              <div class="row mt-15">
+                <div class="col-md-12">
+                    <input type="file" class="form-control" id="images" name="image[]" onchange="preview_images();" multiple/>
+                </div>
+              </div>
+              <div class="row mt-15 mb-15" id="image_preview" style="margin-top: 10px"></div>
+              <div class="row mt-15">
+                <div class="col-md-12">
+                  <input type="submit" value="Add Liveaboard" class="cws-button alt float-right">
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </div>
@@ -78,19 +112,32 @@
 $(function() { 
   $('.description').froalaEditor({
     heightMin: 200,
+    toolbarSticky: false
   })
   $('.boat_features').froalaEditor({
     heightMin: 200,
+    toolbarSticky: false
   })
   $('.food_and_drinks').froalaEditor({
     heightMin: 200,
+    toolbarSticky: false
   })
   $('.diving').froalaEditor({
     heightMin: 200,
+    toolbarSticky: false
   })
   $('.gear_rental').froalaEditor({
     heightMin: 200,
+    toolbarSticky: false
   }) 
 }); 
+</script>
+<script>
+  function preview_images() {
+      var total_file = document.getElementById("images").files.length;
+      for (var i = 0; i < total_file; i++) {
+          $('#image_preview').append("<div class='col-md-3' style='margin: 5px'><img class='img-responsive img-thumbnail' src='" + URL.createObjectURL(event.target.files[i]) + "'></div>");
+      }
+  }
 </script>
 @endsection

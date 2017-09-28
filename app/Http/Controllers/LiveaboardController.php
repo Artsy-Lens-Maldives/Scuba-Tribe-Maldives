@@ -43,7 +43,7 @@ class LiveaboardController extends Controller
     {
         $liveaboard = liveaboard::create(Input::except('_token', 'image'));
         foreach ($request->image as $photo) {
-            $fileName = $request->input('name') . '-' . time() . '-' . $photo->getClientOriginalName();
+            $fileName = $liveaboard->slug . '-' . time() . '-' . $photo->getClientOriginalName();
             $location = 'public/' . $liveaboard->slug . '/images'; 
             $file = $photo->storeAs($location, $fileName);
             liveaboard_photo::create([
@@ -104,8 +104,10 @@ class LiveaboardController extends Controller
         $fileloc = 'app/public/' . $slug . '/' . 'images/' . $filename;
         $path = storage_path($fileloc);
     
+        $failed = "It failed";
+        
         if (!File::exists($path)) {
-          abort(404);
+          return $failed;
         }
     
         $file = File::get($path);

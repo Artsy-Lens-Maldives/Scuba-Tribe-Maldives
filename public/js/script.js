@@ -224,12 +224,12 @@ function sticky_init() {
 		jQuery(window).scroll(function(event){
 			var st = jQuery(this).scrollTop();
 			if (st > lastScrollTop || st <= 120) {
-				sticky_contaner.removeClass('sticky-on');
+				sticky_contaner.removeClass('sticky-on-1');
 			} else {
 				if (jQuery(window).width() <= 1000) {
-					sticky_contaner.removeClass('sticky-on');
+					sticky_contaner.removeClass('sticky-on-1');
 				} else {
-					sticky_contaner.addClass('sticky-on');
+					sticky_contaner.addClass('sticky-on-1');
 				}
 			}
 			lastScrollTop = st;

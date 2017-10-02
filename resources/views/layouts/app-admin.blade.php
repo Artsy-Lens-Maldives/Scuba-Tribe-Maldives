@@ -25,6 +25,16 @@
     <script src="//www.youtube.com/player_api"></script>
     <script type="text/javascript" src="/js/all.js"></script>
     <script type="text/javascript" src="/js/plugin.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107400398-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107400398-1');
+    </script>
     @yield('js')
   </body>
 </html>

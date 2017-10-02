@@ -47,7 +47,7 @@ Route::group(['prefix' => 'catamaran'], function () {
   Route::get('/', 'CatamaranController@index');
   Route::get('{catamaran}', 'CatamaranController@show');
   Route::get('add/new', 'CatamaranController@create');
-  Route::post('add/new', 'CatamaranControllerr@store');
+  Route::post('add/new', 'CatamaranController@store');
   Route::get('{slug}/photo/{filename}', 'CatamaranController@image');
 
 });

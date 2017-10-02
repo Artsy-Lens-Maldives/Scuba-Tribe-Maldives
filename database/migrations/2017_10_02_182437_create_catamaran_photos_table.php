@@ -15,6 +15,8 @@ class CreateCatamaranPhotosTable extends Migration
     {
         Schema::create('catamaran_photos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('catamaran_id')->nullable();
+            $table->string('photo_url')->nullable();
             $table->timestamps();
         });
     }

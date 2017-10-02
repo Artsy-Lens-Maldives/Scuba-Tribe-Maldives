@@ -15,6 +15,9 @@ class CreateCatamaranItinerariesTable extends Migration
     {
         Schema::create('catamaran_itineraries', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('catamaran_id')->nullable();
+            $table->string('date')->nullable();
+            $table->longtext('detail')->nullable();
             $table->timestamps();
         });
     }

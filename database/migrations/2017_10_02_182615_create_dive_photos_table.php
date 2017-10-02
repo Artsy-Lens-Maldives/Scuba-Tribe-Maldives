@@ -14,7 +14,9 @@ class CreateDivePhotosTable extends Migration
     public function up()
     {
         Schema::create('dive_photos', function (Blueprint $table) {
-            $table->increments('id');
+           $table->increments('id');
+            $table->integer('dive_id')->nullable();
+            $table->string('photo_url')->nullable();
             $table->timestamps();
         });
     }

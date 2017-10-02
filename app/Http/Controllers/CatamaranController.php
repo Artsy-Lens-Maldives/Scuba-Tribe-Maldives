@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\catamaran;
-use App\catamaran_photo;
+use App\catamaran_photos;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Input;

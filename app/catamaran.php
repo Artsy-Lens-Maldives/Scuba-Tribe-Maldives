@@ -26,7 +26,7 @@ class catamaran extends Model
     }
 
     public function images() {
-        return $this->hasMany('App\catamaran_photo', 'catamaran_id');
+        return $this->hasMany('App\catamaran_photos', 'catamaran_id');
     }
     
     public function getFirstImageAttribute() {

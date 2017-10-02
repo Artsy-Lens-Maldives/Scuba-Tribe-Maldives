@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\catamaran;
+use App\catamaran_photo;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 
 class CatamaranController extends Controller
 {
@@ -14,7 +19,8 @@ class CatamaranController extends Controller
      */
     public function index()
     {
-        return view('catamaran.index');
+        $catamarans = catamaran::all();
+        return view('catamaran.index', compact('catamarans'));
     }
 
     /**
@@ -24,7 +30,7 @@ class CatamaranController extends Controller
      */
     public function create()
     {
-        //
+        return view('catamaran.create');
     }
 
     /**
@@ -35,7 +41,17 @@ class CatamaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $catamaran = catamaran::create(Input::except('_token', 'image'));
+        foreach ($request->image as $photo) {
+            $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
+            $location = 'public/' . $catamaran->slug . '/images'; 
+            $file = $photo->storeAs($location, $fileName);
+            catamaran_photo::create([
+                'catamaran_id' => $catamaran->id,
+                'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
+            ]);
+        }
+        return 'Successfully created';
     }
 
     /**
@@ -46,7 +62,7 @@ class CatamaranController extends Controller
      */
     public function show(catamaran $catamaran)
     {
-        //
+        return view('catamaran.detail', compact('catamaran'));
     }
 
     /**
@@ -81,5 +97,25 @@ class CatamaranController extends Controller
     public function destroy(catamaran $catamaran)
     {
         //
+    }
+
+    public function image($slug, $filename)
+    {
+        $fileloc = 'app/public/' . $slug . '/' . 'images/' . $filename;
+        $path = storage_path($fileloc);
+    
+        $failed = "It failed";
+        
+        if (!File::exists($path)) {
+          return $failed;
+        }
+    
+        $file = File::get($path);
+        $type = File::mimeType($path);
+    
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+    
+        return $response;
     }
 }

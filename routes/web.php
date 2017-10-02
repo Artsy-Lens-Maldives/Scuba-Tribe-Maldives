@@ -43,7 +43,13 @@ Route::group(['prefix' => 'liveaboard'], function () {
 
 });
 // Catamaran Routes
-Route::get('/catamaran', 'CatamaranController@index');
+Route::group(['prefix' => 'catamaran'], function () {
+  Route::get('/', 'CatamaranController@index');
+  Route::get('{catamaran}', 'CatamaranController@show');
+  Route::get('add/new', 'CatamaranController@create');
+  Route::post('add/new', 'CatamaranControllerr@store');
+  Route::get('{slug}/photo/{filename}', 'CatamaranController@image');
 
+});
 // Diving Spots Routes
 Route::get('/diving-spots', 'DivingSpotController@index');

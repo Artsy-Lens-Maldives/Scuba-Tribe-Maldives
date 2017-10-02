@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCatamaranPhotosTable extends Migration
+class CreateCatamaranItinerariesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateCatamaranPhotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('catamaran_photos', function (Blueprint $table) {
+        Schema::create('catamaran_itineraries', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('catamaran_id')->nullable();
-            $table->string('photo_url')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateCatamaranPhotosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catamaran_photos');
+        Schema::dropIfExists('catamaran_itineraries');
     }
 }

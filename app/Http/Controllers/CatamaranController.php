@@ -46,7 +46,7 @@ class CatamaranController extends Controller
             $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
             $location = 'public/' . $catamaran->slug . '/images'; 
             $file = $photo->storeAs($location, $fileName);
-            catamaran_photo::create([
+            catamaran_photos::create([
                 'catamaran_id' => $catamaran->id,
                 'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
             ]);

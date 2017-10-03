@@ -123,6 +123,7 @@
               </div>
             </div>
           </div>
+          @if(!$liveaboard->vessel_layout_photo == null)
           <div class="row">
             <div class="col-md-12">
               <div class="mb-15 p-30-40">
@@ -131,6 +132,7 @@
               </div>
             </div>
           </div>
+          @endif
         </div>
         <!-- section reviews-->
         <div id="reviews" class="container mb-60">

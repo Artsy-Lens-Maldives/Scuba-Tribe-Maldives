@@ -96,7 +96,7 @@
           </div>
         </div>
         <!-- section location-->
-        <div id="features" class="container mb-50">
+        <!--<div id="features" class="container mb-50">
           <div class="row">
             <div class="col-md-12">
               <h4 class="trans-uppercase mb-10">{{ $catamaran->name }} Features</h4>
@@ -113,8 +113,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
         <!-- section reviews-->
+        @if($catamaran->reviews->isEmpty())
+        
+        @else
         <div id="reviews" class="container mb-60">
           <div class="row">
             <div class="col-md-12">
@@ -122,57 +125,6 @@
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          @if(!$catamaran->reviews->isEmpty())
-
-            <div class="reviews-wrap">
-              <div class="reviews-top pattern relative">
-                <div class="reviews-total" style="background: #afafaf;">
-
-                  <div class="reviews-sub-mark">4.2</div>
-                  <div class="stars-perc"><span style="width:85%"></span></div><span>Based on 67 reviews</span>
-                </div>
-                <div class="reviews-marks">
-                  <ul>
-                    <li>Cleanliness<span><span class="stars-perc"><span style="width:85%"></span></span>4.5</span></li>
-                    <li>Location<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>
-                    <li>Staff<span><span class="stars-perc"><span style="width:100%"></span></span>5.0</span></li>
-                    <li>Free Wi-Fi<span><span class="stars-perc"><span style="width:65%"> </span></span>3.5</span></li>
-                  </ul>
-                  <ul>
-                    <li>Comfort<span><span class="stars-perc"><span style="width:85%"> </span></span>4.5</span></li>
-                    <li>Facilities<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>
-                    <li>Value for money<span><span class="stars-perc"><span style="width:100%"> </span></span>5.0</span></li>
-                  </ul>
-                </div>
-              </div>
-              @foreach($catamaran->reviews as $review)
-                <div class="comments">
-                  <div class="comment-body">
-                    <div class="avatar"><img src="/pic/blog/90x90/1.jpg" data-at2x="/pic/blog/90x90/1@2x.jpg" alt></div>
-                    <div class="comment-info">
-                      <div class="comment-meta">
-                        <div class="title">
-                          <h5>{{ $review->title }} <span>{{ $review->first_name }} {{ $review->last_name }}</span></h5>
-                        </div>
-                        <div class="comment-date">
-                          <div class="stars stars-{{ $review->star }}">{{ $review->star }}</div><span>{{ $review->created_at->diffForHumans() }}</span>
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="comment-content">
-                        <p>{{ $review->text }}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>    
-              @endforeach
-              <div class="reviews-bottom">
-                <h4>You've been to this? Leave a review</h4>
-              </div>
-            </div>
-
-          @else
-          
             <div class="reviews-wrap">
               <div class="comments">
                 <h3>No Reviews found</h3>
@@ -181,9 +133,8 @@
                 <h4>You've been to this? Leave a review</h4>
               </div>
             </div>
-
-          @endif
-        </div>
+          </div>
+        @endif
         <!-- review -->
         <div class="container">
           <div class="row">

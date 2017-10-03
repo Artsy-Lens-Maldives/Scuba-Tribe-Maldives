@@ -62,7 +62,8 @@ class CatamaranController extends Controller
      */
     public function show(catamaran $catamaran)
     {
-        return view('catamaran.detail', compact('catamaran'));
+        $liveaboard = $catamaran;
+        return view('catamaran.detail', compact('liveaboard', 'catamaran'));
     }
 
     /**

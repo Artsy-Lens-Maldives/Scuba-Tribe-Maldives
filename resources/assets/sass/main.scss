@@ -1,41 +1,33 @@
 @import 'variables';
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
-
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400);
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,600);
-
-@import url(https://fonts.googleapis.com/css?family=Hind+Siliguri:400,500,600);
-
-@import url(https://fonts.googleapis.com/css?family=Parisienne);
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato:300|Noto+Serif|Open+Sans:300|Ubuntu:300');
 
 .font-1 {
-    font-family: Hind Siliguri;
+    font-family: 'Noto Serif', serif;
 }
 
 .font-2 {
-    font-family: Roboto;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .font-3 {
-    font-family: Merriweather;
+    font-family: 'Lato', sans-serif;
 }
 
 .font-4 {
-    font-family: Montserrat;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .font-5 {
-    font-family: Parisienne;
+    font-family: 'Droid Sans', sans-serif;
 }
 
 .font-bold {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .font-medium {
-    font-weight: 400;
+    font-weight: 200;
 }
 /**/
 /* Common Style */
@@ -68,7 +60,7 @@ body {
 }
 
 html, body {
-    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: $body-bg;
     line-height: 1.75;
     font-size: 15px;
@@ -223,7 +215,7 @@ ins.alt-5 {
     color: #424d58;
     font-style: normal;
     border-bottom: 1px solid #424d58;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .color-g2 {
@@ -273,7 +265,6 @@ ins.alt-5 {
 
 h1, h2, h3, h4, h5, h6 {
     color: #404040;
-    font-weight: 700;
 }
 
 h1 {
@@ -447,13 +438,8 @@ address {
     padding-bottom: 120px;
 }
 
-h2 span,
-h3 span {
-    font-weight: 600;
-}
-
 .text-w-light {
-    font-weight: 300 !important;
+    font-weight: 200 !important;
 }
 
 .page-section-sub {
@@ -987,7 +973,7 @@ hr {
     z-index: 1;
     display: block;
     width: 100%;
-    border-bottom: 2px solid $main-color;
+    border-bottom: 2px solid #848484;
 }
 
 .cws_divider.short,
@@ -1237,7 +1223,7 @@ header .transparent .inner-nav > ul > li > a:hover {
 }
 
 .inner-nav ul li > a {
-    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
     font-size: 13px;
     font-weight: 600;
     color: #a9b5c1;
@@ -5097,7 +5083,7 @@ nav .inner-nav.mobile_nav.opened ul {
 }
 
 .breadcrumbs .breadcrumbs-item > a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: $color-white;
     font-size: 12px;
 }
@@ -6722,7 +6708,7 @@ body .tparrows {
     color: #a9b5c1;
     cursor: pointer;
     font-weight: 700;
-    font-family: Montserrat;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .accordion .content-title span,
@@ -7093,7 +7079,7 @@ body .tparrows {
 }
 
 .counter-block .counter-name-wrap .counter-name {
-    font-family: "Montserrat";
+    font-family: 'Lato', sans-serif;
     font-size: 12px;
     color: #a9b5c1;
 }
@@ -7330,7 +7316,7 @@ body .tparrows {
 }
 
 .tabs .block-tabs-btn .tabs-btn {
-    font-family: Montserrat;
+    font-family: 'Open Sans', sans-serif;
     color: $main-color;
     font-weight: 600;
     float: left;
@@ -11867,7 +11853,7 @@ form.form .subscribe-submit {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    font-family: Montserrat;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .price_slider .ui-slider-handle .price_label sup {

@@ -34,10 +34,10 @@ class catamaran extends Model
     }
 
     public function reviews() {
-        return $this->hasMany('App\catamaran_review', 'catamaran_id');
+        return $this->hasMany('App\catamaran_reviews', 'catamaran_id');
     }
 
     public function itinerary() {
-        return $this->hasMany('App\catamaran_itinerary', 'catamaran_id');
+        return $this->hasMany('App\catamaran_itineraries', 'catamaran_id');
     }
 }

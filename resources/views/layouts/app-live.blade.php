@@ -21,7 +21,6 @@
     @yield('content')
     
     @include('partials.footer')
-    <script src="//www.youtube.com/player_api"></script>
     <script type="text/javascript" src="/js/all.js"></script>
     <script type="text/javascript" src="/js/plugin.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->

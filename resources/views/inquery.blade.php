@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row" style="">
       <div class="col-md-12">
-        <h4 class="trans-uppercase mb-10">Send an Inquery about (the fuck pacakge)</h4>
+        <h4 class="trans-uppercase mb-10">Send an Inquery about</h4>
         <div class="cws_divider mb-30"></div>
       </div>
     </div>
@@ -17,14 +17,7 @@
 
       <div class="row">
         <div class="col-md-5 mb-md-30 mb-xs-0 mb-30">
-          <div class="review-total"><img src="/pic/blog/120x120.jpg" data-at2x="/pic/blog/120x120@2x.jpg" alt>
-            <div class="review-total-content">
-              
-              <ul class="icon">
-                <li>Maldives<i class="flaticon-suntour-map"></i></li>
-              </ul>
-            </div>
-          </div>
+          
         </div>
       </div>
       <form class="form clearfix">
@@ -36,14 +29,14 @@
             <input type="text" name="email" value="" size="40" placeholder="Last Name" aria-required="true" class="form-row form-row-first">
           </div>
           <div class="col-md-4">
-            <input type="text" name="email" value="" size="40" placeholder="Booking Number" aria-required="true" class="form-row form-row-first">
+            <input type="text" name="email" value="" size="40" placeholder="Phone Number" aria-required="true" class="form-row form-row-first">
           </div>
           <div class="col-md-12">
-            <input type="text" name="password" value="" size="40" placeholder="Title of your review" aria-required="true" class="form-row form-row-last">
+            <input type="text" name="email" value="" size="40" placeholder="Title of your Inquiry" aria-required="true" class="form-row form-row-last">
           </div>
           <div class="col-md-12">
-            <textarea name="message" cols="40" rows="4" placeholder="Message of your review" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
-            <input type="submit" value="Add a review" class="cws-button alt float-right">
+            <textarea name="message" cols="40" rows="4" placeholder="Message of your Inquiry" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
+            <input type="submit" value="Send Inquiry" class="cws-button alt float-right">
           </div>
         </div>
       </form>

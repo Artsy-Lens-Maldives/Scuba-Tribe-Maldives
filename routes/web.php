@@ -53,3 +53,8 @@ Route::group(['prefix' => 'catamaran'], function () {
 });
 // Diving Spots Routes
 Route::get('/diving-spots', 'DivingSpotController@index');
+
+// Inquery.blade
+Route::get('/inquery', function () {
+    return view('inquery');
+});

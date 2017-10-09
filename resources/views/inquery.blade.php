@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row" style="">
       <div class="col-md-12">
-        <h4 class="trans-uppercase mb-10">Send an Inquery about</h4>
+        <h4 class="trans-uppercase mb-10">Send an Inquiry about <strong>{{ $name }}</strong></h4>
         <div class="cws_divider mb-30"></div>
       </div>
     </div>

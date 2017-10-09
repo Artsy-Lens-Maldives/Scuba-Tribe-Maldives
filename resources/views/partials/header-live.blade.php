@@ -14,16 +14,16 @@
             </div>
             <div class="col-md-6 col-sm-5 text-right">
               <div class="top-right-wrap">
-                <div class="top-login"><a href="#">My Account</a></div>
+                <!-- <div class="top-login"><a href="#">My Account</a></div> -->
                 <div class="curr-wrap dropdown">
                   <div>
                     <ul>
                       <li><a href="#" class="lang-sel icl-en">Currency<i class="fa fa-angle-down"></i></a>
                         <ul>
                           <li><a href="#">USD</a></li>
-                          <li><a href="#">EUR</a></li>
-                          <li> <a href="#">GBP</a></li>
-                          <li> <a href="#">AUD</a></li>
+                          <!-- <li><a href="#">EUR</a></li> -->
+                          <!-- <li> <a href="#">GBP</a></li> -->
+                          <!-- <li> <a href="#">AUD</a></li> -->
                         </ul>
                       </li>
                     </ul>
@@ -35,8 +35,8 @@
                       <li><a href="#" class="lang-sel icl-en">Language <i class="fa fa-angle-down"></i></a>
                         <ul>
                           <li><a href="#">English</a></li>
-                          <li> <a href="#">Deutsch</a></li>
-                          <li> <a href="#">Espanol</a></li>
+                          <!-- <li> <a href="#">Deutsch</a></li> -->
+                          <!-- <li> <a href="#">Espanol</a></li> -->
                         </ul>
                       </li>
                     </ul>
@@ -74,11 +74,11 @@
               <li class="slash">/</li>
               <!-- End Catamaran -->
 
-              <!-- Diving Spots -->
-              <li><a href="{{ url('/diving-spots') }}">Diving Spots</a>
+              <!-- Local Island -->
+              <li><a href="{{ url('/local-island') }}">Local Island</a>
               </li>
               <li class="slash">/</li>
-              <!-- End Diving Spots -->
+              <!-- End Local Island -->
 
               <!-- Caontact-Us -->
               <li><a href="pag{{ url('/contact-us') }}">Contact Us</a></li>

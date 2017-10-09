@@ -24,7 +24,8 @@ class InqueryController extends Controller
      */
     public function create()
     {
-        //
+        $name = "Test";
+        return view('inquery', compact('name'));
     }
 
     /**

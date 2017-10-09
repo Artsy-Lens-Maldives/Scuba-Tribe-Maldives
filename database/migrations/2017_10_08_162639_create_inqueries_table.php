@@ -15,6 +15,9 @@ class CreateInqueriesTable extends Migration
     {
         Schema::create('inqueries', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->nullable();
+            $table->integer('type_id')->nullable();
+            $table->string('type')->nullable();
             $table->string('fname')->nullable();
             $table->string('lname')->nullable();
             $table->string('phone')->nullable();

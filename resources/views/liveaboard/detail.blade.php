@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="bg-gray-3 p-30-40">
+              <div class="bg-gray-3 p-30-40"style="list-style: square;">
                 <h4>Boat Features</h4>
                 {!! $liveaboard->boat_features !!}
               </div>
@@ -74,10 +74,10 @@
                       <h4>{{ $itinerary->date }}</h4>
                     </td>
                     <td style="vertical-align: middle;"> 
-                      {{ $itinerary->detail }}
+                      {!! $itinerary->detail !!}
                     </td>
                     <td style="vertical-align: middle;">
-                      <a href="#" class="cws-button alt gray">Book now</a>
+                      <a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}/inquiry" class="cws-button alt gray">Send Inquiry</a>
                     </td>
                     @endforeach
 
@@ -214,7 +214,6 @@
           </div>
           
           <div class="review-content pattern relative">
-            @if(!Auth::guest())
 
             <div class="row">
               <div class="col-md-5 mb-md-30 mb-xs-0">
@@ -278,13 +277,6 @@
                 </div>
               </div>
             </form>
-
-            @else
-
-            <h4>You need to login to write a review</h4>
-
-            @endif
-            
             
           </div>
         </div>

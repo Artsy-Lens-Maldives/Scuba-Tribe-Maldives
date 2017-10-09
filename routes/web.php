@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'liveaboard'], function () {
   Route::get('/', 'LiveaboardController@index');
   Route::get('{liveaboard}', 'LiveaboardController@show');
+  Route::get('{liveaboard}/inquiry', 'InqueryController@create');
   Route::get('add/new', 'LiveaboardController@create');
   Route::post('add/new', 'LiveaboardController@store');
   Route::get('{slug}/photo/{filename}', 'LiveaboardController@image');

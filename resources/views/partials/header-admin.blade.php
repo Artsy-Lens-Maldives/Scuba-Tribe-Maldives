@@ -86,19 +86,15 @@
               <!-- End Catamaran -->
 
               <!-- Diving Spots -->
-              <li><a href="{{ url('admin/diving-spots') }}" class="mn-has-sub">Local Island<i class="fa fa-angle-down button_open"></i></a>
+              <li><a href="{{ url('admin/local-island') }}" class="mn-has-sub">Local Island<i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
-                  <li><a href="{{ url('admin/diving-spots/add') }}">Add New</a></li>
+                  <li><a href="{{ url('admin/local-island/add') }}">Add New</a></li>
+                  <li><a href="{{ url('admin/local-island/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>
               <li class="slash">/</li>              
               <!-- End Diving Spots -->
               
-              <!-- Inquiries -->
-              <li>
-                <a href="{{ url('admin/inquiry') }}">Inquiries</a>
-              </li>
-              <!-- End Inquiries -->
             </ul>
           </div>
           <!-- End Main Menu-->

@@ -24,4 +24,8 @@ class inquery extends Model
         return $this->belongsTo('App\catamaran', 'type_id');
     }
 
+    public function divespot() {
+        return $this->belongsTo('App\diving_spot', 'type_id');
+    }
+
 }

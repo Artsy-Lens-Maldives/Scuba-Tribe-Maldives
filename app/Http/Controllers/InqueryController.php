@@ -19,7 +19,7 @@ class InqueryController extends Controller
         
         $inquery->type_id = $id;
         $inquery->type = $type;
-        $inquery->iten_id = $iten_id;
+        $inquery->iten_id = "0";
         $inquery->save();
         
         return redirect()->back()->with('alert-success', 'Your Inquiry has been sent. We wil get back to you as soon as possible.');

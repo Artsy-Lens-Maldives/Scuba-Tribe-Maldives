@@ -48,7 +48,7 @@ Route::group(['prefix' => 'local-island'], function () {
 
     Route::get('/inquiry', function () {
         $inquiries = App\inquery::where('type', 'local-island')->get();
-        return view('inquiry.cat-table', compact('inquiries'));
+        return view('inquiry.dive-table', compact('inquiries'));
     });
 
 });

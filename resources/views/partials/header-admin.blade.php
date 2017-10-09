@@ -64,24 +64,31 @@
               <!-- End Home -->
               
               <!-- Liveaboard -->
-              <li class="active">
-                <a href="{{ url('/liveaboard') }}">All Liveaboards</a>
+              <li><a href="{{ url('admin/liveaboard') }}" class="mn-has-sub">All Liveaboards <i class="fa fa-angle-down button_open"></i></a>
+                <ul class="mn-sub">
+                  <li><a href="{{ url('admin/liveaboard/add') }}">Add New</a></li>
+                  <li><a href="{{ url('admin/liveaboard/itinerary/add') }}">Add Itinerary</a></li>
+                </ul>
               </li>
               <li class="slash">/</li>
               <!-- End Liveaboard -->
 
               <!-- Catamaran -->
-              <li>
-                <a href="{{ url('/catamaran') }}">All Catamarans</a>
+              <li><a href="{{ url('admin/catamaran') }}" class="mn-has-sub">All Catamarans <i class="fa fa-angle-down button_open"></i></a>
+                <ul class="mn-sub">
+                  <li><a href="{{ url('admin/catamaran/add') }}">Add New</a></li>
+                  <li><a href="{{ url('admin/catamaran/itinerary/add') }}">Add Itinerary</a></li>
+                </ul>
               </li>
               <li class="slash">/</li>
               <!-- End Catamaran -->
 
               <!-- Diving Spots -->
-              <li>
-                <a href="{{ url('/diving-spots') }}">All Diving Spots</a>
+              <li><a href="{{ url('admin/diving-spots') }}" class="mn-has-sub">All Diving Spots<i class="fa fa-angle-down button_open"></i></a>
+                <ul class="mn-sub">
+                  <li><a href="{{ url('admin/diving-spots/add') }}">Add New</a></li>
+                </ul>
               </li>              
-              <li class="slash">/</li>
               <!-- End Diving Spots -->
               <!-- Search
               <li class="search"><a href="#" class="mn-has-sub">Search</a>

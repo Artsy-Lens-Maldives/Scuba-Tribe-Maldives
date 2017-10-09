@@ -39,28 +39,19 @@ Route::group(['prefix' => 'liveaboard'], function () {
   Route::get('/', 'LiveaboardController@index');
   Route::get('{liveaboard}', 'LiveaboardController@show');
   
-  Route::get('add/new', 'LiveaboardController@create');
-  Route::post('add/new', 'LiveaboardController@store');
-  
   Route::get('{slug}/photo/{filename}', 'LiveaboardController@image');
-  
-  Route::get('itinerary/add/new', 'LiveaboardController@itinerary');
-  Route::post('itinerary/add/new', 'LiveaboardController@itinerary_add');
 
 });
 // Catamaran Routes
 Route::group(['prefix' => 'catamaran'], function () {
+
   Route::get('/', 'CatamaranController@index');
   Route::get('{catamaran}', 'CatamaranController@show');
-  
-  Route::get('add/new', 'CatamaranController@create');
-  Route::post('add/new', 'CatamaranController@store');
-  
+    
   Route::get('{slug}/photo/{filename}', 'CatamaranController@image');
 
-  Route::get('itinerary/add/new', 'CatamaranController@itinerary');
-  Route::post('itinerary/add/new', 'CatamaranController@itinerary_add');
 });
+
 // Diving Spots Routes
 Route::get('/diving-spots', 'DivingSpotController@index');
 

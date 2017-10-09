@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\liveaboard;
 use App\liveaboard_photo;
+use App\liveaboard_itinerary;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Input;
@@ -117,5 +118,17 @@ class LiveaboardController extends Controller
         $response->header("Content-Type", $type);
     
         return $response;
+    }
+
+    public function itinerary()
+    {
+        $liveaboards = liveaboard::all();
+        return view('liveaboard.itinerary', compact('liveaboards'));   
+    }
+    
+    public function itinerary_add()
+    {
+        liveaboard_itinerary::create(Input::except('_token'));
+        return redirect()->back()->with('alert-success', 'Successfully added itenerary');
     }
 }

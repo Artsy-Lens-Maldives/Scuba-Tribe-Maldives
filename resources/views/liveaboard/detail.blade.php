@@ -66,31 +66,29 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
                   @if(!$liveaboard->itinerary->isEmpty())
-
                     @foreach($liveaboard->itinerary as $itinerary)
-                    <td style="vertical-align: middle;">
-                      <h4>{{ $itinerary->date }}</h4>
-                    </td>
-                    <td style="vertical-align: middle;"> 
-                      {!! $itinerary->detail !!}
-                    </td>
-                    <td style="vertical-align: middle;">
-                      <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->name }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
-                    </td>
+                    <tr>
+                      <td class="col-md-1" style="vertical-align: middle;">
+                        <h4>{{ $itinerary->date }}</h4>
+                      </td>
+                      <td class="col-md-10" style="vertical-align: middle;"> 
+                        {!! $itinerary->detail !!}
+                      </td>
+                      <td class="col-md-1" style="vertical-align: middle;">
+                        <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->name }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
+                      </td>
+                    </tr>
                     @endforeach
-
                   @else
-
-                    <td></td>
-                    <td style="vertical-align: middle;">
-                      <h4>No Itineraries Found</h4>
-                    </td>
-                    <td></td>
-                  
+                    <tr>
+                      <td></td>
+                      <td style="vertical-align: middle;">
+                        <h4>No Itineraries Found</h4>
+                      </td>
+                      <td></td>
+                    </tr>
                   @endif
-                </tr>
               </tbody>
             </table>
           </div>

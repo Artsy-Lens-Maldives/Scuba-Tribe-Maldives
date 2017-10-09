@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\catamaran;
 use App\catamaran_photos;
+use App\catamaran_itineraries;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Input;
@@ -118,5 +119,17 @@ class CatamaranController extends Controller
         $response->header("Content-Type", $type);
     
         return $response;
+    }
+
+    public function itinerary()
+    {
+        $catamarans = catamaran::all();
+        return view('catamaran.itinerary', compact('catamarans'));   
+    }
+    
+    public function itinerary_add()
+    {
+        catamaran_itineraries::create(Input::except('_token'));
+        return redirect()->back()->with('alert-success', 'Successfully added itenerary');
     }
 }

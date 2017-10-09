@@ -68,27 +68,28 @@
               <tbody>
                 <tr>
                   @if(!$catamaran->itinerary->isEmpty())
-
                     @foreach($catamaran->itinerary as $itinerary)
-                    <td style="vertical-align: middle;">
-                      <h4>{{ $itinerary->date }}</h4>
-                    </td>
-                    <td style="vertical-align: middle;"> 
-                      {{ $itinerary->detail }}
-                    </td>
-                    <td style="vertical-align: middle;">
-                      <a href="{{ url('inquiry') }}/{{ $catamaran->id }}/{{ $catamaran->name }}/catamaran/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
-                    </td>
+                    <tr>
+                      <td style="vertical-align: middle;">
+                        <h4>{{ $itinerary->date }}</h4>
+                      </td>
+                      <td style="vertical-align: middle;"> 
+                        {!! $itinerary->detail !!}
+                      </td>
+                      <td style="vertical-align: middle;">
+                        <a href="{{ url('inquiry') }}/{{ $catamaran->id }}/{{ $catamaran->name }}/catamaran/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
+                      </td>
+                    </tr>
                     @endforeach
 
                   @else
-
-                    <td></td>
-                    <td style="vertical-align: middle;">
-                      <h4>No Itineraries Found</h4>
-                    </td>
-                    <td></td>
-                  
+                    <tr>
+                      <td></td>
+                      <td style="vertical-align: middle;">
+                        <h4>No Itineraries Found</h4>
+                      </td>
+                      <td></td>
+                    </tr>
                   @endif
                 </tr>
               </tbody>

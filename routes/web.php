@@ -47,6 +47,7 @@ Route::group(['prefix' => 'liveaboard'], function () {
   Route::get('{slug}/photo/{filename}', 'LiveaboardController@image');
 
 });
+
 // Catamaran Routes
 Route::group(['prefix' => 'catamaran'], function () {
 
@@ -57,8 +58,16 @@ Route::group(['prefix' => 'catamaran'], function () {
 
 });
 
-// Diving Spots Routes
-Route::get('/diving-spots', 'DivingSpotController@index');
+// Dive Spots Routes
+Route::group(['prefix' => 'local-island'], function () {
+  
+    Route::get('/', 'DivingSpotController@index');
+    Route::get('{diving_spot}', 'DivingSpotController@show');
+      
+    Route::get('{slug}/photo/{filename}', 'DivingSpotController@image');
+  
+  });
+
 
 // Inquiry route
 Route::get('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@show');

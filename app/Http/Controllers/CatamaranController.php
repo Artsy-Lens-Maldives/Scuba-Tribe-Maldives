@@ -42,10 +42,19 @@ class CatamaranController extends Controller
      */
     public function store(Request $request)
     {
-        $catamaran = catamaran::create(Input::except('_token', 'image'));
+        $catamaran = catamaran::create(Input::except('_token', 'image', 'catamaran_layout_photo'));
+        
+        $layout_photo = $request->catamaran_layout_photo;
+        
+        $layout_name = $catamaran->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
+        $location = 'public/' . $catamaran->slug . '/images'; 
+        $layout_file = $layout_photo->storeAs($location, $layout_name);
+        
+        $catamaran->catamaran_layout_photo = '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $layout_name;
+        $catamaran->save();
+        
         foreach ($request->image as $photo) {
             $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
-            $location = 'public/' . $catamaran->slug . '/images'; 
             $file = $photo->storeAs($location, $fileName);
             catamaran_photos::create([
                 'catamaran_id' => $catamaran->id,

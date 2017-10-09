@@ -81,6 +81,19 @@
             <div class="review-content pattern relative mb-15" style="">
               <div class="row">
                 <div class="col-md-12">
+                  <h6 class="trans-uppercase mb-10">Add Vessel Layout Photo</h6>
+                  <div class="cws_divider mb-30"></div>
+                </div>
+              </div>
+              <div class="row mt-15">
+                <div class="col-md-12">
+                    <input type="file" class="form-control" name="catamaran_layout_photo"/>
+                </div>
+              </div>
+            </div>
+            <div class="review-content pattern relative mb-15" style="">
+              <div class="row">
+                <div class="col-md-12">
                   <h6 class="trans-uppercase mb-10">Add Photos to gallery</h6>
                   <div class="cws_divider mb-30"></div>
                 </div>

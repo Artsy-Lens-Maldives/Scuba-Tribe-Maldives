@@ -47,6 +47,13 @@
             <div class="col-md-12">
               {!! $liveaboard->description !!}
             </div>
+            <div class="col-md-12">
+              <h4 class="mb-20">Liveaboard Layout Photo</h4>
+              <div class="cws_divider mb-30"></div>
+              <center>
+                <img src="{{ $liveaboard->vessel_layout_photo }}" class="img-responsive" alt="{{ $liveaboard->name }} layout photo">
+              </center>
+            </div>
           </div>
         </div>
         <!-- section prices-->

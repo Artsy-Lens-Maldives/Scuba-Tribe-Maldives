@@ -42,7 +42,18 @@ class LiveaboardController extends Controller
      */
     public function store(Request $request)
     {
-        $liveaboard = liveaboard::create(Input::except('_token', 'image'));
+        $liveaboard = liveaboard::create(Input::except('_token', 'image', 'catamaran_layout_photo'));
+        
+        $layout_photo = $request->catamaran_layout_photo;
+        
+        $layout_name = $liveaboard->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
+        $location = 'public/' . $liveaboard->slug . '/images'; 
+        $layout_file = $layout_photo->storeAs($location, $layout_name);
+        
+        $liveaboard->vessel_layout_photo = '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $layout_name;
+        $liveaboard->save();
+        
+
         foreach ($request->image as $photo) {
             $fileName = $liveaboard->slug . '-' . time() . '-' . $photo->getClientOriginalName();
             $location = 'public/' . $liveaboard->slug . '/images'; 

@@ -47,6 +47,13 @@
             <div class="col-md-12">
               {!! $catamaran->description !!}
             </div>
+            <div class="col-md-12">
+              <h4 class="mb-20">Catamaran Layout Photo</h4>
+              <div class="cws_divider mb-30"></div>
+              <center>
+                <img src="{{ $catamaran->catamaran_layout_photo }}" class="img-responsive" alt="{{ $catamaran->name }} layout photo">
+              </center>
+            </div>
           </div>
         </div>
         <!-- section prices-->

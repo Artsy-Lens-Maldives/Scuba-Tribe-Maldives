@@ -1,4 +1,4 @@
-@extends('admin.layout.auth')
+@extends('layouts.app-admin')
 
 @section('content')
     <div class="content-body" style="margin-top: 100px">

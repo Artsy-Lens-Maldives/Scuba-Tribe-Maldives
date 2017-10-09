@@ -68,6 +68,7 @@
                 <ul class="mn-sub">
                   <li><a href="{{ url('admin/liveaboard/add') }}">Add New</a></li>
                   <li><a href="{{ url('admin/liveaboard/itinerary/add') }}">Add Itinerary</a></li>
+                  <li><a href="{{ url('admin/liveaboard/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>
               <li class="slash">/</li>
@@ -78,6 +79,7 @@
                 <ul class="mn-sub">
                   <li><a href="{{ url('admin/catamaran/add') }}">Add New</a></li>
                   <li><a href="{{ url('admin/catamaran/itinerary/add') }}">Add Itinerary</a></li>
+                  <li><a href="{{ url('admin/catamaran/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>
               <li class="slash">/</li>

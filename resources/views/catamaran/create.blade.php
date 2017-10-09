@@ -5,6 +5,16 @@
     <div class="content-body" style="margin-top: 100px">
       <section class="page-section pt-0 pb-50">
         <div class="container">
+          <div class="flash-message">
+            @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+              @if(Session::has('alert-' . $msg))
+
+              <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+              <div class="cws_divider mb-30"></div>
+              @endif
+            @endforeach
+          </div> 
+          <!-- end .flash-message -->
           <div class="row">
             <div class="col-md-12">
               <h4 class="trans-uppercase mb-10">Add a new Catamaran</h4>

@@ -13,7 +13,8 @@
           <div class="cws_divider mb-30"></div>
           @endif
         @endforeach
-      </div> <!-- end .flash-message -->
+      </div> 
+      <!-- end .flash-message -->
 
       <div class="row" style="">
         <div class="col-md-12">

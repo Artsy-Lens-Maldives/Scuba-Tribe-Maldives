@@ -118,7 +118,7 @@
               </span>
             </h2>
           </div>
-          <div class="breadright"><a href="#" class="cws-button small alt">Get price</a>
+          <div class="breadright"><a href="#itinerary" class="cws-button small alt">Get price</a>
             <p>Best Price Guarantee</p>
           </div>
         </div>

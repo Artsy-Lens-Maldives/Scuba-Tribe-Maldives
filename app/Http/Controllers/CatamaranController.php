@@ -52,7 +52,7 @@ class CatamaranController extends Controller
                 'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
             ]);
         }
-        return 'Successfully created';
+        return redirect()->back()->with('alert-success', 'Successfully added new Catamaran');
     }
 
     /**

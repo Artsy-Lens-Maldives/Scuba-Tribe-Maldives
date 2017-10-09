@@ -52,7 +52,7 @@ class LiveaboardController extends Controller
                 'photo_url' => '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $fileName
             ]);
         }
-        return 'Successfully created';
+        return redirect()->back()->with('alert-success', 'Successfully added new Liveaboard');
     }
 
     /**

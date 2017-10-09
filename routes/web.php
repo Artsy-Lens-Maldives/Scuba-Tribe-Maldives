@@ -57,9 +57,10 @@ Route::get('/diving-spots', 'DivingSpotController@index');
 
 // Inquiry route
 Route::get('/inquiry', function () {
-    return view('inquery');
+    return view('inquiry.inquery');
 });
+
 // table.blade
 Route::get('/table', function () {
-    return view('table');
+    return view('inquiry.table');
 });

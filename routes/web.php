@@ -59,3 +59,7 @@ Route::get('/diving-spots', 'DivingSpotController@index');
 Route::get('/inquiry', function () {
     return view('inquery');
 });
+// table.blade
+Route::get('/table', function () {
+    return view('table');
+});

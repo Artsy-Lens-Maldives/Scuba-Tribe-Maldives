@@ -58,8 +58,3 @@ Route::get('/diving-spots', 'DivingSpotController@index');
 // Inquiry route
 Route::get('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@show');
 Route::post('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@store');
-
-// table.blade
-Route::get('/table', function () {
-    return view('inquiry.table');
-});

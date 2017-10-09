@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato:300|Noto+Serif|Open+Sans:300|Ubuntu:300');
 
+.input-sm {
+    line-height: 1.5 !important;
+}
+
 .font-1 {
     font-family: 'Noto Serif', serif;
 }
@@ -309,13 +313,6 @@ ol {
     list-style-type: decimal-leading-zero;
     list-style-position: inside;
     padding: 0;
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none !important;
 }
 
 ul li {
@@ -12704,7 +12701,7 @@ table.table thead tr {
 }
 
 table.table thead tr th {
-    color: #a9b5c1;
+    color: #3D3D3D;
     text-transform: uppercase;
     padding: 17px;
     font-size: 12px;
@@ -12719,7 +12716,7 @@ table.table thead tr th:last-child {
 
 table.table tbody tr td {
     padding: 17px;
-    color: #939ea9;
+    color: #000000;
     border-right: 1px solid #e6eaed;
 }
 

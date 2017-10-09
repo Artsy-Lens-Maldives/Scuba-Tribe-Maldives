@@ -16,10 +16,11 @@ class InqueryController extends Controller
     public function store($id, $name, $type, $iten_id)
     {
         $inquery = inquery::create(Input::except('_token'));
+        
         $inquery->type_id = $id;
         $inquery->type = $type;
         $inquery->iten_id = $iten_id;
-
+        $inquery->save();
         
         return redirect()->back()->with('alert-success', 'Your Inquiry has been sent. We wil get back to you as soon as possible.');
     }

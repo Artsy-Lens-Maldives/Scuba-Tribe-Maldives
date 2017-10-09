@@ -58,13 +58,13 @@
             <ul class="clearlist">
               <!-- Home -->
               <li>
-                <a href="{{ url('/') }}" class="active">Back to Home</a>
+                <a href="{{ url('/') }}" class="active">Home</a>
               </li>
               <li class="slash">/</li>
               <!-- End Home -->
               
               <!-- Liveaboard -->
-              <li><a href="{{ url('admin/liveaboard') }}" class="mn-has-sub">All Liveaboards <i class="fa fa-angle-down button_open"></i></a>
+              <li><a href="{{ url('admin/liveaboard') }}" class="mn-has-sub">Liveaboards <i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
                   <li><a href="{{ url('admin/liveaboard/add') }}">Add New</a></li>
                   <li><a href="{{ url('admin/liveaboard/itinerary/add') }}">Add Itinerary</a></li>
@@ -74,7 +74,7 @@
               <!-- End Liveaboard -->
 
               <!-- Catamaran -->
-              <li><a href="{{ url('admin/catamaran') }}" class="mn-has-sub">All Catamarans <i class="fa fa-angle-down button_open"></i></a>
+              <li><a href="{{ url('admin/catamaran') }}" class="mn-has-sub">Catamarans <i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
                   <li><a href="{{ url('admin/catamaran/add') }}">Add New</a></li>
                   <li><a href="{{ url('admin/catamaran/itinerary/add') }}">Add Itinerary</a></li>
@@ -84,30 +84,19 @@
               <!-- End Catamaran -->
 
               <!-- Diving Spots -->
-              <li><a href="{{ url('admin/diving-spots') }}" class="mn-has-sub">All Diving Spots<i class="fa fa-angle-down button_open"></i></a>
+              <li><a href="{{ url('admin/diving-spots') }}" class="mn-has-sub">Local Island<i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
                   <li><a href="{{ url('admin/diving-spots/add') }}">Add New</a></li>
                 </ul>
-              </li>              
-              <!-- End Diving Spots -->
-              <!-- Search
-              <li class="search"><a href="#" class="mn-has-sub">Search</a>
-                <ul class="search-sub">
-                  <li>
-                    <div class="container">
-                      <div class="mn-wrap">
-                        <form method="post" class="form">
-                          <div class="search-wrap">
-                            <input type="text" placeholder="Where will you go next?" class="form-control search-field"><i class="flaticon-suntour-search search-icon"></i>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="close-button"><span>Search</span></div>
-                    </div>
-                  </li>
-                </ul>
               </li>
-              End Search-->
+              <li class="slash">/</li>              
+              <!-- End Diving Spots -->
+              
+              <!-- Inquiries -->
+              <li>
+                <a href="{{ url('admin/inquiry') }}">Inquiries</a>
+              </li>
+              <!-- End Inquiries -->
             </ul>
           </div>
           <!-- End Main Menu-->

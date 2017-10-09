@@ -19,14 +19,26 @@ Route::group(['prefix' => 'liveaboard'], function () {
     Route::get('itinerary/add', 'LiveaboardController@itinerary');
     Route::post('itinerary/add', 'LiveaboardController@itinerary_add');
 
+    Route::get('/inquiry', function () {
+        $inquiries = App\inquery::where('type', 'liveaboard')->get();
+        return view('inquiry.live-table', compact('inquiries'));
+    });
+
 });
 
 Route::group(['prefix' => 'catamaran'], function () {
     
-  Route::get('add', 'CatamaranController@create');
-  Route::post('add', 'CatamaranController@store');
-  
-  Route::get('itinerary/add', 'CatamaranController@itinerary');
-  Route::post('itinerary/add', 'CatamaranController@itinerary_add');
+    Route::get('add', 'CatamaranController@create');
+    Route::post('add', 'CatamaranController@store');
+    
+    Route::get('itinerary/add', 'CatamaranController@itinerary');
+    Route::post('itinerary/add', 'CatamaranController@itinerary_add');
+
+    Route::get('/inquiry', function () {
+        $inquiries = App\inquery::where('type', 'catamaran')->get();
+        return view('inquiry.cat-table', compact('inquiries'));
+    });
 
 });
+
+// table.blade

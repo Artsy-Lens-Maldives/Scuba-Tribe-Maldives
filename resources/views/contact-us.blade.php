@@ -20,36 +20,8 @@
           </div>
           <div class="col-md-6">
             <div class="map-wrapper">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25295.930156304785!2d16.371063311644324!3d48.208404844730474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07986fcad78b%3A0x73f5a4d267cc4174!2zTmFnbGVyZ2Fzc2UgMTAsIDEwMTAgV2llbiwg0JDQstGB0YLRgNC40Y8!5e0!3m2!1sru!2sua!4v1453294615596" allowfullscreen=""></iframe>
+              <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB9LZeVoEfQZHvSUT5lpVdD5kYZZNYjo6g&center=4.2108213,73.5399387&zoom=14"></iframe>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="element-section pattern bg-gray-3 relative pt-60 pb-100">
-        <div class="container">
-          <h4 class="title-section mb-20"><span class="font-bold">Contact us</span></h4>
-          <div class="widget-contact-form pb-0">
-            <!-- contact-form-->
-            <div class="email_server_responce"></div>
-            <form action="php/contacts-process.php" method="post" class="form contact-form alt clearfix">
-              <div class="row">
-                <div class="col-md-6 clearfix">
-                  <div class="input-container">
-                    <input type="text" name="name" value="" size="40" placeholder="Name" aria-invalid="false" aria-required="true" class="form-row form-row-first">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="input-container">
-                    <input type="text" name="email" value="" size="40" placeholder="Email" aria-required="true" class="form-row form-row-last">
-                  </div>
-                </div>
-              </div>
-              <div class="input-container">
-                <textarea name="message" cols="40" rows="4" placeholder="Comment" aria-invalid="false" aria-required="true"></textarea>
-              </div>
-              <input type="submit" value="Submit now" class="cws-button alt">
-            </form>
-            <!-- /contact-form-->
           </div>
         </div>
       </div>

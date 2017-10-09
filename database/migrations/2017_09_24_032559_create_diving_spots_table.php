@@ -15,6 +15,13 @@ class CreateDivingSpotsTable extends Migration
     {
         Schema::create('diving_spots', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
+            $table->integer('star')->nullable();
+            $table->longtext('description')->nullable();
+            $table->string('owner_address')->nullable();
+            $table->string('email')->nullable();
+            $table->string('website')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

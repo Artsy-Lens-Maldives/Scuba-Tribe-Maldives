@@ -41,4 +41,16 @@ Route::group(['prefix' => 'catamaran'], function () {
 
 });
 
+Route::group(['prefix' => 'local-island'], function () {
+    
+    Route::get('add', 'DivingSpotController@create');
+    Route::post('add', 'DivingSpotController@store');
+
+    Route::get('/inquiry', function () {
+        $inquiries = App\inquery::where('type', 'local-island')->get();
+        return view('inquiry.cat-table', compact('inquiries'));
+    });
+
+});
+
 // table.blade

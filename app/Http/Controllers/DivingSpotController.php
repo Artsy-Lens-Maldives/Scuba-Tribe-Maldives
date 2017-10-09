@@ -14,7 +14,8 @@ class DivingSpotController extends Controller
      */
     public function index()
     {
-        return view('diving-spots.index');
+        $divespots = diving_spot::all();
+        return view('diving-spots.index', compact('divespots'));
     }
 
     /**
@@ -46,7 +47,8 @@ class DivingSpotController extends Controller
      */
     public function show(diving_spot $diving_spot)
     {
-        //
+        $liveaboard = $diving_spot;
+        return view('diving-spots.detail', compact('liveaboard', 'diving_spot'));
     }
 
     /**

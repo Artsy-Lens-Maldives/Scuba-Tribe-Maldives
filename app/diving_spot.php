@@ -34,6 +34,6 @@ class diving_spot extends Model
     }
 
     public function reviews() {
-        return $this->hasMany('App\dive_review', 'dive_id');
+        return $this->hasMany('App\dive_reviews', 'dive_id');
     }
 }

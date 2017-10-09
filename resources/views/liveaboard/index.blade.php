@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="content-body">
+    <div class="content-body">
       <div class="container page">
         <h2 class="title-section mb-5">Liveaboards</h2>
         <hr style="border-bottom: 2px solid #000000;">
@@ -47,6 +47,6 @@
           
         
       </div>
- 
     </div>
+
 @endsection

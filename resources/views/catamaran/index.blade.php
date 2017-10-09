@@ -24,7 +24,7 @@
                     <h6 class="blog-title">{{ $catamaran->name }}</h6></a>
                   <div class="stars stars-{{ $catamaran->star }}"></div>
                   <div class="recom-price"><span style="font-size: 18px;" class="font-1"><b>Send an Inquiry for prices </b></div>
-                  <p class="mb-30">Quisque egestas a est in convallis. Maecenas pellentesque.</p><a href="{{ url('catamaran/') }}/{{ $catamaran->slug }}" class="recom-button">Read more</a><a href="{{ url('catamaran/') }}/{{ $catamaran->slug }}" class="cws-button small alt">Send Inquiry</a>
+                  <p class="mb-30"></p><a href="{{ url('catamaran/') }}/{{ $catamaran->slug }}" class="recom-button">Read more</a><a href="{{ url('catamaran/') }}/{{ $catamaran->slug }}" class="cws-button small alt">Send Inquiry</a>
                   @if($catamaran->discount > 0)
                   <div class="action font-2">{{ $catamaran->discount }}%</div>
                   @endif

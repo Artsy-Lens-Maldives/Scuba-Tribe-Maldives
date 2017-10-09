@@ -77,7 +77,7 @@
                       {{ $itinerary->detail }}
                     </td>
                     <td style="vertical-align: middle;">
-                      <a href="#" class="cws-button alt gray">Book now</a>
+                      <a href="{{ url('inquiry') }}/{{ $catamaran->id }}/{{ $catamaran->name }}/catamaran/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
                     </td>
                     @endforeach
 

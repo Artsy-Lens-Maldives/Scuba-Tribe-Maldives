@@ -77,7 +77,7 @@
                       {!! $itinerary->detail !!}
                     </td>
                     <td style="vertical-align: middle;">
-                      <a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}/inquiry" class="cws-button alt gray">Send Inquiry</a>
+                      <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->name }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
                     </td>
                     @endforeach
 

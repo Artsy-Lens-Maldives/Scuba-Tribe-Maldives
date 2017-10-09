@@ -4,83 +4,23 @@ namespace App\Http\Controllers;
 
 use App\inquery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class InqueryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function show($id, $name, $type, $iten_id)
     {
-        //
+        return view('inquiry.inquery', compact('name', 'type'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function store($id, $name, $type, $iten_id)
     {
-        $name = "Test";
-        return view('inquery', compact('name'));
-    }
+        $inquery = inquery::create(Input::except('_token'));
+        $inquery->type_id = $id;
+        $inquery->type = $type;
+        $inquery->iten_id = $iten_id;
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\inquery  $inquery
-     * @return \Illuminate\Http\Response
-     */
-    public function show(inquery $inquery)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\inquery  $inquery
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(inquery $inquery)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\inquery  $inquery
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, inquery $inquery)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\inquery  $inquery
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(inquery $inquery)
-    {
-        //
+        
+        return redirect()->back()->with('alert-success', 'Your Inquiry has been sent. We wil get back to you as soon as possible.');
     }
 }

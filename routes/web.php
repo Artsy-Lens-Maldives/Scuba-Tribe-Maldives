@@ -56,9 +56,8 @@ Route::group(['prefix' => 'catamaran'], function () {
 Route::get('/diving-spots', 'DivingSpotController@index');
 
 // Inquiry route
-Route::get('/inquiry', function () {
-    return view('inquiry.inquery');
-});
+Route::get('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@show');
+Route::post('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@store');
 
 // table.blade
 Route::get('/table', function () {

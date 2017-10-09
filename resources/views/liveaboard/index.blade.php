@@ -24,7 +24,7 @@
                     <h6 class="blog-title">{{ $liveaboard->name }}</h6></a>
                   <div class="stars stars-{{ $liveaboard->star }}"></div>
                   <div class="recom-price"><span style="font-size: 18px;" class="font-1"><b>Send an Inquiry for prices </b></div>
-                  <p class="mb-30">Quisque egestas a est in convallis. Maecenas pellentesque.</p><a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}" class="recom-button">Read more</a><a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}" class="cws-button small alt">Send Inquiry</a>
+                  <p class="mb-30"></p><a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}" class="recom-button">Read more</a><a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}" class="cws-button small alt">Send Inquiry</a>
                   @if($liveaboard->discount > 0)
                   <div class="action font-2">{{ $liveaboard->discount }}%</div>
                   @endif

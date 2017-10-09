@@ -23,7 +23,7 @@
                     <h6 class="blog-title">{{ $divespot->name }}</h6></a>
                   <div class="stars stars-{{ $divespot->star }}"></div>
                   <div class="recom-price"><span style="font-size: 18px;" class="font-1"><b>Send an Inquiry for prices </b></div>
-                  <p class="mb-30">Quisque egestas a est in convallis. Maecenas pellentesque.</p><a href="{{ url('local-island/') }}/{{ $divespot->slug }}" class="recom-button">Read more</a><a href="{{ url('local-island/') }}/{{ $divespot->slug }}" class="cws-button small alt">Send Inquiry</a>
+                  <p class="mb-30"></p><a href="{{ url('local-island/') }}/{{ $divespot->slug }}" class="recom-button">Read more</a><a href="{{ url('local-island/') }}/{{ $divespot->slug }}" class="cws-button small alt">Send Inquiry</a>
                   @if($divespot->discount > 0)
                   <div class="action font-2">{{ $divespot->discount }}%</div>
                   @endif

@@ -11,7 +11,7 @@
             <h2 class="mt-40 mb-50 align-center">Ooops ... We are sorry, the page you want isn’t here anymore.</h2>
             <div class="row">
               <div class="col-md-6 mb-md-30"> 
-                <p>Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, fauci bus at, scelerisque quis, convallis in, nisi disi. Suspendisse non nisl sit amet velit.</p>
+                <p>Are you trying to steal from us.?</p>
               </div>
               <div class="col-md-6"> 
                 <p class="mb-15">Perhaps searching can help or go back to <a href="{{ url('/') }}" class="back-home">Homepage</a></p>

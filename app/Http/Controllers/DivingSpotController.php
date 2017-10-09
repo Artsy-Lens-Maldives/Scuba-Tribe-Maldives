@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\diving_spot;
+use App\dive_photos;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 
 class DivingSpotController extends Controller
 {
@@ -25,7 +29,7 @@ class DivingSpotController extends Controller
      */
     public function create()
     {
-        //
+        return view('diving-spots.create');
     }
 
     /**
@@ -36,7 +40,17 @@ class DivingSpotController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $diving_spot = diving_spot::create(Input::except('_token', 'image'));
+        foreach ($request->image as $photo) {
+            $fileName = $diving_spot->slug . '-' . time() . '-' . $photo->getClientOriginalName();
+            $location = 'public/' . $diving_spot->slug . '/images'; 
+            $file = $photo->storeAs($location, $fileName);
+            dive_photos::create([
+                'dive_id' => $diving_spot->id,
+                'photo_url' => '/local-island'. '/' . $diving_spot->slug . '/' . 'photo/' . $fileName
+            ]);
+        }
+        return redirect()->back()->with('alert-success', 'Successfully added new Catamaran');
     }
 
     /**
@@ -83,5 +97,25 @@ class DivingSpotController extends Controller
     public function destroy(diving_spot $diving_spot)
     {
         //
+    }
+
+    public function image($slug, $filename)
+    {
+        $fileloc = 'app/public/' . $slug . '/' . 'images/' . $filename;
+        $path = storage_path($fileloc);
+    
+        $failed = "It failed";
+        
+        if (!File::exists($path)) {
+          return $failed;
+        }
+    
+        $file = File::get($path);
+        $type = File::mimeType($path);
+    
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+    
+        return $response;
     }
 }

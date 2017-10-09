@@ -10,7 +10,7 @@
               @if(Session::has('alert-' . $msg))
 
               <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
-              <div class="cws_divider mb-30"></div>
+              
               @endif
             @endforeach
           </div> 
@@ -33,7 +33,7 @@
               <div class="row">
                 <div class="col-md-10">
                   <label for="name">Name</label>
-                  <input id="name" itype="text" name="name" size="191" placeholder="   Name of Catamaran" aria-required="true" class="form-row">
+                  <input id="name" itype="text" name="name" size="191" placeholder="   Name of Local Island" aria-required="true" class="form-row">
                 </div>
                 <div class="col-md-2">
                   <label for="rating">Select rating</label>

@@ -92,7 +92,7 @@
                   <li><a href="{{ url('admin/local-island/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>
-              <li class="slash">/</li>              
+                           
               <!-- End Diving Spots -->
               
             </ul>

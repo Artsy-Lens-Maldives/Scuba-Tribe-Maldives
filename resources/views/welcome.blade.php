@@ -117,15 +117,8 @@
                   <!-- /tabs container-->
                   <!-- tabs container-->
                   <div data-tabs-id="cont-tabs2" class="container-tabs">
-                    <h6 class="trans-uppercase">Hotel Bohemians</h6>
-                    <p>Duis egestas accumsan ipsum, at volutpat elit imperdiet in. Curabitur lacinia, massa quis elementum bibendum, tellus neque porttitor erat, a ornare enim arcu nec mauris. Morbi ac tristique felis. Praesent cursus placerat risus. Duis ut magna quis sem varius consequat.  </p>
-                    <ul class="style-3">
-                      <li>Nam molestie dolor id auctor sodales;</li>
-                      <li>In sagittis dolor vel turpis aliquet pharetra;</li>
-                      <li>Quisque non turpis in dui congue dapibus;</li>
-                      <li>Vivamus varius nisl quis dictum maximus;</li>
-                      <li>Vestibulum scelerisque ligula quis est faucibus tincidunt.</li>
-                    </ul>
+                    <h6 class="trans-uppercase">Mission</h6>
+                    <p>Our mission is to be the most respected and trustful scuba diving agency in the Maldives. To do this, we have established a culture that puts our customer's needs at first place. We focus on prompt communication and being accessible at any time for our clients.</p>
                   </div>
                   <!-- /tabs container-->
                   <!-- tabs container-->

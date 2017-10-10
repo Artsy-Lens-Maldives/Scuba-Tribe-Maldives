@@ -35,7 +35,9 @@
             <div class="col-md-4">
               <div class="bg-gray-3 p-30-40"style="list-style: square;">
                 <h4>Boat Features</h4>
+                <div style="list-style-type: square;">
                 {!! $liveaboard->boat_features !!}
+                </div>
               </div>
             </div>
           </div>
@@ -45,8 +47,9 @@
           <div class="row">
             <div class="col-md-8">
               <h4 class="mb-20">Description</h4>
-              
+              <div style="list-style-type: square;">
               {!! $liveaboard->description !!}
+              </div>
             </div>
             <div class="col-md-4">
               <h4 class="mb-20">Liveaboard Layout Photo</h4>
@@ -116,19 +119,25 @@
             <div class="col-md-4">
               <div class="mb-15 p-30-40">
                 <h4>Food and Drinks</h4>
-                {!! $liveaboard->food_and_drinks !!}
+                <div style="list-style-type: square;">
+                  {!! $liveaboard->food_and_drinks !!}
+                </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="mb-15 p-30-40">
                 <h4>Diving</h4>
-                  {!! $liveaboard->diving !!}
+                  <div style="list-style-type: square;">
+                    {!! $liveaboard->diving !!}
+                  </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="mb-15 p-30-40">
-                <h4>Gear Rental</h4>
-                {!! $liveaboard->gear_rental !!}
+                <h4>Boat Specifications</h4>
+                <div style="list-style-type: square;">
+                  {!! $liveaboard->gear_rental !!}
+                </div>
               </div>
             </div>
           </div>

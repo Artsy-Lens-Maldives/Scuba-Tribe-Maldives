@@ -7,5 +7,5 @@ yarn install
 yarn run production
 php artisan migrate
 php artisan optimize
-php artisan route:optimize
+php artisan route:cache
 php artisan cache:clear

@@ -35,7 +35,7 @@
             <div class="col-md-4">
               <div class="bg-gray-3 p-30-40">
                 <h4>Boat Features</h4>
-                <div style="list-style-type: square;">
+                <div style="list-style: square !important;">
                 {!! $catamaran->features !!}
                 </div>
               </div>
@@ -48,7 +48,7 @@
           <div class="row">
             <div class="col-md-8">
               <h4 class="mb-20">Description</h4>
-              <div style="list-style-type: square;">
+              <div style="list-style: square !important;">
               {!! $catamaran->description !!}
               </div>
             </div>

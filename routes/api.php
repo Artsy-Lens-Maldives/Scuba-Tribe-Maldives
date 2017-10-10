@@ -18,6 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('subscribe', function (Request $request) {
-    Session::flash('msg', 'athik.13@gmail.com');
-    return Redirect::back();
+    return redirect('/#subscribe')->with('message', $request->email);
 });

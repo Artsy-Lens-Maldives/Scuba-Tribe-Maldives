@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,11 @@ Route::get('/', function () {
 
 Route::get('/contact-us', function () {
     return view('contact-us');
+});
+
+Route::post('subscribe', function (Request $request) {
+  \App\subscribe::create(Input::except('_token'));
+  return redirect('/#subscribe')->with('message', $request->input('email'));
 });
 
 

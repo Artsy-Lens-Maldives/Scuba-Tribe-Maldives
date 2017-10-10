@@ -44,34 +44,31 @@
             </ul>
           </div>
           <!-- call out section-->
-          <section class="page-section-sub pt-90 pb-80 bg-main pattern relative">
+          <section id="subscribe" class="page-section-sub pt-90 pb-80 bg-main pattern relative">
             <div class="container">
               <div class="call-out-box clearfix with-icon">
                 <div class="row call-out-wrap">
-                  
-                  @if(Session::has('msg'))
-                    <div class="col-md-12">
-                      <center>
-                        <h2 class="title-section alt-2"><span>{{Session::get('msg')}}, Thanks for subscribing</span></h2>
-                      </center>
-                    </div>
-                  @else
+                    @if(Session::has('message'))
+                      <div class="col-md-12">
+                        <center>
+                          <h4 class="title-section alt-2"><span>{{ Session::get('message') }}, Thanks for subscribing</span></h4>
+                        </center>
+                      </div>
+                    @else
                     <div class="col-md-5">
                       <h6 class="title-section-top gray font-4">subscribe today</h6>
                       <h2 class="title-section alt-2"><span>Get</span> Latest offers</h2>
                     </div>
                     <div class="col-md-7">
-                      <form action="api/subscribe" method="post" class="form contact-form mt-10">
+                      <form action="/subscribe" method="post" class="form mt-10">
                         {!! csrf_field() !!}
                         <div class="input-container">
                           <input type="text" placeholder="Enter your email" value="" name="email" class="newsletter-field mb-0 form-row"><i class="flaticon-suntour-email icon-left"></i>
-                          
                         </div>
                         <button type="submit" class="subscribe-submit"><i class="flaticon-suntour-arrow icon-right"></i></button>
                       </form>
                     </div>
-                  @endif
-
+                    @endif
                 </div>
               </div>
             </div>

@@ -151,52 +151,39 @@
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="{{ url('/') }}">
                     <div class="pic"><img src="pic/testimonial/top-bg/1.jpg" data-at2x="pic/testimonial/top-bg/1@2x.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/1.jpg" data-at2x="pic/testimonial/author/1@2x.jpg" alt></div>
+                  <div class="author"> <img src="/img/reviews/review (1).jpg" data-at2x="/img/reviews/review (1).jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
-                  <h5 class="title"><span>Nicole</span> Beck</h5>
+                  <h5 class="title"><span>Hadassah</span> Hartman</h5>
                   <div class="stars stars-5"></div>
-                  <p class="align-center">Suspe blandit orci quis lorem eleifend maximus. Quisque nec.</p><a href="{{ url('/') }}" class="testimonial-button">Read more</a>
+                  <p class="align-center">It was my first liveaboard trip to the Maldives! And it was amazing!!! Thanks to Rita for a very professional help and guidance, our trip was fabulous!</p>
                 </div>
               </div>
               <!-- testimonial item-->
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="{{ url('/') }}">
                     <div class="pic"><img src="pic/testimonial/top-bg/2.jpg" data-at2x="pic/testimonial/top-bg/2@2x.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/2.jpg" data-at2x="pic/testimonial/author/2@2x.jpg" alt></div>
+                  <div class="author"> <img src="/img/reviews/review (2).jpg" data-at2x="/img/reviews/review (2).jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
-                  <h5 class="title"><span>Peter</span> Robertson</h5>
+                  <h5 class="title"><span>Alejandro</span> Cole</h5>
                   <div class="stars stars-5"></div>
-                  <p class="align-center">Nulla elit justo, dapibus ut lacus ac, ornare elementum neque.</p><a href="{{ url('/') }}" class="testimonial-button">Read more</a>
+                  <p class="align-center">Scuba Tribe was recommended by my friend who knows the guys personally. I couldn't dream of more!<br> Rita was very helpful and really made sure everything goes smooth untill our departure from the Maldives. Sad we couldn't meet personally. But we are definitely coming back next year and will book only with Scuba Tribe!</p>
                 </div>
               </div>
               <!-- testimonial item-->
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="{{ url('/') }}">
                     <div class="pic"><img src="pic/testimonial/top-bg/3.jpg" data-at2x="pic/testimonial/top-bg/3@2x.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/3.jpg" data-at2x="pic/testimonial/author/3@2x.jpg" alt></div>
+                  <div class="author"> <img src="/img/reviews/review (3).jpg" data-at2x="/img/reviews/review (3).jpg" alt></div>
                 </div>
                 <!-- testimonial content-->
                 <div class="testimonial-body">
-                  <h5 class="title"><span>Kathy</span> Harrison</h5>
+                  <h5 class="title"><span>Arturo</span> Bonilla</h5>
                   <div class="stars stars-5"></div>
-                  <p class="align-center">Maece facilisis sit amet mauris eget aliquam. Integer vitae.</p><a href="{{ url('/') }}" class="testimonial-button">Read more</a>
-                </div>
-              </div>
-              <!-- testimonial item-->
-              <div class="testimonial-item">
-                <div class="testimonial-top"><a href="{{ url('/') }}">
-                    <div class="pic"><img src="pic/testimonial/top-bg/1.jpg" data-at2x="pic/testimonial/top-bg/1@2x.jpg" alt></div></a>
-                  <div class="author"> <img src="pic/testimonial/author/1.jpg" data-at2x="pic/testimonial/author/1@2x.jpg" alt></div>
-                </div>
-                <!-- testimonial content-->
-                <div class="testimonial-body">
-                  <h5 class="title"><span>Nicole</span> Beck</h5>
-                  <div class="stars stars-5"></div>
-                  <p class="align-center">Suspe blandit orci quis lorem eleifend maximus. Quisque nec.</p><a href="{{ url('/') }}" class="testimonial-button">Read more</a>
+                  <p class="align-center">This was my 2nd time diving in Maldives, and I must say it was the best dive trip of my life. Me and my wife booked a liveaboard dive trip with Scuba Tribe, and will surely book again and highly recommend to everyone! <br>Thank you Rita and Shakko, it was superb experience!</p>
                 </div>
               </div>
             </div>

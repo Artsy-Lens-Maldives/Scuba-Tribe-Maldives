@@ -20,7 +20,15 @@
           <div class="col-md-3 col-sm-6">
             <div class="widget-footer">
               <h4>Tag cloud</h4>
-              <div class="widget-tags-wrap"><a href="#" rel="tag" class="tag">Adventure</a><a href="#" rel="tag" class="tag">Romantic</a><a href="#" rel="tag" class="tag">Wildlife</a><a href="#" rel="tag" class="tag">Beach</a><a href="#" rel="tag" class="tag">Honeymoon</a><a href="#" rel="tag" class="tag">Island</a><a href="#" rel="tag" class="tag">Parks</a><a href="#" rel="tag" class="tag">Family</a><a href="#" rel="tag" class="tag">Travel</a></div>
+              <div class="widget-tags-wrap">
+                <a href="#" rel="tag" class="tag">Scuba</a>
+                <a href="#" rel="tag" class="tag">Holiday</a>
+                <a href="#" rel="tag" class="tag">Travel</a>
+                <a href="#" rel="tag" class="tag">Maldives</a>
+                <a href="#" rel="tag" class="tag">Liveaboard</a>
+                <a href="#" rel="tag" class="tag">Catamaran</a>
+                <a href="#" rel="tag" class="tag">Diving</a>
+              </div>
             </div>
           </div>
           <!-- end widget footer-->

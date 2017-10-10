@@ -21,7 +21,7 @@
                       <li><a href="#" class="lang-sel icl-en">Language <i class="fa fa-angle-down"></i></a>
                         <ul>
                           <li><a href="#">English</a></li>
-                          <!-- <li> <a href="#">Deutsch</a></li> -->
+                          <li> <a href="#">Russian</a></li>
                           <!-- <li> <a href="#">Espanol</a></li> -->
                         </ul>
                       </li>

@@ -42,16 +42,16 @@
           
         </div>
         <div class="container mt-30">
-          <h4 class="mb-20">Description</h4>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
+              <h4 class="mb-20">Description</h4>
+              
               {!! $liveaboard->description !!}
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
               <h4 class="mb-20">Liveaboard Layout Photo</h4>
-              <div class="cws_divider mb-30"></div>
               <center>
-                <img src="{{ $liveaboard->vessel_layout_photo }}" class="img-responsive" alt="{{ $liveaboard->name }} layout photo">
+                <img style="height: 100%; width: 100%;" src="{{ $liveaboard->vessel_layout_photo }}" alt="{{ $liveaboard->name }} layout photo">
               </center>
             </div>
           </div>
@@ -69,6 +69,7 @@
                 <tr>
                   <th>Date</th>
                   <th>Itinerary</th>
+                  <th>Capacity</th>
                   <th>Select</th>
                 </tr>
               </thead>
@@ -79,8 +80,11 @@
                       <td class="col-md-1" style="vertical-align: middle;">
                         <h4>{{ $itinerary->date }}</h4>
                       </td>
-                      <td class="col-md-10" style="vertical-align: middle;"> 
+                      <td class="col-md-8" style="vertical-align: middle;"> 
                         {!! $itinerary->detail !!}
+                      </td>
+                      <td class="col-md-2" style="vertical-align: middle;"> 
+                        <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>
                       </td>
                       <td class="col-md-1" style="vertical-align: middle;">
                         <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->name }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
@@ -128,16 +132,6 @@
               </div>
             </div>
           </div>
-          @if(!$liveaboard->vessel_layout_photo == null)
-          <div class="row">
-            <div class="col-md-12">
-              <div class="mb-15 p-30-40">
-                <h4>Vessel Layout photo</h4>
-                <img src="{{ $liveaboard->vessel_layout_photo }}" class="img-responsive">
-              </div>
-            </div>
-          </div>
-          @endif
         </div>
       </section>
     </div>

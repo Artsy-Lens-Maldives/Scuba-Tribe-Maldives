@@ -42,16 +42,16 @@
           
         </div>
         <div class="container mt-30">
-          <h4 class="mb-20">Description</h4>
+          
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
+              <h4 class="mb-20">Description</h4>
               {!! $catamaran->description !!}
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
               <h4 class="mb-20">Catamaran Layout Photo</h4>
-              <div class="cws_divider mb-30"></div>
               <center>
-                <img src="{{ $catamaran->catamaran_layout_photo }}" class="img-responsive" alt="{{ $catamaran->name }} layout photo">
+                <img style="height: 100%; width: 100%;" src="{{ $catamaran->catamaran_layout_photo }}" alt="{{ $catamaran->name }} layout photo">
               </center>
             </div>
           </div>
@@ -69,6 +69,7 @@
                 <tr>
                   <th>Date</th>
                   <th>Itinerary</th>
+                  <th>Capacity</th>
                   <th>Select</th>
                 </tr>
               </thead>
@@ -77,13 +78,16 @@
                   @if(!$catamaran->itinerary->isEmpty())
                     @foreach($catamaran->itinerary as $itinerary)
                     <tr>
-                      <td style="vertical-align: middle;">
+                      <td class="col-md-1" style="vertical-align: middle;">
                         <h4>{{ $itinerary->date }}</h4>
                       </td>
-                      <td style="vertical-align: middle;"> 
+                      <td class="col-md-8" style="vertical-align: middle;"> 
                         {!! $itinerary->detail !!}
                       </td>
-                      <td style="vertical-align: middle;">
+                      <td class="col-md-2" style="vertical-align: middle;"> 
+                        <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>
+                      </td>
+                      <td class="col-md-1" style="vertical-align: middle;">
                         <a href="{{ url('inquiry') }}/{{ $catamaran->id }}/{{ $catamaran->name }}/catamaran/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
                       </td>
                     </tr>
@@ -103,25 +107,6 @@
             </table>
           </div>
         </div>
-        <!-- section location-->
-        <!--<div id="features" class="container mb-50">
-          <div class="row">
-            <div class="col-md-12">
-              <h4 class="trans-uppercase mb-10">{{ $catamaran->name }} Features</h4>
-              <div class="cws_divider mb-30"></div>
-            </div>
-          </div> 
-          <div class="row">
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="mb-15 p-30-40">
-                <h4>Catamaran Layout photo</h4>
-                <img src="{{ $catamaran->catamaran_layout_photo }}" class="img-responsive">
-              </div>
-            </div>
-          </div>
-        </div>-->
       </section>
     </div>
 

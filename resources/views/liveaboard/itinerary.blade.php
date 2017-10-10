@@ -43,10 +43,25 @@
                     </select>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Current Capacitiy:</label>
+                    <input type="number" name="current"placeholder="Enter Current Capacity" aria-required="true" class="form-row form-row-last" min="0" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Max Capacitiy:</label>
+                    <input type="number" name="max"placeholder="Enter Max Capacity" aria-required="true" class="form-row form-row-last" min="1" required>
+                </div>
+            </div>
+
             <div class="col-md-12">
+              <label>Enter Itinerary Date:</label>
               <input type="text" name="date" size="40" placeholder="Enter Date" aria-required="true" class="form-row form-row-last" required>
             </div>
             <div class="col-md-12">
+              <label>Enter Itinerary Details:</label>
               <textarea id="detail" name="detail" cols="40" rows="4" placeholder="Detail about itenary" aria-invalid="false" aria-required="true" class="mb-20" required></textarea>
               <input type="submit" value="Add itinerary" class="cws-button alt float-right">
             </div>

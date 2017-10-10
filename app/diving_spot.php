@@ -30,7 +30,7 @@ class diving_spot extends Model
     }
     
     public function getFirstImageAttribute() {
-        return $this->images()->first();
+        return $this->images()->where('main', '1')->first();
     }
 
     public function reviews() {

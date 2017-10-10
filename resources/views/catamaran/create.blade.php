@@ -21,7 +21,7 @@
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          <form class="form clearfix" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
+          <form class="form clearfix" action="{{ url('admin/catamaran/add/post') }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="review-content pattern relative mb-15" style="">
               <div class="row">

@@ -117,10 +117,9 @@
                   <!-- /tabs container-->
                   <!-- tabs container-->
                   <div data-tabs-id="cont-tabs2" class="container-tabs">
-                    <h6 class="trans-uppercase">Mission</h6>
                     <p>Our mission is to be the most respected and trustful scuba diving agency in the Maldives. To do this, we have established a culture that puts our customer's needs at first place. We focus on prompt communication and being accessible at any time for our clients.</p>
                   </div>
-                  <!-- /tabs container-->
+                  <!-- /tabs container -->
                   <!-- tabs container-->
                   <div data-tabs-id="cont-tabs3" class="container-tabs">
                     <h6 class="trans-uppercase">Hotel Bohemians</h6>

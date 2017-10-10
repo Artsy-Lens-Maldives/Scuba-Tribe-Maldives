@@ -38,10 +38,12 @@
       <div class="copyright"> 
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
-              <p>© Copyright 2017 <span>Scuba Tribe Maldives</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved</p>
-            </div>
-            <div class="col-sm-6 text-right"><a href="{{ url('/') }}" class="footer-nav">Home</a><a href="{{ url('/liveaboards') }}" class="footer-nav">Liveaboard</a><a href="{{ url('/catameran') }}" class="footer-nav">Catamaran</a><a href="{{ url('/dive-spots') }}" class="footer-nav">Local Islands</a><a href="{{ url('/contact-us') }}" class="footer-nav">Contact Us</a></div>
+            <center>
+              <div style="margin:0px auto;" class="col-sm-12">
+                <p>© Copyright 2017 <span>Scuba Tribe Maldives</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved</p>
+              </div>
+            </center>
+            <!--<div class="col-sm-6 text-right"><a href="{{ url('/') }}" class="footer-nav">Home</a><a href="{{ url('/liveaboards') }}" class="footer-nav">Liveaboard</a><a href="{{ url('/catameran') }}" class="footer-nav">Catamaran</a><a href="{{ url('/dive-spots') }}" class="footer-nav">Local Islands</a><a href="{{ url('/contact-us') }}" class="footer-nav">Contact Us</a></div> -->
           </div>
         </div>
       </div>

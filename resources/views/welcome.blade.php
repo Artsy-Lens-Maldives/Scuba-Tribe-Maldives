@@ -10,28 +10,28 @@
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
-                  <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
+                  <div class="sl-title-bot">Custom Made Scuba Diving <span>Holidays</span></div>
                 </div>
               </li>
               <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/1.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="y:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
-                  <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
+                  <div class="sl-title-bot">Custom Made Scuba Diving <span>Holidays</span></div>
                 </div>
               </li>
               <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/11.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
-                  <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
+                  <div class="sl-title-bot">Custom Made Scuba Diving <span>Holidays</span></div>
                 </div>
               </li>
               <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/3.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
                 <div data-x="['center','center','center','center']" data-y="center" data-transform_in="y:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
                   <div class="sl-title-top">Welcome to</div>
                   <div class="sl-title">Scuba Tribe Maldives</div>
-                  <div class="sl-title-bot">We Offer Personalized <span>Prices</span></div>
+                  <div class="sl-title-bot">Custom Made Scuba Diving <span>Holidays</span></div>
                 </div>
               </li>
               <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="/rs-plugin/assets/loader.gif" data-lazyload="/img/bg/9.JPG" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
@@ -84,9 +84,9 @@
           <div class="row">
             <div class="col-md-8">
               <h6 class="title-section-top font-4"></h6>
-              <h2 class="title-section"><span>About</span> Us</h2>
+              <h2 class="title-section"><span>About Us</span></h2>
               <div class="cws_divider mb-25 mt-5"></div>
-              <p>Read about our fantastic organization which provides varaities of services which is unmatchable to any other in this industry. </p>
+              <p>We are here to make your scuba diving holiday a memorable one!</p>
             </div>
             <div class="col-md-4"><i class="flaticon-suntour-photo title-icon"></i></div>
           </div>

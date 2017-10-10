@@ -15,20 +15,6 @@
             <div class="col-md-6 col-sm-5 text-right">
               <div class="top-right-wrap">
                 <!-- <div class="top-login"><a href="#">My Account</a></div> -->
-                <div class="curr-wrap dropdown">
-                  <div>
-                    <ul>
-                      <li><a href="#" class="lang-sel icl-en">Currency<i class="fa fa-angle-down"></i></a>
-                        <ul>
-                          <li><a href="#">USD</a></li>
-                          <!-- <li><a href="#">EUR</a></li> -->
-                          <!-- <li> <a href="#">GBP</a></li> -->
-                          <!-- <li> <a href="#">AUD</a></li> -->
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
                 <div class="lang-wrap dropdown">
                   <div>
                     <ul>
@@ -63,19 +49,19 @@
               <!-- End Home -->
               
               <!-- Liveaboard -->
-              <li><a href="{{ url('/liveaboard') }}">Liveaboard</a>
+              <li><a href="{{ url('/liveaboard') }}">Liveaboards</a>
               </li>
               <li class="slash">/</li>
               <!-- End Liveaboard -->
 
               <!-- Catamaran -->
-              <li><a href="{{ url('/catamaran') }}">Catamaran</a>
+              <li><a href="{{ url('/catamaran') }}">Catamarans</a>
               </li>
               <li class="slash">/</li>
               <!-- End Catamaran -->
 
               <!-- Local Island -->
-              <li><a href="{{ url('/local-island') }}">Local Island</a>
+              <li><a href="{{ url('/local-island') }}">Local Islands</a>
               </li>
               <li class="slash">/</li>
               <!-- End Local Island -->

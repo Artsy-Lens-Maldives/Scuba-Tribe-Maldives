@@ -113,8 +113,7 @@
                   </div>
                   <!-- /tabs container -->
                   <!-- tabs container-->
-                  <div data-tabs-id="cont-tabs3" class="container-tabs">
-                    <h6 class="trans-uppercase">Hotel Bohemians</h6>
+                  <div data-tabs-id="cont-tabs3" class="container-tabs">                    
                     <p>Our vision is to offer customized, details oriented, best possible priced scuba diving holidays in the Maldives for our customers.</p>
                   </div>
                   <!-- /tabs container-->

@@ -17,7 +17,7 @@
           <!-- end .flash-message -->
           <div class="row">
             <div class="col-md-12">
-              <h4 class="trans-uppercase mb-10">Add a new liveaboard</h4>
+              <h4 class="trans-uppercase mb-10">Edit <strong>{{ $liveaboard->name }}</strong> liveaboard</h4>
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
@@ -102,7 +102,7 @@
                 
               </div>
               <div class="row mt-15 mb-15" id="image_preview_old" style="margin-top: 10px">
-                <div class="col-md-12"><h6>Old Images <strong>(Before deleting any image make sure to save an changes to other fields)</strong></h6></div>
+                <div class="col-md-12"><h6>Old Images <strong>(Before deleting any image make sure to save all changes to other fields)</strong></h6></div>
                 @foreach($liveaboard->images as $image)
                   <div class="clearfix col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%;">
                     <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="">

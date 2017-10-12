@@ -17,7 +17,7 @@
 
       <div class="row" style="">
         <div class="col-md-12">
-          <h4 class="trans-uppercase mb-10">Add a new Itinerary</h4>
+          <h4 class="trans-uppercase mb-10">Add a new Itinerary for <strong>{{ $liveaboards[0]->name }}</strong></h4>
           <div class="cws_divider mb-30"></div>
         </div>
       </div>
@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label>Select Liveaboard:</label>
+                    <label>Liveaboard:</label>
                     <select class="form-control" name="liveaboard_id" required>
                         @foreach($liveaboards as $liveaboard)
                             <option value="{{ $liveaboard->id }}">{{ $liveaboard->name }}</option>

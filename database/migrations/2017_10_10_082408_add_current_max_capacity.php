@@ -14,17 +14,17 @@ class AddCurrentMaxCapacity extends Migration
     public function up()
     {
         Schema::table('liveaboard_itineraries', function($table) {
-            $table->integer('current');
+            $table->integer('current')->nullable();
         });
         Schema::table('liveaboard_itineraries', function($table) {
-            $table->integer('max');
+            $table->integer('max')->nullable();
         });
 
         Schema::table('catamaran_itineraries', function($table) {
-            $table->integer('current');
+            $table->integer('current')->nullable();
         });
         Schema::table('catamaran_itineraries', function($table) {
-            $table->integer('max');
+            $table->integer('max')->nullable();
         });
     }
 

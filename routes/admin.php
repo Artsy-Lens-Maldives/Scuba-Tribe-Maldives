@@ -22,21 +22,37 @@ Route::get('/home', function () {
 
 
 Route::group(['prefix' => 'liveaboard'], function () {
-    
-    Route::get('/all', function () {
+    //Main Route
+    Route::get('/', function () {
         $liveaboards = App\liveaboard::all();
-        return view('liveaboard.admin.all-admin', compact('liveaboards'));
+        return view('liveaboard.admin.all-liveaboard', compact('liveaboards'));
     });
     
-    Route::get('edit/{liveaboard}', 'LiveaboardController@edit');
-
-
+    //Liveaboard Add Routes
     Route::get('add', 'LiveaboardController@create');
     Route::post('add/post', 'LiveaboardController@store');
+    
+    //Liveaboard Edit and Delete Routes
+    Route::get('edit/{liveaboard}', 'LiveaboardController@edit');
+    Route::post('edit/{liveaboard}', 'LiveaboardController@update');
+    Route::get('edit/{liveaboard}/image/delete/{id}', 'LiveaboardController@deleteImage');
+    Route::get('delete/{liveaboard}', 'LiveaboardController@destroy');
 
-    Route::get('itinerary/add', 'LiveaboardController@itinerary');
-    Route::post('itinerary/add', 'LiveaboardController@itinerary_add');
+    //Ititnerary Adding Routes
+    Route::get('itinerary/{liveaboard}/add', 'LiveaboardItineraryController@create');
+    Route::post('itinerary/{liveaboard}/add', 'LiveaboardItineraryController@store');
+    
+    //Ititnerary Edit and Delete Routes
+    Route::get('itinerary/{liveaboard}', function($liveaboard) {
+        $live = App\liveaboard::where('slug', $liveaboard)->first();
+        $itineraries = App\liveaboard_itinerary::where('liveaboard_id', $live->id)->get();
+        return view('liveaboard.admin.all-itinerary', compact('itineraries', 'live'));
+    });
+    Route::get('itinerary/edit/{liveaboard_itinerary}', 'LiveaboardItineraryController@edit');
+    Route::post('itinerary/edit/{liveaboard_itinerary}', 'LiveaboardItineraryController@update');
+    Route::get('itinerary/delete/{liveaboard_itinerary}', 'LiveaboardItineraryController@destroy');
 
+    //Liveaboard Inquiries
     Route::get('/inquiry', function () {
         $inquiries = App\inquery::where('type', 'liveaboard')->get();
         return view('inquiry.live-table', compact('inquiries'));

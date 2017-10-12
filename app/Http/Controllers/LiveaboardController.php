@@ -31,7 +31,7 @@ class LiveaboardController extends Controller
      */
     public function create()
     {
-        return view('liveaboard.admin.create');
+        return view('liveaboard.admin.create-liveaboard');
     }
 
     /**
@@ -85,7 +85,7 @@ class LiveaboardController extends Controller
      */
     public function edit(liveaboard $liveaboard)
     {
-        return view('liveaboard.admin.edit', compact('liveaboard'));
+        return view('liveaboard.admin.edit-liveaboard', compact('liveaboard'));
     }
 
     /**
@@ -97,7 +97,25 @@ class LiveaboardController extends Controller
      */
     public function update(Request $request, liveaboard $liveaboard)
     {
-        //
+        $liveaboard->name = $request->name;
+        $liveaboard->star = $request->star;
+        $liveaboard->description = $request->description;
+        $liveaboard->boat_features = $request->boat_features;
+        $liveaboard->food_and_drinks = $request->food_and_drinks;
+        $liveaboard->diving = $request->diving;
+        $liveaboard->gear_rental = $request->gear_rental;
+        $liveaboard->save();
+
+        $message = "Successfully updated " . $liveaboard->name . " Liveaboard";
+        return redirect('admin/liveaboard')->with('alert-success', $message);
+
+    }
+
+    public function deleteImage($liveaboard,$id)
+    {
+        $image = liveaboard_photo::find($id);
+        $image->delete();
+        return redirect()->back()->withInput();
     }
 
     /**
@@ -108,7 +126,8 @@ class LiveaboardController extends Controller
      */
     public function destroy(liveaboard $liveaboard)
     {
-        //
+        $liveaboard->delete();
+        return redirect()->back()->with('alert-success', 'Successfully Deleted Liveaboard');
     }
 
     public function image($slug, $filename)
@@ -129,17 +148,5 @@ class LiveaboardController extends Controller
         $response->header("Content-Type", $type);
     
         return $response;
-    }
-
-    public function itinerary()
-    {
-        $liveaboards = liveaboard::all();
-        return view('liveaboard.admin.itinerary', compact('liveaboards'));   
-    }
-    
-    public function itinerary_add()
-    {
-        liveaboard_itinerary::create(Input::except('_token'));
-        return redirect()->back()->with('alert-success', 'Successfully added itenerary');
     }
 }

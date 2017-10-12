@@ -51,9 +51,7 @@
               <!-- Liveaboard -->
               <li><a href="{{ url('admin/liveaboard') }}" class="mn-has-sub">Liveaboards <i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
-                  <li><a href="{{ url('admin/liveaboard/all') }}">All Liveaboards</a></li>
-                  <li><a href="{{ url('admin/liveaboard/add') }}">Add New</a></li>
-                  <li><a href="{{ url('admin/liveaboard/itinerary/add') }}">Add Itinerary</a></li>
+                  <li><a href="{{ url('admin/liveaboard/') }}">All Liveaboards</a></li>
                   <li><a href="{{ url('admin/liveaboard/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>

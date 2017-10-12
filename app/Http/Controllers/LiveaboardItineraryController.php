@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\liveaboard;
 use App\liveaboard_itinerary;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class LiveaboardItineraryController extends Controller
 {
@@ -22,9 +24,10 @@ class LiveaboardItineraryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($liveaboard)
     {
-        //
+        $liveaboards = liveaboard::where('slug', $liveaboard)->get();
+        return view('liveaboard.admin.create-itinerary', compact('liveaboards'));   
     }
 
     /**
@@ -35,7 +38,10 @@ class LiveaboardItineraryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $liveaboard_itinerary = liveaboard_itinerary::create(Input::except('_token'));
+        
+        $url = 'admin/liveaboard/itinerary/' . $liveaboard_itinerary->liveaboard->slug;
+        return redirect($url)->with('alert-success', 'Successfully added itenerary');
     }
 
     /**
@@ -57,7 +63,8 @@ class LiveaboardItineraryController extends Controller
      */
     public function edit(liveaboard_itinerary $liveaboard_itinerary)
     {
-        //
+        $liveaboards = liveaboard::all();        
+        return view('liveaboard.admin.edit-itinerary', compact('liveaboards', 'liveaboard_itinerary')); 
     }
 
     /**
@@ -69,7 +76,15 @@ class LiveaboardItineraryController extends Controller
      */
     public function update(Request $request, liveaboard_itinerary $liveaboard_itinerary)
     {
-        //
+        $liveaboard_itinerary->liveaboard_id = $request->liveaboard_id;
+        $liveaboard_itinerary->current = $request->current;
+        $liveaboard_itinerary->max = $request->max;
+        $liveaboard_itinerary->date = $request->date;
+        $liveaboard_itinerary->detail = $request->detail;
+        $liveaboard_itinerary->save();
+
+        $url = 'admin/liveaboard/itinerary/' . $liveaboard_itinerary->liveaboard->slug;
+        return redirect($url)->with('alert-success', 'Successfully edited itenerary');
     }
 
     /**
@@ -80,6 +95,7 @@ class LiveaboardItineraryController extends Controller
      */
     public function destroy(liveaboard_itinerary $liveaboard_itinerary)
     {
-        //
+        $liveaboard_itinerary->delete();
+        return redirect()->back()->with('alert-success', 'Successfully Deleted Itinerary');
     }
 }

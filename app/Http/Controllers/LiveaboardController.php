@@ -31,7 +31,7 @@ class LiveaboardController extends Controller
      */
     public function create()
     {
-        return view('liveaboard.create');
+        return view('liveaboard.admin.create');
     }
 
     /**
@@ -85,7 +85,7 @@ class LiveaboardController extends Controller
      */
     public function edit(liveaboard $liveaboard)
     {
-        //
+        return view('liveaboard.admin.edit', compact('liveaboard'));
     }
 
     /**
@@ -134,7 +134,7 @@ class LiveaboardController extends Controller
     public function itinerary()
     {
         $liveaboards = liveaboard::all();
-        return view('liveaboard.itinerary', compact('liveaboards'));   
+        return view('liveaboard.admin.itinerary', compact('liveaboards'));   
     }
     
     public function itinerary_add()

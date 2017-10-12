@@ -15,28 +15,13 @@
             <div class="col-md-6 col-sm-5 text-right">
               <div class="top-right-wrap">
                 <!-- <div class="top-login"><a href="#">My Account</a></div> -->
-                <div class="curr-wrap dropdown">
-                  <div>
-                    <ul>
-                      <li><a href="#" class="lang-sel icl-en">Currency<i class="fa fa-angle-down"></i></a>
-                        <ul>
-                          <li><a href="#">USD</a></li>
-                          <!-- <li><a href="#">EUR</a></li> -->
-                          <!-- <li> <a href="#">GBP</a></li> -->
-                          <!-- <li> <a href="#">AUD</a></li> -->
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
                 <div class="lang-wrap dropdown">
                   <div>
                     <ul>
                       <li><a href="#" class="lang-sel icl-en">Language <i class="fa fa-angle-down"></i></a>
                         <ul>
                           <li><a href="#">English</a></li>
-                          <!-- <li> <a href="#">Deutsch</a></li> -->
-                          <!-- <li> <a href="#">Espanol</a></li> -->
+                          <li><a href="#">Russian</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -66,6 +51,7 @@
               <!-- Liveaboard -->
               <li><a href="{{ url('admin/liveaboard') }}" class="mn-has-sub">Liveaboards <i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
+                  <li><a href="{{ url('admin/liveaboard/all') }}">All Liveaboards</a></li>
                   <li><a href="{{ url('admin/liveaboard/add') }}">Add New</a></li>
                   <li><a href="{{ url('admin/liveaboard/itinerary/add') }}">Add Itinerary</a></li>
                   <li><a href="{{ url('admin/liveaboard/inquiry') }}">All Inquiries</a></li>

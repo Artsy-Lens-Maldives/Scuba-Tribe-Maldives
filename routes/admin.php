@@ -23,6 +23,14 @@ Route::get('/home', function () {
 
 Route::group(['prefix' => 'liveaboard'], function () {
     
+    Route::get('/all', function () {
+        $liveaboards = App\liveaboard::all();
+        return view('liveaboard.admin.all-admin', compact('liveaboards'));
+    });
+    
+    Route::get('edit/{liveaboard}', 'LiveaboardController@edit');
+
+
     Route::get('add', 'LiveaboardController@create');
     Route::post('add/post', 'LiveaboardController@store');
 

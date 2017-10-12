@@ -27,7 +27,8 @@ Route::post('subscribe', function (Request $request) {
 });
 
 
-Auth::routes();
+//Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin'], function () {

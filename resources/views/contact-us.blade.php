@@ -10,8 +10,8 @@
               <h4 class="title-section mt-30"><span class="font-bold">Contacts</span></h4>
               <div class="cws_divider mb-25 mt-5"></div>
               <ul class="icon">
-                <li> <a href="#">support@scubatribemaldives.com<i class="flaticon-suntour-email"></i></a></li>
-                <li> <a href="#">(960)-700-1183<i class="flaticon-suntour-phone"></i></a></li>
+                <li> <a href="mailto:info@scubatribemaldives.com">info@scubatribemaldives.com<i class="flaticon-suntour-email"></i></a></li>
+                <li> <a href="tel:7465333">(960)-746-5333<i class="flaticon-suntour-phone"></i></a></li>
                 <li> <a href="#">Hulhumale<i class="flaticon-suntour-map"></i></a></li>
               </ul>
               <p class="mt-20">We have created Scuba Tribe Maldives to share our passion for scuba diving. To make sure you get what you need and even more. Booking your scuba holiday with us you will get the best Maldives liveaboards, sailing catamarans and local islands diving experience. </p>

@@ -10,8 +10,8 @@
             <p class="color-g2 mt-10">Custom made diving holidays in the Maldives. Liveaboards, private Catamarans, local Dive Centers. Book with us for the best rates.</p>
             <!-- social-->
             <div class="social-link dark">
-              <a href="https://web.facebook.com/scubatribemaldives/" class="cws-social fa fa-facebook"> Facebook</a>
-              <a href="https://www.instagram.com/scubatribemaldives/" class="cws-social fa fa-instagram"> Instagram</a>
+              <a href="https://web.facebook.com/scubatribemaldives/" target="_blank" class="cws-social fa fa-facebook"> Facebook</a>
+              <a href="https://www.instagram.com/scubatribemaldives/" target="_blank" class="cws-social fa fa-instagram"> Instagram</a>
             </div>
             <!-- ! social-->
           </div>

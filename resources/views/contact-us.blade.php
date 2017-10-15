@@ -15,7 +15,10 @@
                 <li> <a href="#">Hulhumale<i class="flaticon-suntour-map"></i></a></li>
               </ul>
               <p class="mt-20">We have created Scuba Tribe Maldives to share our passion for scuba diving. To make sure you get what you need and even more. Booking your scuba holiday with us you will get the best Maldives liveaboards, sailing catamarans and local islands diving experience. </p>
-              <div class="contact-cws-social"><a href="#" class="cws-social fa fa-twitter"></a><a href="#" class="cws-social fa fa-facebook"></a><a href="#" class="cws-social fa fa-google-plus"></a><a href="#" class="cws-social fa fa-linkedin"></a></div>
+              <div class="contact-cws-social">
+                <a href="https://web.facebook.com/scubatribemaldives/" target="_blank" class="cws-social fa fa-facebook"></a>
+                <a href="https://www.instagram.com/scubatribemaldives/" target="_blank" class="cws-social fa fa-instagram">
+              </div>
             </div>
           </div>
           <div class="col-md-6">

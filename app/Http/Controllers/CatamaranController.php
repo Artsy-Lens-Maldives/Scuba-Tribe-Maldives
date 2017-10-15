@@ -31,7 +31,7 @@ class CatamaranController extends Controller
      */
     public function create()
     {
-        return view('catamaran.create');
+        return view('catamaran.admin.create-catamaran');
     }
 
     /**
@@ -84,7 +84,7 @@ class CatamaranController extends Controller
      */
     public function edit(catamaran $catamaran)
     {
-        //
+        return view('catamaran.admin.edit-catamaran', compact('catamaran'));
     }
 
     /**
@@ -96,7 +96,21 @@ class CatamaranController extends Controller
      */
     public function update(Request $request, catamaran $catamaran)
     {
-        //
+        $catamaran->name= $request->name;
+        $catamaran->star= $request->star;
+        $catamaran->description= $request->description;
+        $catamaran->features= $request->features;
+        $catamaran->save();
+
+        $message = "Successfully updated " . $catamaran->name . " Catamaran";
+        return redirect('admin/catamaran')->with('alert-success', $message);
+    }
+
+    public function deleteImage($catamaran,$id)
+    {
+        $image = catamaran_photos::find($id);
+        $image->delete();
+        return redirect()->back()->withInput();
     }
 
     /**
@@ -107,7 +121,8 @@ class CatamaranController extends Controller
      */
     public function destroy(catamaran $catamaran)
     {
-        //
+        $catamaran ->delete();
+        return redirect()->back()->with('alert-success', 'Successfully Deleted Catamaran');
     }
 
     public function image($slug, $filename)
@@ -133,7 +148,7 @@ class CatamaranController extends Controller
     public function itinerary()
     {
         $catamarans = catamaran::all();
-        return view('catamaran.itinerary', compact('catamarans'));   
+        return view('catamaran.admin.create-itinerary', compact('catamarans'));   
     }
     
     public function itinerary_add()

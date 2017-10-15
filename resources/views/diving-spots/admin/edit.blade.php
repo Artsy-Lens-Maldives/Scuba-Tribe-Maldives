@@ -17,11 +17,11 @@
           <!-- end .flash-message -->
           <div class="row">
             <div class="col-md-12">
-              <h4 class="trans-uppercase mb-10">Add a new Catamaran</h4>
+              <h4 class="trans-uppercase mb-10">Edit <strong>{{ $diving_spot->name }}</strong> Local Island</h4>
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          <form class="form clearfix" action="{{ url('admin/catamaran/add/post') }}" method="post" enctype="multipart/form-data">
+          <form class="form clearfix" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="review-content pattern relative mb-15" style="">
               <div class="row">
@@ -33,53 +33,25 @@
               <div class="row">
                 <div class="col-md-10">
                   <label for="name">Name</label>
-                  <input id="name" itype="text" name="name" size="191" placeholder="   Name of Catamaran" aria-required="true" class="form-row">
+                  <input id="name" value="{{ $diving_spot->name }}" type="text" name="name" size="191" placeholder="   Name of Local Island" aria-required="true" class="form-row">
                 </div>
                 <div class="col-md-2">
                   <label for="rating">Select rating</label>
                   <select class="form-control form-row" name="star" id="rating">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    @for($i = 1; $i <= 5; $i++)
+                      <option value="{{ $i }}" {{ ($diving_spot->star == $i ? 'selected' : '') }} >{{ $i }}</option>    
+                    @endfor
                   </select>
                 </div>
                 <div class="col-md-12">
                   <label for="description">Description</label>
-                  <textarea class="description" id="description" name="description" cols="40" rows="4" placeholder="Write a description" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
-                </div>
-                <div class="col-md-12">
-                  <label for="features">Features</label>
-                  <textarea class="boat_features" id="features" name="features" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
+                  <textarea class="description" id="description" name="description" cols="40" rows="4" placeholder="Write a description" aria-invalid="false" aria-required="true" class="mb-20">
+                    {!! $diving_spot->description !!}
+                  </textarea>
                 </div>
               </div>
             </div>
             
-            <div class="review-content pattern relative mb-15" style="">
-              <div class="row">
-                <div class="col-md-12">
-                  <h6 class="trans-uppercase mb-10">Features</h6>
-                  <div class="cws_divider mb-30"></div>
-                </div>
-              </div>
-              <div class="row">
-                
-              </div>
-            </div>
-            <div class="review-content pattern relative mb-15" style="">
-              <div class="row">
-                <div class="col-md-12">
-                  <h6 class="trans-uppercase mb-10">Add Vessel Layout Photo</h6>
-                  <div class="cws_divider mb-30"></div>
-                </div>
-              </div>
-              <div class="row mt-15">
-                <div class="col-md-12">
-                    <input type="file" class="form-control" name="catamaran_layout_photo"/>
-                </div>
-              </div>
-            </div>
             <div class="review-content pattern relative mb-15" style="">
               <div class="row">
                 <div class="col-md-12">
@@ -93,9 +65,20 @@
                 </div>
               </div>
               <div class="row mt-15 mb-15" id="image_preview" style="margin-top: 10px"></div>
+              <div class="row mt-15 mb-15" id="image_preview_old" style="margin-top: 10px">
+                <div class="col-md-12"><h6>Old Images <strong>(Before deleting any image make sure to save all changes to other fields)</strong></h6></div>
+                @foreach($diving_spot->images as $image)
+                  <div class="clearfix col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%;">
+                    <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
+                    <center>
+                      <a href="{{ url('admin/local-island/edit/') }}/{{ $diving_spot->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
+                    </center>
+                  </div>
+                @endforeach
+              </div>
               <div class="row mt-15">
                 <div class="col-md-12">
-                  <input type="submit" value="Add Catamaran" class="cws-button alt float-right">
+                  <input type="submit" value="Edit Dive Spot" class="cws-button alt float-right">
                 </div>
               </div>
             </div>

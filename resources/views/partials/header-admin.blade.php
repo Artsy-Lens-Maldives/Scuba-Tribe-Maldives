@@ -61,8 +61,7 @@
               <!-- Catamaran -->
               <li><a href="{{ url('admin/catamaran') }}" class="mn-has-sub">Catamarans <i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
-                  <li><a href="{{ url('admin/catamaran/add') }}">Add New</a></li>
-                  <li><a href="{{ url('admin/catamaran/itinerary/add') }}">Add Itinerary</a></li>
+                  <li><a href="{{ url('admin/catamaran/') }}">All Catamarans</a></li>
                   <li><a href="{{ url('admin/catamaran/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>
@@ -72,7 +71,7 @@
               <!-- Diving Spots -->
               <li><a href="{{ url('admin/local-island') }}" class="mn-has-sub">Local Island<i class="fa fa-angle-down button_open"></i></a>
                 <ul class="mn-sub">
-                  <li><a href="{{ url('admin/local-island/add') }}">Add New</a></li>
+                  <li><a href="{{ url('admin/local-island/') }}">All Local Islands</a></li>
                   <li><a href="{{ url('admin/local-island/inquiry') }}">All Inquiries</a></li>
                 </ul>
               </li>

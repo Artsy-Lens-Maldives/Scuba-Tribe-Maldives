@@ -29,7 +29,7 @@ class DivingSpotController extends Controller
      */
     public function create()
     {
-        return view('diving-spots.create');
+        return view('diving-spots.admin.create');
     }
 
     /**
@@ -50,7 +50,7 @@ class DivingSpotController extends Controller
                 'photo_url' => '/local-island'. '/' . $diving_spot->slug . '/' . 'photo/' . $fileName
             ]);
         }
-        return redirect()->back()->with('alert-success', 'Successfully added new Catamaran');
+        return redirect()->back()->with('alert-success', 'Successfully added new divespot');
     }
 
     /**
@@ -73,7 +73,7 @@ class DivingSpotController extends Controller
      */
     public function edit(diving_spot $diving_spot)
     {
-        //
+        return view('diving-spots.admin.edit', compact('diving_spot'));
     }
 
     /**
@@ -85,7 +85,13 @@ class DivingSpotController extends Controller
      */
     public function update(Request $request, diving_spot $diving_spot)
     {
-        //
+        $diving_spot->name= $request->name;
+        $diving_spot->star= $request->star;
+        $diving_spot->description= $request->description;
+        $diving_spot->save();
+
+        $message = "Successfully updated " . $diving_spot->name . " Local Island";
+        return redirect('admin/local-island')->with('alert-success', $message);
     }
 
     /**
@@ -96,7 +102,15 @@ class DivingSpotController extends Controller
      */
     public function destroy(diving_spot $diving_spot)
     {
-        //
+        $diving_spot->delete();
+        return redirect()->back()->with('alert-success', 'Successfully Deleted Local Island');
+    }
+
+    public function deleteImage($diving_spot,$id)
+    {
+        $image = dive_photos::find($id);
+        $image->delete();
+        return redirect()->back()->withInput();
     }
 
     public function image($slug, $filename)

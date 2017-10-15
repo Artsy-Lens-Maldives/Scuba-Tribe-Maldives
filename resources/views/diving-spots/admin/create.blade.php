@@ -33,7 +33,7 @@
               <div class="row">
                 <div class="col-md-10">
                   <label for="name">Name</label>
-                  <input id="name" itype="text" name="name" size="191" placeholder="   Name of Local Island" aria-required="true" class="form-row">
+                  <input id="name" type="text" name="name" size="191" placeholder="   Name of Local Island" aria-required="true" class="form-row">
                 </div>
                 <div class="col-md-2">
                   <label for="rating">Select rating</label>

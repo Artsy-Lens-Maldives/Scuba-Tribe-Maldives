@@ -105,7 +105,7 @@
                 <div class="col-md-12"><h6>Old Images <strong>(Before deleting any image make sure to save all changes to other fields)</strong></h6></div>
                 @foreach($liveaboard->images as $image)
                   <div class="clearfix col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%;">
-                    <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="">
+                    <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
                     <center>
                       <a href="{{ url('admin/liveaboard/edit/') }}/{{ $liveaboard->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
                     </center>

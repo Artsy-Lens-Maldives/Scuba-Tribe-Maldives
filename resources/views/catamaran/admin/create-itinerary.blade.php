@@ -30,7 +30,7 @@
             
           </div>
         </div>
-        <form method="post" class="form clearfix">
+        <form action="{{ url()->current() }}/post" method="post" class="form clearfix">
           {{ csrf_field() }}
           <div class="row">
             <div class="col-md-12">

@@ -17,11 +17,11 @@
           <!-- end .flash-message -->
           <div class="row">
             <div class="col-md-12">
-              <h4 class="trans-uppercase mb-10">Add a new liveaboard</h4>
+              <h4 class="trans-uppercase mb-10">Add a new Catamaran</h4>
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          <form class="form clearfix" action="{{ url('admin/liveaboard/add/post') }}"  method="post" enctype="multipart/form-data">
+          <form class="form clearfix" action="{{ url('admin/catamaran/add/post') }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="review-content pattern relative mb-15" style="">
               <div class="row">
@@ -33,7 +33,7 @@
               <div class="row">
                 <div class="col-md-10">
                   <label for="name">Name</label>
-                  <input id="name" type="text" name="name" size="191" placeholder="   Name of liveaboard" aria-required="true" class="form-row">
+                  <input id="name" type="text" name="name" size="191" placeholder="   Name of Catamaran" aria-required="true" class="form-row">
                 </div>
                 <div class="col-md-2">
                   <label for="rating">Select rating</label>
@@ -50,8 +50,8 @@
                   <textarea class="description" id="description" name="description" cols="40" rows="4" placeholder="Write a description" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
                 </div>
                 <div class="col-md-12">
-                  <label for="boat_features">Boat Features</label>
-                  <textarea class="boat_features" id="boat_features" name="boat_features" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
+                  <label for="features">Features</label>
+                  <textarea class="boat_features" id="features" name="features" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
                 </div>
               </div>
             </div>
@@ -64,18 +64,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
-                  <label for="food_and_drinks">Food and Drinks</label>
-                  <textarea class="food_and_drinks" id="food_and_drinks" name="food_and_drinks" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
-                </div>
-                <div class="col-md-12">
-                  <label for="diving">Diving</label>
-                  <textarea class="diving" id="diving" name="diving" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
-                </div>
-                <div class="col-md-12">
-                  <label for="gear_rental">Gear rental</label>
-                  <textarea class="gear_rental" id="gear_rental" name="gear_rental" cols="40" rows="4" aria-invalid="false" aria-required="true" class="mb-20"></textarea>
-                </div>
+                
               </div>
             </div>
             <div class="review-content pattern relative mb-15" style="">
@@ -106,7 +95,7 @@
               <div class="row mt-15 mb-15" id="image_preview" style="margin-top: 10px"></div>
               <div class="row mt-15">
                 <div class="col-md-12">
-                  <input type="submit" value="Add Liveaboard" class="cws-button alt float-right">
+                  <input type="submit" value="Add Catamaran" class="cws-button alt float-right">
                 </div>
               </div>
             </div>

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\catamaran;
 use App\catamaran_itineraries;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class CatamaranItinerariesController extends Controller
 {
@@ -22,9 +24,10 @@ class CatamaranItinerariesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($catamaran)
     {
-        //
+        $catamarans = catamaran::where('slug', $catamaran)->get();
+        return view('catamaran.admin.create-itinerary', compact('catamarans'));   
     }
 
     /**
@@ -35,7 +38,9 @@ class CatamaranItinerariesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $catamaran_itineraries = catamaran_itineraries::create(Input::except('_token'));
+        $url = 'admin/catamaran/itinerary/' . $catamaran_itineraries->catamaran->slug;
+        return redirect($url)->with('alert-success', 'Successfully added itenerary');
     }
 
     /**
@@ -57,7 +62,8 @@ class CatamaranItinerariesController extends Controller
      */
     public function edit(catamaran_itineraries $catamaran_itineraries)
     {
-        //
+        $catamarans = catamaran::all();        
+        return view('catamaran.admin.edit-itinerary', compact('catamarans', 'catamaran_itineraries')); 
     }
 
     /**
@@ -69,7 +75,15 @@ class CatamaranItinerariesController extends Controller
      */
     public function update(Request $request, catamaran_itineraries $catamaran_itineraries)
     {
-        //
+        $catamaran_itineraries->catamaran_id = $request->catamaran_id;
+        $catamaran_itineraries->current = $request->current;
+        $catamaran_itineraries->max = $request->max;
+        $catamaran_itineraries->date = $request->date;
+        $catamaran_itineraries->detail = $request->detail;
+        $catamaran_itineraries->save();
+
+        $url = 'admin/catamaran/itinerary/' . $catamaran_itineraries->catamaran->slug;
+        return redirect($url)->with('alert-success', 'Successfully edited itenerary');
     }
 
     /**
@@ -80,6 +94,7 @@ class CatamaranItinerariesController extends Controller
      */
     public function destroy(catamaran_itineraries $catamaran_itineraries)
     {
-        //
+        $catamaran_itineraries->delete();
+        return redirect()->back()->with('alert-success', 'Successfully Deleted Itinerary');
     }
 }

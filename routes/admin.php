@@ -61,12 +61,35 @@ Route::group(['prefix' => 'liveaboard'], function () {
 });
 
 Route::group(['prefix' => 'catamaran'], function () {
-    
+    //Main Route
+    Route::get('/', function () {
+        $catamarans = App\catamaran::all();
+        return view('catamaran.admin.all-catamaran', compact('catamarans'));
+    });
+
+    //Add Routes
     Route::get('add', 'CatamaranController@create');
     Route::post('add/post', 'CatamaranController@store');
+
+    //Catamaran Edit and Delete Routes
+    Route::get('edit/{catamaran}', 'CatamaranController@edit');
+    Route::post('edit/{catamaran}', 'CatamaranController@update');
+    Route::get('edit/{catamaran}/image/delete/{id}', 'CatamaranController@deleteImage');
+    Route::get('delete/{catamaran}', 'CatamaranController@destroy');
     
-    Route::get('itinerary/add', 'CatamaranController@itinerary');
-    Route::post('itinerary/add', 'CatamaranController@itinerary_add');
+    //Ititnerary Adding Routes
+    Route::get('itinerary/{catamaran}/add', 'CatamaranItinerariesController@create');
+    Route::post('itinerary/{catamaran}/add/post', 'CatamaranItinerariesController@store');
+
+    //Itinerary Edit and Delete Routes
+    Route::get('itinerary/{catamaran}', function($catamaran) {
+        $cat = App\catamaran::where('slug', $catamaran)->first();
+        $itineraries = App\catamaran_itineraries::where('catamaran_id', $cat->id)->get();
+        return view('catamaran.admin.all-itinerary', compact('itineraries', 'cat'));
+    });
+    Route::get('itinerary/edit/{catamaran_itineraries}', 'CatamaranItinerariesController@edit');
+    Route::post('itinerary/edit/{catamaran_itineraries}', 'CatamaranItinerariesController@update');
+    Route::get('itinerary/delete/{catamaran_itineraries}', 'CatamaranItinerariesController@destroy');
 
     Route::get('/inquiry', function () {
         $inquiries = App\inquery::where('type', 'catamaran')->get();
@@ -76,9 +99,20 @@ Route::group(['prefix' => 'catamaran'], function () {
 });
 
 Route::group(['prefix' => 'local-island'], function () {
-    
+    //Main Route
+    Route::get('/', function () {
+        $diving_spots = App\diving_spot::all();
+        return view('diving-spots.admin.all', compact('diving_spots'));
+    });
+
     Route::get('add', 'DivingSpotController@create');
     Route::post('add', 'DivingSpotController@store');
+
+    //Local Island Edit and Delete Routes
+    Route::get('edit/{diving_spot}', 'DivingSpotController@edit');
+    Route::post('edit/{diving_spot}', 'DivingSpotController@update');
+    Route::get('edit/{diving_spot}/image/delete/{id}', 'DivingSpotController@deleteImage');
+    Route::get('delete/{diving_spot}', 'DivingSpotController@destroy');
 
     Route::get('/inquiry', function () {
         $inquiries = App\inquery::where('type', 'local-island')->get();

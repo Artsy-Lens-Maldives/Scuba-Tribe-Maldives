@@ -47,6 +47,7 @@ class DivingSpotController extends Controller
             $file = $photo->storeAs($location, $fileName);
             dive_photos::create([
                 'dive_id' => $diving_spot->id,
+                'main' => '1',
                 'photo_url' => '/local-island'. '/' . $diving_spot->slug . '/' . 'photo/' . $fileName
             ]);
         }

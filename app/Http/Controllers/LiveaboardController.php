@@ -60,6 +60,7 @@ class LiveaboardController extends Controller
             $file = $photo->storeAs($location, $fileName);
             liveaboard_photo::create([
                 'liveaboard_id' => $liveaboard->id,
+                'main' => '1',
                 'photo_url' => '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $fileName
             ]);
         }

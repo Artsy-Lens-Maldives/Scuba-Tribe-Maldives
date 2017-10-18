@@ -72,12 +72,29 @@
               </div>
               <div class="row mt-15 mb-15" id="image_preview" style="margin-top: 10px"></div>
               <div class="row mt-15 mb-15" id="image_preview_old" style="margin-top: 10px">
-                <div class="col-md-12"><h6>Old Images <strong>(Before deleting any image make sure to save all changes to other fields)</strong></h6></div>
+                <div class="col-md-12">
+                  <h6>Old Images 
+                    <strong>
+                      (Before deleting any image make sure to save all changes to other fields) 
+                      <br>
+                      <br>
+                      Click any image to preview it.
+                    </strong>
+                  </h6>
+                </div>
                 @foreach($catamaran->images as $image)
-                  <div class="clearfix col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%;">
-                    <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
+                  <div class="clearfix col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%; margin-top: 10px; margin-bottom: 10px;">
+                    <a href="{{ $image->photo_url }}" data-title="{{ $catamaran->name }}'s image" data-toggle="lightbox">
+                      <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
+                    </a>
                     <center>
                       <a href="{{ url('admin/catamaran/edit/') }}/{{ $catamaran->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
+                      @if($image->main == '0')
+                        <a href="{{ url('admin/catamaran/edit/') }}/{{ $catamaran->slug }}/image/main/{{ $image->id }}" class="btn btn-warning" style="margin-top: 3px;">Main Photo</a>        
+                      @else
+                        <a href="" class="btn btn-warning disabled" style="margin-top: 3px;" disabled>Current Main</a>
+                      @endif                      
+                    </center>
                     </center>
                   </div>
                 @endforeach
@@ -101,6 +118,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.0/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.0/css/froala_style.min.css" rel="stylesheet" type="text/css" />    
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet" type="text/css" />
+
 <style>
 .grid-item {
     width: 100%;
@@ -116,6 +135,8 @@
 
 <!-- Include Editor JS files. -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.0/js/froala_editor.pkgd.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 
 <script> 
 $(function() { 
@@ -141,6 +162,11 @@ $(function() {
   }) 
 }); 
 
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    alwaysShowClose: true,
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
 </script>
 <script>
   function preview_images() {

@@ -36,6 +36,18 @@ Route::group(['prefix' => 'liveaboard'], function () {
     Route::get('edit/{liveaboard}', 'LiveaboardController@edit');
     Route::post('edit/{liveaboard}', 'LiveaboardController@update');
     Route::get('edit/{liveaboard}/image/delete/{id}', 'LiveaboardController@deleteImage');
+    Route::get('edit/{liveaboard}/image/main/{id}', function($liveaboard, $id) {
+        $live = App\liveaboard::where('slug', $liveaboard)->first();
+        $old_photos = App\liveaboard_photo::where('liveaboard_id', $live->id)->get();
+        foreach ($old_photos as $old_photo) {
+            $old_photo->main = '0';
+            $old_photo->save();
+        }
+        $photo = App\liveaboard_photo::find($id);
+        $photo->main = '1';
+        $photo->save();
+        return redirect('admin/liveaboard/edit/'. $liveaboard .'/#image_preview_old')->withInput();
+    });
     Route::get('delete/{liveaboard}', 'LiveaboardController@destroy');
 
     //Ititnerary Adding Routes
@@ -75,6 +87,18 @@ Route::group(['prefix' => 'catamaran'], function () {
     Route::get('edit/{catamaran}', 'CatamaranController@edit');
     Route::post('edit/{catamaran}', 'CatamaranController@update');
     Route::get('edit/{catamaran}/image/delete/{id}', 'CatamaranController@deleteImage');
+    Route::get('edit/{catamaran}/image/main/{id}', function($catamaran, $id) {
+        $live = App\catamaran::where('slug', $catamaran)->first();
+        $old_photos = App\catamaran_photos::where('catamaran_id', $live->id)->get();
+        foreach ($old_photos as $old_photo) {
+            $old_photo->main = '0';
+            $old_photo->save();
+        }
+        $photo = App\catamaran_photos::find($id);
+        $photo->main = '1';
+        $photo->save();
+        return redirect('admin/catamaran/edit/'. $catamaran .'/#image_preview_old')->withInput();
+    });
     Route::get('delete/{catamaran}', 'CatamaranController@destroy');
     
     //Ititnerary Adding Routes
@@ -112,6 +136,18 @@ Route::group(['prefix' => 'local-island'], function () {
     Route::get('edit/{diving_spot}', 'DivingSpotController@edit');
     Route::post('edit/{diving_spot}', 'DivingSpotController@update');
     Route::get('edit/{diving_spot}/image/delete/{id}', 'DivingSpotController@deleteImage');
+    Route::get('edit/{diving_spot}/image/main/{id}', function($diving_spot, $id) {
+        $live = App\diving_spot::where('slug', $diving_spot)->first();
+        $old_photos = App\dive_photos::where('dive_id', $live->id)->get();
+        foreach ($old_photos as $old_photo) {
+            $old_photo->main = '0';
+            $old_photo->save();
+        }
+        $photo = App\dive_photos::find($id);
+        $photo->main = '1';
+        $photo->save();
+        return redirect('admin/local-island/edit/'. $diving_spot .'/#image_preview_old')->withInput();
+    });
     Route::get('delete/{diving_spot}', 'DivingSpotController@destroy');
 
     Route::get('/inquiry', function () {

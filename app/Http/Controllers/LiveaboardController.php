@@ -53,14 +53,20 @@ class LiveaboardController extends Controller
         $liveaboard->vessel_layout_photo = '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $layout_name;
         $liveaboard->save();
         
-
+        $i = 0;
         foreach ($request->image as $photo) {
+            $i++;
+            if ($i == '1'){
+                $m = '1';
+            } else {
+                $m = '0';
+            }
             $fileName = $liveaboard->slug . '-' . time() . '-' . $photo->getClientOriginalName();
             $location = 'public/' . $liveaboard->slug . '/images'; 
             $file = $photo->storeAs($location, $fileName);
             liveaboard_photo::create([
                 'liveaboard_id' => $liveaboard->id,
-                'main' => '1',
+                'main' => $m,
                 'photo_url' => '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $fileName
             ]);
         }
@@ -116,7 +122,7 @@ class LiveaboardController extends Controller
     {
         $image = liveaboard_photo::find($id);
         $image->delete();
-        return redirect()->back()->withInput();
+        return redirect('admin/liveaboard/edit/'. $liveaboard .'/#image_preview_old')->withInput();
     }
 
     /**

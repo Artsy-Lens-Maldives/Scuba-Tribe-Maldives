@@ -41,13 +41,20 @@ class DivingSpotController extends Controller
     public function store(Request $request)
     {
         $diving_spot = diving_spot::create(Input::except('_token', 'image'));
+        $i = 0;
         foreach ($request->image as $photo) {
+            $i++;
+            if ($i == '1'){
+                $m = '1';
+            } else {
+                $m = '0';
+            }
             $fileName = $diving_spot->slug . '-' . time() . '-' . $photo->getClientOriginalName();
             $location = 'public/' . $diving_spot->slug . '/images'; 
             $file = $photo->storeAs($location, $fileName);
             dive_photos::create([
                 'dive_id' => $diving_spot->id,
-                'main' => '1',
+                'main' => $m,
                 'photo_url' => '/local-island'. '/' . $diving_spot->slug . '/' . 'photo/' . $fileName
             ]);
         }

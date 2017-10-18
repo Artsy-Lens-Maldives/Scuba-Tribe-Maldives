@@ -15,8 +15,16 @@
             <!-- Recomended item-->
             <div class="col-md-6">
               <div class="recom-item border">
-                <div class="recom-media"><a href="{{ url('catamaran/') }}/{{ $catamaran->slug }}">
-                    <div class="pic"><img src="{{ $catamaran->first_image->photo_url }}" data-at2x="{{ $catamaran->first_image->photo_url }}" alt="{{ $catamaran->name }} image" height="240px"></div></a>
+                <div class="recom-media">
+                  <a href="{{ url('catamaran/') }}/{{ $catamaran->slug }}">
+                    <div class="pic">
+                      @if($catamaran->first_image !== null)
+                        <img src="{{ $catamaran->first_image->photo_url }}" alt="{{ $catamaran->name }} image" height="240px">    
+                      @else
+                        <img src="{{ url('/pic/recomended/1.jpg') }}" alt="{{ $catamaran->name }} image" height="240px">
+                      @endif
+                    </div>
+                  </a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Maldives</div>
                 </div>
                 <!-- Recomended Content-->

@@ -53,12 +53,19 @@ class CatamaranController extends Controller
         $catamaran->catamaran_layout_photo = '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $layout_name;
         $catamaran->save();
         
+        $i = 0;
         foreach ($request->image as $photo) {
+            $i++;
+            if ($i == '1'){
+                $m = '1';
+            } else {
+                $m = '0';
+            }
             $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
             $file = $photo->storeAs($location, $fileName);
             catamaran_photos::create([
                 'catamaran_id' => $catamaran->id,
-                'main' => '1',
+                'main' => $m,
                 'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
             ]);
         }

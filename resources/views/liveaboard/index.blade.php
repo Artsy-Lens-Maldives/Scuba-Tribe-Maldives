@@ -15,8 +15,16 @@
             <!-- Recomended item-->
             <div class="col-md-6">
               <div class="recom-item border">
-                <div class="recom-media"><a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}">
-                    <div class="pic"><img src="{{ $liveaboard->first_image->photo_url }}" data-at2x="{{ $liveaboard->first_image->photo_url }}" alt="{{ $liveaboard->name }} image" height="240px"></div></a>
+                <div class="recom-media">
+                    <a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}">
+                      <div class="pic">
+                        @if($liveaboard->first_image !== null)
+                          <img src="{{ $liveaboard->first_image->photo_url }}" alt="{{ $liveaboard->name }} image" height="240px">    
+                        @else
+                          <img src="{{ url('/pic/recomended/1.jpg') }}" alt="{{ $liveaboard->name }} image">      
+                        @endif
+                      </div>
+                    </a>
                   <div class="location"><i class="flaticon-suntour-map"></i> Maldives</div>
                 </div>
                 <!-- Recomended Content-->

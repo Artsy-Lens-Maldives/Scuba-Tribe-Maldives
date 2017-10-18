@@ -45,18 +45,27 @@
         </div>
         <div class="container mt-30">
           <div class="row">
-            <div class="col-md-8">
-              <h4 class="mb-20">Description</h4>
-              <div class="list-style-square">
-              {!! $liveaboard->description !!}
+            @if($liveaboard->vessel_layout_photo == null)
+              <div class="col-md-12">
+                <h4 class="mb-20">Description</h4>
+                <div class="list-style-square">
+                {!! $liveaboard->description !!}
+                </div>
+              </div>      
+            @else
+              <div class="col-md-8">
+                <h4 class="mb-20">Description</h4>
+                <div class="list-style-square">
+                {!! $liveaboard->description !!}
+                </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <h4 class="mb-20">Liveaboard Layout Photo</h4>
-              <center>
-                <img style="height: 100%; width: 100%;" src="{{ $liveaboard->vessel_layout_photo }}" alt="{{ $liveaboard->name }} layout photo">
-              </center>
-            </div>
+              <div class="col-md-4">
+                <h4 class="mb-20">Liveaboard Layout Photo</h4>
+                <center>
+                  <img style="height: 100%; width: 100%;" src="{{ $liveaboard->vessel_layout_photo }}" alt="{{ $liveaboard->name }} layout photo">
+                </center>
+              </div>
+            @endif
           </div>
         </div>
         <!-- section prices-->

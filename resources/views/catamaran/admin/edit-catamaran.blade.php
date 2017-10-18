@@ -93,7 +93,7 @@
                         <a href="{{ url('admin/catamaran/edit/') }}/{{ $catamaran->slug }}/image/main/{{ $image->id }}" class="btn btn-warning" style="margin-top: 3px;">Main Photo</a>        
                       @else
                         <a href="" class="btn btn-warning disabled" style="margin-top: 3px;" disabled>Current Main</a>
-                      @endif                      
+                      @endif
                     </center>
                     </center>
                   </div>

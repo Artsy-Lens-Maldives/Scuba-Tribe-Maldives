@@ -98,6 +98,17 @@ class DivingSpotController extends Controller
         $diving_spot->description= $request->description;
         $diving_spot->save();
 
+        foreach ($request->image as $photo) {
+            $fileName = $diving_spot->slug . '-' . time() . '-' . $photo->getClientOriginalName();
+            $location = 'public/' . $diving_spot->slug . '/images'; 
+            $file = $photo->storeAs($location, $fileName);
+            dive_photos::create([
+                'dive_id' => $diving_spot->id,
+                'main' => '0',
+                'photo_url' => '/local-island'. '/' . $diving_spot->slug . '/' . 'photo/' . $fileName
+            ]);
+        }
+
         $message = "Successfully updated " . $diving_spot->name . " Local Island";
         return redirect('admin/local-island')->with('alert-success', $message);
     }

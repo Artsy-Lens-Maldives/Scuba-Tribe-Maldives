@@ -109,7 +109,19 @@ class CatamaranController extends Controller
         $catamaran->description= $request->description;
         $catamaran->features= $request->features;
         $catamaran->save();
+        
+        $location = 'public/' . $catamaran->slug . '/images';
 
+        foreach ($request->image as $photo) {
+            $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
+            $file = $photo->storeAs($location, $fileName);
+            catamaran_photos::create([
+                'catamaran_id' => $catamaran->id,
+                'main' => '0',
+                'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
+            ]);
+        }
+        
         $message = "Successfully updated " . $catamaran->name . " Catamaran";
         return redirect('admin/catamaran')->with('alert-success', $message);
     }
@@ -118,7 +130,7 @@ class CatamaranController extends Controller
     {
         $image = catamaran_photos::find($id);
         $image->delete();
-        return redirect()->back()->withInput();
+        return redirect('admin/catamaran/edit/'. $catamaran .'/#image_preview_old')->withInput();
     }
 
     /**

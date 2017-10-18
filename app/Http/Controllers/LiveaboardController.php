@@ -113,6 +113,17 @@ class LiveaboardController extends Controller
         $liveaboard->gear_rental = $request->gear_rental;
         $liveaboard->save();
 
+        foreach ($request->image as $photo) {
+            $fileName = $liveaboard->slug . '-' . time() . '-' . $photo->getClientOriginalName();
+            $location = 'public/' . $liveaboard->slug . '/images'; 
+            $file = $photo->storeAs($location, $fileName);
+            liveaboard_photo::create([
+                'liveaboard_id' => $liveaboard->id,
+                'main' => '0',
+                'photo_url' => '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $fileName
+            ]);
+        }
+
         $message = "Successfully updated " . $liveaboard->name . " Liveaboard";
         return redirect('admin/liveaboard')->with('alert-success', $message);
 

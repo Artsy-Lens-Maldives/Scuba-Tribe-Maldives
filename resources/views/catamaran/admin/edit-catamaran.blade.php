@@ -88,10 +88,11 @@
                       <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
                     </a>
                     <center>
-                      <a href="{{ url('admin/catamaran/edit/') }}/{{ $catamaran->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
                       @if($image->main == '0')
+                        <a href="{{ url('admin/catamaran/edit/') }}/{{ $catamaran->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
                         <a href="{{ url('admin/catamaran/edit/') }}/{{ $catamaran->slug }}/image/main/{{ $image->id }}" class="btn btn-warning" style="margin-top: 3px;">Main Photo</a>        
                       @else
+                        <a href="" class="btn btn-danger disabled" style="margin-top: 3px;" disabled>Delete</a>
                         <a href="" class="btn btn-warning disabled" style="margin-top: 3px;" disabled>Current Main</a>
                       @endif
                     </center>

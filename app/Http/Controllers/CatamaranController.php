@@ -112,14 +112,16 @@ class CatamaranController extends Controller
         
         $location = 'public/' . $catamaran->slug . '/images';
 
-        foreach ($request->image as $photo) {
-            $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
-            $file = $photo->storeAs($location, $fileName);
-            catamaran_photos::create([
-                'catamaran_id' => $catamaran->id,
-                'main' => '0',
-                'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
-            ]);
+        if ($request->image != null) {
+            foreach ($request->image as $photo) {
+                $fileName = $catamaran->slug . '-' . time() . '-' . $photo->getClientOriginalName();
+                $file = $photo->storeAs($location, $fileName);
+                catamaran_photos::create([
+                    'catamaran_id' => $catamaran->id,
+                    'main' => '0',
+                    'photo_url' => '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $fileName
+                ]);
+            }
         }
         
         $message = "Successfully updated " . $catamaran->name . " Catamaran";

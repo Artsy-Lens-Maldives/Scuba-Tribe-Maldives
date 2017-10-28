@@ -46,12 +46,14 @@ class LiveaboardController extends Controller
         
         $layout_photo = $request->catamaran_layout_photo;
         
-        $layout_name = $liveaboard->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
-        $location = 'public/' . $liveaboard->slug . '/images'; 
-        $layout_file = $layout_photo->storeAs($location, $layout_name);
-        
-        $liveaboard->vessel_layout_photo = '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $layout_name;
-        $liveaboard->save();
+        if ($layout_photo != null) {            
+            $layout_name = $liveaboard->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
+            $location = 'public/' . $liveaboard->slug . '/images'; 
+            $layout_file = $layout_photo->storeAs($location, $layout_name);
+            
+            $liveaboard->vessel_layout_photo = '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $layout_name;
+            $liveaboard->save();
+        }
         
         $i = 0;
         foreach ($request->image as $photo) {

@@ -46,13 +46,14 @@ class CatamaranController extends Controller
         
         $layout_photo = $request->catamaran_layout_photo;
         
-        $layout_name = $catamaran->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
-        $location = 'public/' . $catamaran->slug . '/images'; 
-        $layout_file = $layout_photo->storeAs($location, $layout_name);
-        
-        $catamaran->catamaran_layout_photo = '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $layout_name;
-        $catamaran->save();
-        
+        if ($layout_photo != null) {            
+            $layout_name = $catamaran->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
+            $location = 'public/' . $catamaran->slug . '/images'; 
+            $layout_file = $layout_photo->storeAs($location, $layout_name);
+            
+            $catamaran->catamaran_layout_photo = '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $layout_name;
+            $catamaran->save();
+        }
         $i = 0;
         foreach ($request->image as $photo) {
             $i++;

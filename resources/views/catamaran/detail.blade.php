@@ -83,6 +83,7 @@
                   <th>Date</th>
                   <th>Itinerary</th>
                   <th>Capacity</th>
+                  <th>Price</th
                   <th>Select</th>
                 </tr>
               </thead>
@@ -91,11 +92,14 @@
                   @if(!$catamaran->itinerary->isEmpty())
                     @foreach($catamaran->itinerary as $itinerary)
                     <tr>
-                      <td class="col-md-1" style="vertical-align: middle;">
+                      <td class="col-md-2" style="vertical-align: middle;">
                         <h4>{{ $itinerary->date }}</h4>
                       </td>
-                      <td class="col-md-8" style="vertical-align: middle;"> 
+                      <td class="col-md-6" style="vertical-align: middle;"> 
                         {!! $itinerary->detail !!}
+                      </td>
+                      <td class="col-md-1" style="vertical-align: middle;"> 
+                        {!! $itinerary->price !!}
                       </td>
                       <td class="col-md-2" style="vertical-align: middle;"> 
                         <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>

@@ -32,7 +32,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12" style="margin-top: 100px;">
               <div class="bg-gray-3 p-30-40">
                 <h4>Boat Features</h4>
                 <div class="list-style-square">

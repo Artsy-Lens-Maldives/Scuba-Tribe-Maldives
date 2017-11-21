@@ -90,22 +90,36 @@
                   @if(!$liveaboard->itinerary->isEmpty())
                     @foreach($liveaboard->itinerary as $itinerary)
                     <tr>
-                      <td class="col-md-2" style="vertical-align: middle;">
+                      <td class="col-md-3" style="vertical-align: middle;">
                         <h4>{{ $itinerary->date }}</h4>
                       </td>
-                      <td class="item col-md-6" style="vertical-align: middle;"> 
-                        {!! $itinerary->detail !!}
+                      <td class="col-md-4" style="vertical-align: middle;"> 
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#itineraryModal{{ $itinerary->id }}">Show Details</button>
+                      </td>                      
+                      <td class="col-md-3" style="vertical-align: middle;"> 
+                        <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>
                       </td>
                       <td class="col-md-1" style="vertical-align: middle;"> 
                         {!! $itinerary->price !!}
-                      </td>
-                      <td class="col-md-2" style="vertical-align: middle;"> 
-                        <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>
                       </td>
                       <td class="col-md-1" style="vertical-align: middle;">
                         <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->name }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
                       </td>
                     </tr>
+                    <div id="itineraryModal{{ $itinerary->id }}" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <span class="more">{!! $itinerary->detail !!}</span>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
                     @endforeach
                   @else
                     <tr>
@@ -116,37 +130,6 @@
                       <td></td>
                     </tr>
                   @endif
-                    <script>
-                      $(function(){ /* to make sure the script runs after page load */
-
-                        $('.item').each(function(event){ /* select all divs with the item class */
-                        
-                          var max_length = 150; /* set the max content length before a read more link will be added */
-                          
-                          if($(this).html().length > max_length){ /* check for content length */
-                            
-                            var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
-                            var long_content	= $(this).html().substr(max_length);
-                            
-                            $(this).html(short_content+
-                                  '<a href="#" class="read_more"><br/>Read More</a>'+
-                                  '<span class="more_text" style="display:none;">'+long_content+'</span>'); /* Alter the html to allow the read more functionality */
-                                  
-                            $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
-                      
-                              event.preventDefault(); /* prevent the a from changing the url */
-                              $(this).hide(); /* hide the read more button */
-                              $(this).parents('.item').find('.more_text').show(); /* show the .more_text span */
-                          
-                            });
-                            
-                          }
-                          
-                        });
-                      
-                      
-                      });
-                    </script>
               </tbody>
             </table>
           </div>
@@ -189,4 +172,58 @@
       </section>
     </div>
 
+@endsection
+
+@section('js')
+<script>
+$(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 100;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+</script>
+@endsection
+
+@section('css')
+<style>
+
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
+
+</style>
 @endsection

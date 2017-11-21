@@ -92,22 +92,36 @@
                   @if(!$catamaran->itinerary->isEmpty())
                     @foreach($catamaran->itinerary as $itinerary)
                     <tr>
-                      <td class="col-md-2" style="vertical-align: middle;">
+                      <td class="col-md-3" style="vertical-align: middle;">
                         <h4>{{ $itinerary->date }}</h4>
                       </td>
-                      <td class="col-md-6" style="vertical-align: middle;"> 
-                        {!! $itinerary->detail !!}
+                      <td class="col-md-4" style="vertical-align: middle;"> 
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#itineraryModal{{ $itinerary->id }}">Show Details</button>
+                      </td>                      
+                      <td class="col-md-3" style="vertical-align: middle;"> 
+                        <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>
                       </td>
                       <td class="col-md-1" style="vertical-align: middle;"> 
                         {!! $itinerary->price !!}
-                      </td>
-                      <td class="col-md-2" style="vertical-align: middle;"> 
-                        <strong>{{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }}</strong>
                       </td>
                       <td class="col-md-1" style="vertical-align: middle;">
                         <a href="{{ url('inquiry') }}/{{ $catamaran->id }}/{{ $catamaran->name }}/catamaran/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
                       </td>
                     </tr>
+                    <div id="itineraryModal{{ $itinerary->id }}" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <span class="more">{!! $itinerary->detail !!}</span>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
                     @endforeach
 
                   @else

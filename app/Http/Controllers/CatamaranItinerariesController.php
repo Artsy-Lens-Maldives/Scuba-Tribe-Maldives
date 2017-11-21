@@ -79,6 +79,7 @@ class CatamaranItinerariesController extends Controller
         $catamaran_itineraries->current = $request->current;
         $catamaran_itineraries->max = $request->max;
         $catamaran_itineraries->date = $request->date;
+        $catamaran_itineraries->price = $request->price;
         $catamaran_itineraries->detail = $request->detail;
         $catamaran_itineraries->save();
 

@@ -60,6 +60,12 @@
               <label>Enter Itinerary Date:</label>
               <input type="text" name="date" size="40" placeholder="Enter Date" aria-required="true" class="form-row form-row-last" required>
             </div>
+            
+            <div class="col-md-12">
+              <label>Enter Itinerary Price:</label>
+              <input type="number" min="0" name="price" size="40" placeholder="Enter Price" aria-required="true" class="form-row form-row-last" required>
+            </div>
+            
             <div class="col-md-12">
               <label>Enter Itinerary Details:</label>
               <textarea id="detail" name="detail" cols="40" rows="4" placeholder="Detail about itenary" aria-invalid="false" aria-required="true" class="mb-20" required></textarea>

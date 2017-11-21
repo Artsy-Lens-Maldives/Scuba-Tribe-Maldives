@@ -80,6 +80,7 @@ class LiveaboardItineraryController extends Controller
         $liveaboard_itinerary->current = $request->current;
         $liveaboard_itinerary->max = $request->max;
         $liveaboard_itinerary->date = $request->date;
+        $liveaboard_itinerary->price = $request->price;
         $liveaboard_itinerary->detail = $request->detail;
         $liveaboard_itinerary->save();
 

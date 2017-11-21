@@ -127,7 +127,6 @@
                       </div>
                     </div>
                     @endforeach
-
                   @else
                     <tr>
                       <td></td>

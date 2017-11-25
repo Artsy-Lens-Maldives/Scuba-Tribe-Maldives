@@ -14,10 +14,10 @@ class AddPriceForItineraries extends Migration
     public function up()
     {
         Schema::table('liveaboard_itineraries', function($table) {
-            $table->integer('price')->default('0');
+            $table->string('price')->default('0');
         });
         Schema::table('catamaran_itineraries', function($table) {
-            $table->integer('price')->default('0');
+            $table->string('price')->default('0');
         });
     }
 

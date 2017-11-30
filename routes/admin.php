@@ -130,7 +130,7 @@ Route::group(['prefix' => 'local-island'], function () {
     });
 
     Route::get('add', 'DivingSpotController@create');
-    Route::post('add', 'DivingSpotController@store');
+    Route::post('add/post', 'DivingSpotController@store');
 
     //Local Island Edit and Delete Routes
     Route::get('edit/{diving_spot}', 'DivingSpotController@edit');

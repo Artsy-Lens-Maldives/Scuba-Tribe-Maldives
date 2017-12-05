@@ -63,7 +63,7 @@
             
             <div class="col-md-12">
               <label>Enter Itinerary Price:</label>
-              <input type="number" min="0" name="price" size="40" placeholder="Enter Price" aria-required="true" class="form-row form-row-last" required>
+              <input type="text" name="price" placeholder="Enter Price" aria-required="true" class="form-row form-row-last" required>
             </div>
             
             <div class="col-md-12">

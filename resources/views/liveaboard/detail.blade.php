@@ -103,7 +103,7 @@
                         {!! $itinerary->price !!}
                       </td>
                       <td class="col-md-1" style="vertical-align: middle;">
-                        <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->name }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
+                        <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->slug }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a>
                       </td>
                     </tr>
                     <div id="itineraryModal{{ $itinerary->id }}" class="modal fade" role="dialog">
@@ -112,7 +112,7 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Itinerary Detail</h4>
+                            <h4 class="modal-title">Itinerary of {{ $liveaboard->name }} - {{ $itinerary->date }} </h4>
                           </div>
                           <div class="modal-body">
                             <span class="more">{!! $itinerary->detail !!}</span>

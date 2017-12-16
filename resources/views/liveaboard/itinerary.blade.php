@@ -1,4 +1,4 @@
-@extends('layouts.app-live')
+@extends('layouts.app')
 
 @section('content')
     <?php
@@ -27,8 +27,11 @@
             </div>
             <div class="col-md-12">
               <div class="bg-gray-3 p-30-40"style="list-style: square;">
-                <h4>Itinerary of {{ $liveaboard->name }} - {{ $itinerary->date }} <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->slug }}/liveaboard/{{ $itinerary->id }}" class="cws-button alt gray">Send Inquiry</a> </h4>
-                <h5>Capacity: {{ $itinerary->current }}</strong> of <strong>{{ $itinerary->max }} - Price {!! $itinerary->price !!}</h5>
+                <h4>Itinerary of {{ $liveaboard->name }} 
+                  <a href="{{ url('inquiry') }}/{{ $liveaboard->id }}/{{ $liveaboard->slug }}/liveaboard/{{ $itinerary->id }}" class="btn btn-lg btn-success">Send Inquiry</a>
+                  <a href="{{ url('liveaboard') }}/{{ $liveaboard->slug }}" class="btn btn-lg btn-info">Go Back</a>
+                </h4>
+                <h5>Date: <strong>{{ $itinerary->date }}</strong> - Capacity: <strong>{{ $itinerary->current }} of {{ $itinerary->max }}</strong> - Price: <strong>{{ $itinerary->price }}</strong></h5>
                 <hr>
                 <div class="">{!! $itinerary->detail !!}</div>
               </div>

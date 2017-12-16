@@ -1,6 +1,9 @@
 @extends('layouts.app-live')
 
 @section('content')
+    <?php
+      $itinerary = $liveaboard_itinerary;
+    ?>
     
     <div class="content-body">
       <section class="page-section pt-0 pb-50">

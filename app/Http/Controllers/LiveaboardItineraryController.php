@@ -50,9 +50,9 @@ class LiveaboardItineraryController extends Controller
      * @param  \App\liveaboard_itinerary  $liveaboard_itinerary
      * @return \Illuminate\Http\Response
      */
-    public function show(liveaboard_itinerary $liveaboard_itinerary)
+    public function show(liveaboard $liveaboard, liveaboard_itinerary $liveaboard_itinerary)
     {
-        //
+        return view('liveaboard.itinerary', compact('liveaboard', 'liveaboard_itinerary')); 
     }
 
     /**

@@ -51,6 +51,7 @@ Route::group(['prefix' => 'liveaboard'], function () {
   
   Route::get('/', 'LiveaboardController@index');
   Route::get('{liveaboard}', 'LiveaboardController@show');
+  Route::get('{liveaboard}/itinerary/{liveaboard_itinerary}', 'LiveaboardItineraryController@show');
   
   Route::get('{slug}/photo/{filename}', 'LiveaboardController@image');
 

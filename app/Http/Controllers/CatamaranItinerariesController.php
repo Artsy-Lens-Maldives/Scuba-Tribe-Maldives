@@ -49,9 +49,9 @@ class CatamaranItinerariesController extends Controller
      * @param  \App\catamaran_itineraries  $catamaran_itineraries
      * @return \Illuminate\Http\Response
      */
-    public function show(catamaran_itineraries $catamaran_itineraries)
+    public function show(catamaran $catamaran, catamaran_itineraries $catamaran_itineraries)
     {
-        //
+        return view('catamaran.itinerary', compact('catamaran', 'catamaran_itineraries'));
     }
 
     /**

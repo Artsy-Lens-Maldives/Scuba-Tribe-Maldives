@@ -51,6 +51,7 @@ Route::group(['prefix' => 'liveaboard'], function () {
   
   Route::get('/', 'LiveaboardController@index');
   Route::get('{liveaboard}', 'LiveaboardController@show');
+
   Route::get('{liveaboard}/itinerary/{liveaboard_itinerary}', 'LiveaboardItineraryController@show');
   
   Route::get('{slug}/photo/{filename}', 'LiveaboardController@image');
@@ -62,6 +63,8 @@ Route::group(['prefix' => 'catamaran'], function () {
 
   Route::get('/', 'CatamaranController@index');
   Route::get('{catamaran}', 'CatamaranController@show');
+
+  Route::get('{catamaran}/itinerary/{catamaran_itineraries}', 'CatamaranItinerariesController@show');
     
   Route::get('{slug}/photo/{filename}', 'CatamaranController@image');
 

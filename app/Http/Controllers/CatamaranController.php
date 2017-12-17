@@ -124,6 +124,17 @@ class CatamaranController extends Controller
                 ]);
             }
         }
+
+        $layout_photo = $request->catamaran_layout_photo;
+        
+        if ($layout_photo != null) {            
+            $layout_name = $catamaran->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
+            $location = 'public/' . $catamaran->slug . '/images'; 
+            $layout_file = $layout_photo->storeAs($location, $layout_name);
+            
+            $catamaran->catamaran_layout_photo = '/catamaran'. '/' . $catamaran->slug . '/' . 'photo/' . $layout_name;
+            $catamaran->save();
+        }
         
         $message = "Successfully updated " . $catamaran->name . " Catamaran";
         return redirect('admin/catamaran')->with('alert-success', $message);

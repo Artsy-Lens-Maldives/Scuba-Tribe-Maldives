@@ -128,8 +128,18 @@ class LiveaboardController extends Controller
             }
         }
 
+        $layout_photo = $request->catamaran_layout_photo;
+        
+        if ($layout_photo != null) {            
+            $layout_name = $liveaboard->slug . '-layout-' . time() . '-' . $layout_photo->getClientOriginalName();
+            $location = 'public/' . $liveaboard->slug . '/images'; 
+            $layout_file = $layout_photo->storeAs($location, $layout_name);
+            
+            $liveaboard->vessel_layout_photo = '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $layout_name;
+            $liveaboard->save();
+        }
 
-        $message = "Successfully updated " . $liveaboard->name . " Liveaboard";
+        $message = "Successfully updated ".$liveaboard->name." Liveaboard";
         return redirect('admin/liveaboard')->with('alert-success', $message);
 
     }
@@ -138,7 +148,7 @@ class LiveaboardController extends Controller
     {
         $image = liveaboard_photo::find($id);
         $image->delete();
-        return redirect('admin/liveaboard/edit/'. $liveaboard .'/#image_preview_old')->withInput();
+        return redirect('admin/liveaboard/edit/'.$liveaboard.'/#image_preview_old')->withInput();
     }
 
     /**

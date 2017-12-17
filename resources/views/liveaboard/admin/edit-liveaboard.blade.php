@@ -84,6 +84,23 @@
                     {!! $liveaboard->gear_rental !!}
                   </textarea>
                 </div>
+                
+                @if($liveaboard->vessel_layout_photo !== null)
+                  <div class="col-md-9">
+                    <h6 class="trans-uppercase mb-10">Vessel Layout Photo</h6>
+                    <div class="cws_divider mb-30"></div>
+                    <input type="file" class="form-control" name="catamaran_layout_photo"/>
+                  </div>
+                  <div class="col-md-3">
+                    <img class='img-responsive img-thumbnail' src="{{ $vessel_layout_photo }}" style="">
+                  </div>    
+                @else
+                  <div class="col-md-12">
+                    <h6 class="trans-uppercase mb-10">Vessel Layout Photo</h6>
+                    <div class="cws_divider mb-30"></div>
+                    <input type="file" class="form-control" name="catamaran_layout_photo"/>
+                  </div>
+                @endif
               </div>
             </div>
             <div class="review-content pattern relative mb-15" style="">

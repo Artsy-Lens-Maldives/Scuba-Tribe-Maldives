@@ -1,4 +1,8 @@
 <?php
+use App\liveaboard;
+use App\liveaboard_itinerary;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 Route::get('/', function () {
     $users[] = Auth::user();

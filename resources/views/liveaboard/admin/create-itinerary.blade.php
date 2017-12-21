@@ -69,9 +69,18 @@
             <div class="col-md-12">
               <label>Enter Itinerary Details:</label>
               <textarea id="detail" name="detail" cols="40" rows="4" placeholder="Detail about itenary" aria-invalid="false" aria-required="true" class="mb-20" required></textarea>
-              <input type="submit" value="Add itinerary" class="cws-button alt float-right">
+              <label>Itinerary Photo:</label>
+              <div class="file-upload-previews"></div>
+                        <div class="file-upload">
+                            <input type="file" name="image[]" title="Click to add files" accept="gif|jpg|png" required>
+                            <span>Click to add an image for the listing</span>
+                        </div>
+                        </div>
+              
             </div>
+            
           </div>
+          <input type="submit" value="Add itinerary" class="cws-button alt float-right">
         </form>
 
         

@@ -55,83 +55,80 @@ Route::group(['prefix' => 'liveaboard'], function () {
     Route::get('delete/{liveaboard}', 'LiveaboardController@destroy');
 
     //Ititnerary Adding Routes
-        Route::get('itinerary/{liveaboard}/add', function () {
-            $gallery_images = \App\liveaboard_itinerary::all();
-            $liveaboards = liveaboard::where('slug', $liveaboard)->get();        
-            return view('liveaboard.admin.create-itinerary', compact('gallery_images', 'liveaboards'));
-        });
-        Route::post('itinerary/{liveaboard}/add', function (Request $request) {       
-            foreach ($request->image as $photo) {
-                $liveaboard_itinerary = liveaboard_itinerary::create(Input::except('_token', 'image'));
-                //File names and location
-                $fileName = 'gallery' . '-' . time() . '-' . $photo->getClientOriginalName();
-                $location_o = 'gallery'.'/original'.'/'.$fileName;
-                $location_t = 'gallery'.'/thumbnail'.'/'.$fileName;
-                
-                $s3 = \Storage::disk('public');
-    
-                //Original Image
-                $original = Image::make($photo)->resize(1080, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                });
-                $s3->put($location_o, $original->stream()->__toString(), 'public');
-                //Thumbnail image
-                $thumbnail = Image::make($photo)->resize(null, 300, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                });
-                $s3->put($location_t, $thumbnail->stream()->__toString(), 'public');
-    
-                $liveaboard_itinerary->photo_url = $location_o;
-                $liveaboard_itinerary->thumbnail = $location_t;
-                $liveaboard_itinerary->save();
-    
-            }
-            $url = 'admin/liveaboard/itinerary/' . $liveaboard_itinerary->liveaboard->slug;
-            return redirect($url)->with('alert-success', 'Successfully added itenerary');
-        }); 
-        Route::get('itinerary/{id}/delete', function ($id) {
-            $photo = \App\liveaboard_itinerary::find($id);
-            if ($photo !== null) {
-                $photo->delete();
-                return redirect()->back()->with('alert-success', 'Successfully deleted the image');
-            } else {
-                return redirect('/price')->with('alert-danger', 'Image not found');
-            }
+    Route::get('itinerary/{liveaboard}/add', 'LiveaboardItineraryController@create');
+    Route::post('itinerary/{liveaboard}/add', function (Request $request) {       
+        foreach ($request->image as $photo) {
+            $liveaboard_itinerary = liveaboard_itinerary::create(Input::except('_token', 'image'));
+            //File names and location
+            $fileName = 'gallery' . '-' . time() . '-' . $photo->getClientOriginalName();
+            $location_o = 'gallery'.'/original'.'/'.$fileName;
+            $location_t = 'gallery'.'/thumbnail'.'/'.$fileName;
             
-        });
-        Route::get('itinerary/{id}', function ($id) {
-            $price = \App\liveaboard_itinerary::find($id);
-    
-            return $price;
-        });
-    
-    
-    Route::get('/image/{folder}/{type}/{filename}', function ($folder, $type, $filename) {
-        $fileloc = 'app/public/'.$folder.'/'.$type.'/'.$filename;
-        $path = storage_path($fileloc);
-    
-        $failed = "It failed";
-        
-        if (!File::exists($path)) {
-          return $failed;
-        }
-    
-        $file = File::get($path);
-        $type = File::mimeType($path);
-    
-        /*$img = Image::cache(function($image) use ($file) {
-            $image->make($file)->resize(null, 1080, function ($constraint) {
+            $s3 = \Storage::disk('public');
+
+            //Original Image
+            $original = Image::make($photo)->resize(1080, null, function ($constraint) {
                 $constraint->aspectRatio();
+                $constraint->upsize();
             });
-        }, 100, false); */
+            $s3->put($location_o, $original->stream()->__toString(), 'public');
+            //Thumbnail image
+            $thumbnail = Image::make($photo)->resize(null, 300, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+            $s3->put($location_t, $thumbnail->stream()->__toString(), 'public');
+
+            $liveaboard_itinerary->photo_url = $location_o;
+            $liveaboard_itinerary->thumbnail = $location_t;
+            $liveaboard_itinerary->save();
+
+        }
+        $url = 'admin/liveaboard/itinerary/' . $liveaboard_itinerary->liveaboard->slug;
+        return redirect($url)->with('alert-success', 'Successfully added itenerary');
+    }); 
+    Route::get('itinerary/{id}/delete', function ($id) {
+        $photo = \App\liveaboard_itinerary::find($id);
+        if ($photo !== null) {
+            $photo->delete();
+            return redirect()->back()->with('alert-success', 'Successfully deleted the image');
+        } else {
+            return redirect('/price')->with('alert-danger', 'Image not found');
+        }
         
-        $response = Response::make($file, 200);
-        $response->header("Content-Type", $type);
-    
-        return $response;
     });
+    Route::get('itinerary/{id}', function ($id) {
+        $price = \App\liveaboard_itinerary::find($id);
+
+        return $price;
+    });
+
+
+Route::get('/image/{folder}/{type}/{filename}', function ($folder, $type, $filename) {
+    $fileloc = 'app/public/'.$folder.'/'.$type.'/'.$filename;
+    $path = storage_path($fileloc);
+
+    $failed = "It failed";
+    
+    if (!File::exists($path)) {
+      return $failed;
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    /*$img = Image::cache(function($image) use ($file) {
+        $image->make($file)->resize(null, 1080, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+    }, 100, false); */
+    
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+
     //Ititnerary Edit and Delete Routes
     Route::get('itinerary/{liveaboard}', function($liveaboard) {
         $live = App\liveaboard::where('slug', $liveaboard)->first();

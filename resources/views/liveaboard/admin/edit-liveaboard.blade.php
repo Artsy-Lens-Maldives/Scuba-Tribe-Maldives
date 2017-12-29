@@ -21,7 +21,7 @@
               <div class="cws_divider mb-30"></div>
             </div>
           </div>
-          <form class="form clearfix" action=""  method="post" enctype="multipart/form-data">
+          <form class="form clearfix" action="{{ url()->current() }}/edit"  method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="review-content pattern relative mb-15" style="">
               <div class="row">
@@ -92,7 +92,7 @@
                     <input type="file" class="form-control" name="catamaran_layout_photo"/>
                   </div>
                   <div class="col-md-3">
-                    <img class='img-responsive img-thumbnail' src="{{ $vessel_layout_photo }}" style="">
+                    <img class='img-responsive img-thumbnail' src="{{ $liveaboard->vessel_layout_photo }}" style="">
                   </div>    
                 @else
                   <div class="col-md-12">
@@ -118,34 +118,7 @@
               <div class="row mt-15 mb-15" id="image_preview" style="margin-top: 10px">
                 
               </div>
-              <div class="row mt-15 mb-15" id="image_preview_old" style="margin-top: 10px">
-                <div class="col-md-12">
-                  <h6>Old Images 
-                    <strong>
-                      (Before deleting any image make sure to save all changes to other fields) 
-                      <br>
-                      <br>
-                      Click any image to preview it.
-                    </strong>
-                  </h6>
-                </div>
-                @foreach($liveaboard->images as $image)
-                  <div class="clearfix col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%; margin-top: 10px; margin-bottom: 10px;">
-                    <a href="{{ $image->photo_url }}" data-title="{{ $liveaboard->name }}'s image" data-toggle="lightbox">
-                      <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
-                    </a>
-                    <center>
-                      @if($image->main == '0')
-                        <a href="{{ url('admin/liveaboard/edit/') }}/{{ $liveaboard->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
-                        <a href="{{ url('admin/liveaboard/edit/') }}/{{ $liveaboard->slug }}/image/main/{{ $image->id }}" class="btn btn-warning" style="margin-top: 3px;">Main Photo</a>        
-                      @else
-                        <a href="" class="btn btn-danger disabled" style="margin-top: 3px;" disabled>Delete</a>
-                        <a href="" class="btn btn-warning disabled" style="margin-top: 3px;" disabled>Current Main</a>
-                      @endif                     
-                    </center>
-                  </div>
-                @endforeach
-              </div>
+              
               <div class="row mt-15">
                 <div class="col-md-12">
                   <input type="submit" value="Save Changes" class="cws-button alt float-right">
@@ -153,6 +126,52 @@
               </div>
             </div>
           </form>
+
+            <hr>
+          <div class="review-content pattern relative mb-15" style="">
+            <div class="row mt-15 mb-15" id="image_preview_old" style="margin-top: 10px">
+              <div class="col-md-12">
+                <h6>Old Images 
+                  <strong>
+                    (Before deleting any image make sure to save all changes to other fields) 
+                    <br>
+                    <br>
+                    Click any image to preview it.
+                  </strong>
+                </h6>
+              </div>
+              <form action="{{ url()->current() }}/image/order" method="POST">
+                {{ csrf_field() }}
+                @foreach($liveaboard->images as $image)
+                  <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" style="width: 200px; height:100%; margin-top: 10px; margin-bottom: 10px;">
+                      <a href="{{ $image->photo_url }}" data-title="{{ $liveaboard->name }}'s image" data-toggle="lightbox">
+                        <img class='img-responsive img-thumbnail' src="{{ $image->photo_url }}" style="width: 200px; height:130px;">
+                      </a>
+                      <center>
+                        @if($image->main == '0')
+                          <a href="{{ url('admin/liveaboard/edit/') }}/{{ $liveaboard->slug }}/image/delete/{{ $image->id }}" onclick="return confirm('Are you sure you want to delete this image?');" class="btn btn-danger" style="margin-top: 3px;">Delete</a>
+                          <a href="{{ url('admin/liveaboard/edit/') }}/{{ $liveaboard->slug }}/image/main/{{ $image->id }}" class="btn btn-warning" style="margin-top: 3px;">Main Photo</a>        
+                        @else
+                          <a href="" class="btn btn-danger disabled" style="margin-top: 3px;" disabled>Delete</a>
+                          <a href="" class="btn btn-warning disabled" style="margin-top: 3px;" disabled>Current Main</a>
+                        @endif                     
+                      </center>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-7 col-xs-5" style="margin-top: 40px;">
+                      <div class="form-group">
+                        <label for="order-{{ $image->id }}">Order Number</label>
+                        <input type="number" class="form-control" value="{{ $image->order }}" name="{{ $image->id }}" id="oder-{{ $image->id }}" placeholder="Enter order number here Eg: 1">
+                      </div>
+                    </div>
+                  </div>
+                @endforeach
+                <div class="col-md-12">
+                  <input type="submit" value="Save Changes" class="cws-button alt float-right">
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </div>

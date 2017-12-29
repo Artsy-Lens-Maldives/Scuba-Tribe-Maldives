@@ -190,4 +190,17 @@ class CatamaranController extends Controller
         catamaran_itineraries::create(Input::except('_token'));
         return redirect()->back()->with('alert-success', 'Successfully added itenerary');
     }
+
+    public function imageOrder(catamaran $catamaran, Request $request)
+    {
+        $live_photos = $catamaran->images;
+        foreach ($live_photos as $live_photo) {
+            $id = $live_photo->id;
+            $live_photo->order = $request->$id;
+            $live_photo->save();
+        }
+        return redirect('admin/catamaran')->with('alert-success', 'Successfully changed image order');
+    }
+
+
 }

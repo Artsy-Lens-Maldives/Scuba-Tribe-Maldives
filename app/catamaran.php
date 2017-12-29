@@ -35,7 +35,7 @@ class catamaran extends Model
     }
 
     public function images() {
-        return $this->hasMany('App\catamaran_photos', 'catamaran_id');
+        return $this->hasMany('App\catamaran_photos', 'catamaran_id')->orderBy('order');
     }
     
     public function getFirstImageAttribute() {

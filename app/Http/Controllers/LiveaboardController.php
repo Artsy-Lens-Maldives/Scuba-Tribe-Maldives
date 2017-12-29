@@ -69,6 +69,7 @@ class LiveaboardController extends Controller
             liveaboard_photo::create([
                 'liveaboard_id' => $liveaboard->id,
                 'main' => $m,
+                'order' => $i,
                 'photo_url' => '/liveaboard'. '/' . $liveaboard->slug . '/' . 'photo/' . $fileName
             ]);
         }
@@ -181,5 +182,16 @@ class LiveaboardController extends Controller
         $response->header("Content-Type", $type);
     
         return $response;
+    }
+
+    public function imageOrder(liveaboard $liveaboard, Request $request)
+    {
+        $live_photos = $liveaboard->images;
+        foreach ($live_photos as $live_photo) {
+            $id = $live_photo->id;
+            $live_photo->order = $request->$id;
+            $live_photo->save();
+        }
+        return redirect('admin/liveaboard')->with('alert-success', 'Successfully changed image order');
     }
 }

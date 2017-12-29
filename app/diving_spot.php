@@ -35,7 +35,7 @@ class diving_spot extends Model
     }
 
     public function images() {
-        return $this->hasMany('App\dive_photos', 'dive_id');
+        return $this->hasMany('App\dive_photos', 'dive_id')->orderBy('order');
     }
     
     public function getFirstImageAttribute() {

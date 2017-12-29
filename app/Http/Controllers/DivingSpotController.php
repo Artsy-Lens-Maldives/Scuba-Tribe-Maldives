@@ -153,4 +153,15 @@ class DivingSpotController extends Controller
     
         return $response;
     }
+
+    public function imageOrder(diving_spot $diving_spot, Request $request)
+    {
+        $live_photos = $diving_spot->images;
+        foreach ($live_photos as $live_photo) {
+            $id = $live_photo->id;
+            $live_photo->order = $request->$id;
+            $live_photo->save();
+        }
+        return redirect('admin/local-island')->with('alert-success', 'Successfully changed image order');
+    }
 }

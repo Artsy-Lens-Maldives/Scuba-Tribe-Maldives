@@ -37,8 +37,8 @@ Route::group(['prefix' => 'liveaboard'], function () {
     Route::post('add/post', 'LiveaboardController@store');
     
     //Liveaboard Edit and Delete Routes
-    Route::get('edit/{liveaboard}', 'LiveaboardController@edit');
-    Route::post('edit/{liveaboard}', 'LiveaboardController@update');
+    Route::get('edit/{liveaboard}/edit', 'LiveaboardController@edit');
+    Route::post('edit/{liveaboard}/edit', 'LiveaboardController@update');
     Route::get('edit/{liveaboard}/image/delete/{id}', 'LiveaboardController@deleteImage');
     Route::get('edit/{liveaboard}/image/main/{id}', function($liveaboard, $id) {
         $live = App\liveaboard::where('slug', $liveaboard)->first();
@@ -52,13 +52,15 @@ Route::group(['prefix' => 'liveaboard'], function () {
         $photo->save();
         return redirect('admin/liveaboard/edit/'. $liveaboard .'/#image_preview_old')->withInput();
     });
+    Route::post('edit/{liveaboard}/image/order', 'LiveaboardController@imageOrder');
     Route::get('delete/{liveaboard}', 'LiveaboardController@destroy');
 
     //Ititnerary Adding Routes
     Route::get('itinerary/{liveaboard}/add', 'LiveaboardItineraryController@create');
-    Route::post('itinerary/{liveaboard}/add', function (Request $request) {       
+    Route::post('itinerary/{liveaboard}/add', function (liveaboard_itinerary $liveaboard_itinerary, Request $request) {       
+        $liveaboard_itinerary = liveaboard_itinerary::create(Input::except('_token', 'image'));
+
         foreach ($request->image as $photo) {
-            $liveaboard_itinerary = liveaboard_itinerary::create(Input::except('_token', 'image'));
             //File names and location
             $fileName = 'gallery' . '-' . time() . '-' . $photo->getClientOriginalName();
             $location_o = 'gallery'.'/original'.'/'.$fileName;
@@ -174,6 +176,7 @@ Route::group(['prefix' => 'catamaran'], function () {
         $photo->save();
         return redirect('admin/catamaran/edit/'. $catamaran .'/#image_preview_old')->withInput();
     });
+    Route::post('edit/{catamaran}/image/order', 'CatamaranController@imageOrder');
     Route::get('delete/{catamaran}', 'CatamaranController@destroy');
     
     //Ititnerary Adding Routes
@@ -223,6 +226,7 @@ Route::group(['prefix' => 'local-island'], function () {
         $photo->save();
         return redirect('admin/local-island/edit/'. $diving_spot .'/#image_preview_old')->withInput();
     });
+    Route::post('edit/{diving_spot}/image/order', 'DivingSpotController@imageOrder');
     Route::get('delete/{diving_spot}', 'DivingSpotController@destroy');
 
     Route::get('/inquiry', function () {

@@ -35,7 +35,7 @@ class liveaboard extends Model
     }
 
     public function images() {
-        return $this->hasMany('App\liveaboard_photo', 'liveaboard_id');
+        return $this->hasMany('App\liveaboard_photo', 'liveaboard_id')->orderBy('order');
     }
     
     public function getFirstImageAttribute() {

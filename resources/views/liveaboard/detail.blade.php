@@ -20,14 +20,14 @@
               <div id="flex-slider" class="flexslider">
                 <ul class="slides">
                   @foreach($liveaboard->images as $image)
-                  <li><img src="{{ $image->photo_url }}" alt></li>
+                    <li><img src="{{ $image->photo_url }}" alt></li>
                   @endforeach
                 </ul>
               </div>
               <div id="flex-carousel" class="flexslider">
                 <ul class="slides">
                   @foreach($liveaboard->images as $image)
-                  <li><img src="{{ $image->photo_url }}" data-at2x="{{ $image->photo_url }}" alt></li>
+                    <li><img src="{{ $image->photo_url }}" data-at2x="{{ $image->photo_url }}" alt></li>
                   @endforeach
                 </ul>
               </div>

@@ -18,8 +18,6 @@ class CreateLiveaboardItinerariesTable extends Migration
             $table->integer('liveaboard_id')->nullable();
             $table->string('date')->nullable();
             $table->longtext('detail')->nullable();
-            $table->string('photo_url')->nullable();
-            $table->string('thumbnail')->nullable();
             $table->timestamps();
         });
     }

@@ -9,26 +9,24 @@
               <div class="top-left-wrap font-3">
                 <div class="mail-top"><a href="mailto:info@scubatribemaldives.com"> <i class="fa fa-envelope"></i>info@scubatribemaldives.com</a></div><span>/</span>
                 <div class="tel-top"><a href="tel:7465333"> <i class="fa fa-phone"></i>(960)-7465333</a></div><span>/</span>
-                <div class="tel-top"><a href="https://web.facebook.com/scubatribemaldives/" target="_blank"> <i class="fa fa-facebook"></i>Facebook</a></div><span>/</span>
-                <div class="tel-top"><a href="https://www.instagram.com/scubatribemaldives/" target="_blank"> <i class="fa fa-instagram"></i>Instagram</a></div>
               </div>
               <!-- ! lang select wrapper-->
             </div>
             <div class="col-md-5 col-sm-4 text-right">
               <div class="top-right-wrap">
                 <!-- <div class="top-login"><a href="#">My Account</a></div> -->
-                <div class="lang-wrap dropdown">
+                <!-- <div class="lang-wrap dropdown">
                   <div>
                     <ul>
                       <li><a href="#" class="lang-sel icl-en">Language <i class="fa fa-angle-down"></i></a>
                         <ul>
                           <li><a href="#">English</a></li>
-                          <li><a href="#">Russian</a></li>
+                          <li> <a href="#">Russian</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

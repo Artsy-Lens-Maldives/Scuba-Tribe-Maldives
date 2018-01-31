@@ -14,7 +14,7 @@
         </div>
         <div class="container" style="margin-bottom: 100px">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
               <div id="flex-slider" class="flexslider">
                 <ul class="slides">
                   @foreach($diving_spot->images as $image)
@@ -30,14 +30,15 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-4">
+          </div>
+          <div class="row">
+            <div class="col-md-12">
               <div class="bg-gray-3 p-30-40">
                 <h4>Description</h4>
                 {!! $diving_spot->description !!}
               </div>
             </div>
           </div>
-          
         </div>
       </section>
     </div>

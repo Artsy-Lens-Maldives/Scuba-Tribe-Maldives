@@ -91,7 +91,7 @@
                     @foreach($liveaboard->itinerary as $itinerary)
                     <tr>
                       <td class="col-md-3" style="vertical-align: middle;">
-                        <h4>{{ $itinerary->date }}</h4>
+                        <h6>{{ $itinerary->date }}</h6>
                       </td>
                       <td class="col-md-4" style="vertical-align: middle;"> 
                         <a class="btn btn-info btn-lg" href="{{ url()->current() }}/itinerary/{{ $itinerary->id }}">Show Details</button>

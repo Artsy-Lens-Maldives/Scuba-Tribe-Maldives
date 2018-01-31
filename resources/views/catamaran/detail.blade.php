@@ -35,7 +35,7 @@
             <div class="col-md-12" style="margin-top: 100px;">
               <div class="bg-gray-3 p-30-40">
                 <h4>Boat Features</h4>
-                <div class="list-style-square">
+                <div class="" style="list-style: none;">
                   {!! $catamaran->features !!}
                 </div>
               </div>
@@ -49,14 +49,14 @@
             @if($catamaran->catamaran_layout_photo == null)
               <div class="col-md-12">
                 <h4 class="mb-20">Description</h4>
-                <div class="list-style-square">
+                <div class="" style="list-style: none;">
                 {!! $catamaran->description !!}
                 </div>
               </div>  
             @else
               <div class="col-md-8">
                 <h4 class="mb-20">Description</h4>
-                <div class="list-style-square">
+                <div class="" style="list-style: none;">
                 {!! $catamaran->description !!}
                 </div>
               </div>
@@ -93,7 +93,7 @@
                     @foreach($catamaran->itinerary as $itinerary)
                     <tr>
                       <td class="col-md-3" style="vertical-align: middle;">
-                        <h4>{{ $itinerary->date }}</h4>
+                        <h6>{{ $itinerary->date }}</h6>
                       </td>
                       <td class="col-md-4" style="vertical-align: middle;"> 
                         <a class="btn btn-info btn-lg" href="{{ url()->current() }}/itinerary/{{ $itinerary->id }}">Show Details</button>

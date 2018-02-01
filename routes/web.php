@@ -84,3 +84,8 @@ Route::group(['prefix' => 'local-island'], function () {
 // Inquiry route
 Route::get('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@show');
 Route::post('/inquiry/{id}/{name}/{type}/{iten_id}', 'InqueryController@store');
+
+Route::get('/search', function () {
+  $liveaboards = \App\Liveaboard::all();
+  return view('search.index', compact('liveaboards'));
+});

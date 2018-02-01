@@ -8,9 +8,7 @@
               <!-- lang select wrapper-->
               <div class="top-left-wrap font-3">
                 <div class="mail-top"><a href="mailto:info@scubatribemaldives.com"> <i class="fa fa-envelope"></i>info@scubatribemaldives.com</a></div><span>/</span>
-                <div class="tel-top"><a href="tel:7465333"> <i class="fa fa-phone"></i>(960)-7465333</a></div><span>/</span>
-                <div class="tel-top"><a href="https://web.facebook.com/scubatribemaldives/" target="_blank"> <i class="fa fa-facebook"></i>Facebook</a></div><span>/</span>
-                <div class="tel-top"><a href="https://www.instagram.com/scubatribemaldives/" target="_blank"> <i class="fa fa-instagram"></i>Instagram</a></div>
+                <div class="tel-top"><a href="tel:7465333"> <i class="fa fa-phone"></i>(960)-7465333</a></div>
               </div>
               <!-- ! lang select wrapper-->
             </div>
@@ -77,11 +75,7 @@
                   <li>
                     <div class="container">
                       <div class="mn-wrap">
-                        <form method="post" class="form">
-                          <div class="search-wrap">
-                            <input type="text" placeholder="Where will you go next?" class="form-control search-field"><i class="flaticon-suntour-search search-icon"></i>
-                          </div>
-                        </form>
+                        @include('partials.search')
                       </div>
                       <div class="close-button"><span>Search</span></div>
                     </div>

@@ -8,7 +8,7 @@
               <!-- lang select wrapper-->
               <div class="top-left-wrap font-3">
                 <div class="mail-top"><a href="mailto:info@scubatribemaldives.com"> <i class="fa fa-envelope"></i>info@scubatribemaldives.com</a></div><span>/</span>
-                <div class="tel-top"><a href="tel:7465333"> <i class="fa fa-phone"></i>(960)-7465333</a></div><span>/</span>
+                <div class="tel-top"><a href="tel:7465333"> <i class="fa fa-phone"></i>(960)-7465333</a></div>
               </div>
               <!-- ! lang select wrapper-->
             </div>

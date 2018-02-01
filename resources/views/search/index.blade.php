@@ -3,7 +3,7 @@
 @section('content')
     <div class="content-body">
         <div class="container page">
-            <h2 class="title-section mb-5">Liveaboards</h2>
+            <h2 class="title-section mb-5">You searched for {{ "'".request()->q."'" }}</h2>
             <hr style="border-bottom: 2px solid #000000;">
 
             @if(!$liveaboards->isEmpty())
@@ -16,9 +16,9 @@
                                     <a href="{{ url('liveaboard/') }}/{{ $liveaboard->slug }}">
                                         <div class="pic">
                                             @if($liveaboard->first_image !== null)
-                                              <img src="{{ $liveaboard->first_image->photo_url }}" alt="{{ $liveaboard->name }} image" height="240px">    
+                                            <img src="{{ $liveaboard->first_image->photo_url }}" alt="{{ $liveaboard->name }} image" height="240px">    
                                             @else
-                                              <img src="{{ url('/pic/recomended/1.jpg') }}" alt="{{ $liveaboard->name }} image">      
+                                            <img src="{{ url('/pic/recomended/1.jpg') }}" alt="{{ $liveaboard->name }} image">      
                                             @endif
                                         </div>
                                     </a>

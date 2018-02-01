@@ -44,7 +44,7 @@
             </ul>
           </div>
           <!-- call out section-->
-          <section id="subscribe" class="page-section-sub pt-90 pb-80 bg-main pattern relative">
+          <!-- <section id="subscribe" class="page-section-sub pt-90 pb-80 bg-main pattern relative">
             <div class="container">
               <div class="call-out-box clearfix with-icon">
                 <div class="row call-out-wrap">
@@ -72,7 +72,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         <!-- ! call out section-->
       </div>
 
